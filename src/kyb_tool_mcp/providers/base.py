@@ -145,6 +145,8 @@ class ProviderContext:
     client: httpx.AsyncClient
     cache: HttpCache | None = None
     limiters: dict[str, RateLimiter] = field(default_factory=dict)
+    # Resolve hostnames for the SSRF guard. Off when an injected (offline/mock) transport is used.
+    resolve_dns: bool = True
 
     @classmethod
     def create(cls, config: Config, transport: httpx.AsyncBaseTransport | None = None) -> ProviderContext:
@@ -160,7 +162,7 @@ class ProviderContext:
             if (s.kyb_http_cache and transport is None)
             else None
         )
-        return cls(config=config, client=client, cache=cache)
+        return cls(config=config, client=client, cache=cache, resolve_dns=transport is None)
 
     async def aclose(self) -> None:
         await self.client.aclose()

@@ -2,10 +2,13 @@
 
 from __future__ import annotations
 
+import asyncio
 import contextlib
+import ipaddress
 import re
+import socket
 from html.parser import HTMLParser
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 
 import httpx
 
@@ -54,6 +57,53 @@ def extract_text(html: str) -> tuple[str | None, str]:
     return p.title, text
 
 
+def _blocked_ip(ip: ipaddress.IPv4Address | ipaddress.IPv6Address) -> bool:
+    if isinstance(ip, ipaddress.IPv6Address) and ip.ipv4_mapped:
+        ip = ip.ipv4_mapped
+    return (
+        ip.is_private
+        or ip.is_loopback
+        or ip.is_link_local
+        or ip.is_multicast
+        or ip.is_reserved
+        or ip.is_unspecified
+    )
+
+
+async def check_target(url: str, resolve: bool = True) -> str | None:
+    """Return a reason if `url` must not be fetched (SSRF guard), else None.
+
+    Only http(s) is allowed. Literal IPs are always checked; hostnames are resolved (when
+    `resolve`) and rejected if ANY address is loopback, private, link-local (incl. cloud
+    metadata 169.254.169.254), multicast or reserved.
+    """
+    parts = urlsplit(url)
+    if parts.scheme not in {"http", "https"}:
+        return f"scheme '{parts.scheme}' not allowed"
+    host = (parts.hostname or "").strip(".").lower()
+    if not host:
+        return "no host"
+    if host == "localhost" or host.endswith((".localhost", ".local", ".internal")):
+        return f"internal host '{host}'"
+    try:
+        literal = ipaddress.ip_address(host)
+    except ValueError:
+        literal = None
+    if literal is not None:
+        return f"internal address {literal}" if _blocked_ip(literal) else None
+    if not resolve:
+        return None
+    try:
+        infos = await asyncio.to_thread(socket.getaddrinfo, host, parts.port or 443, proto=socket.IPPROTO_TCP)
+    except OSError:
+        return None  # unresolvable: let the fetch fail normally -> WEBSITE_UNREACHABLE
+    for info in infos:
+        addr = ipaddress.ip_address(str(info[4][0]).split("%")[0])
+        if _blocked_ip(addr):
+            return f"'{host}' resolves to internal address {addr}"
+    return None
+
+
 class WebsiteHttpProvider:
     name = "website_http"
 
@@ -82,6 +132,16 @@ class WebsiteHttpProvider:
         redirects: list[str] = []
         try:
             for _ in range(MAX_REDIRECTS + 1):
+                blocked = await check_target(current, resolve=self.ctx.resolve_dns)
+                if blocked:
+                    # SSRF guard: never fetch internal targets, including via redirects.
+                    return WebsiteSnapshot(
+                        url=url,
+                        final_url=current,
+                        reachable=False,
+                        error=f"blocked: {blocked}",
+                        redirects=redirects,
+                    )
                 async with self.ctx.client.stream("GET", current, timeout=self.timeout) as r:
                     if r.is_redirect and "location" in r.headers:
                         redirects.append(current)

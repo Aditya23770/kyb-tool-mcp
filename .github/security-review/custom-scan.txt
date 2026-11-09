@@ -1,0 +1,25 @@
+**Server-Side Request Forgery (kyb-tool-mcp website checks):**
+- `check_website` and `review_kyb_case` fetch URLs chosen by an LLM (MCP client) or supplied in an application; flag any new path that lets such a URL reach loopback, private (RFC 1918), link-local (169.254.0.0/16, cloud metadata endpoints), IPv6 local addresses, or non-http(s) schemes
+- Redirect handling that re-validates only the first URL and not each redirect target
+- DNS resolution done separately from the connection (DNS rebinding) when validating target hosts
+
+**Sanctions Screening Bypass (false negatives):**
+- Changes in `src/kyb_tool_mcp/matching/`, `checks/screening_checks.py`, `policy.py` or `data/policy.default.yaml` that let a listed person or entity be auto-cleared (FALSE_POSITIVE) or approved, e.g. over-broad auto-clear rules, normalisation that drops identifying name tokens, thresholds moved in code instead of YAML
+- Exceptions caught and converted into a silent pass instead of a `PROVIDER_ERROR` flag (the system must fail closed)
+- A screening check reported as "done" when no list was actually searched
+
+**Decision and Evidence Integrity:**
+- Any code path where something other than `policy.decide()` sets or alters the APPROVE / REJECT / ESCALATE decision
+- Flags that can reach the output without passing `validate_flags` (every flag must cite existing evidence ids)
+- Audit log entries that can be skipped or altered without the result showing it
+
+**MCP Transport Integrity:**
+- Writes to stdout (print, logging handlers) from code reachable by the stdio MCP server, which corrupt the JSON-RPC stream or allow injected responses
+
+**Untrusted Data Handling:**
+- Parsing downloaded sanctions XML with external entity resolution enabled (XXE)
+- Website HTML or list content reaching an HTML sink in `website/` (innerHTML, insertAdjacentHTML) without escaping
+- File paths derived from list content, case files or tool arguments (path traversal)
+
+**Secrets Exposure:**
+- `COMPANIES_HOUSE_API_KEY` or other credentials written into evidence payloads, audit log rows, HTTP cache keys, exception messages or MCP tool output

@@ -1,0 +1,21 @@
+1. HARD EXCLUSIONS - Automatically exclude findings matching these patterns:
+- Denial of service, resource exhaustion, rate limiting, memory or CPU usage (including XML "billion laughs" and regex DoS)
+- Findings in tests (`tests/`), benchmark data (`benchmarks/data/`, `benchmarks/c_cases/`) or documentation (`*.md`, `docs/`)
+- Names, dates of birth and nationalities from public sanctions lists (OFAC SDN, UN) appearing in fixtures, benchmark cases or logs: this is public-domain reference data, not leaked PII
+- Fictional people and companies in `tests/` and `kyb_tool_mcp/testing.py`
+- Outdated third-party dependencies (handled by Dependabot)
+- Lack of authentication on the MCP server: it is a local stdio process launched by the user's own MCP client, not a network service
+- Missing hardening without a concrete exploit (no CSP header on the static GitHub Pages site, etc.)
+
+2. SIGNAL QUALITY CRITERIA - For remaining findings, assess:
+- Is there a concrete attack path from an attacker-controlled input? Attacker-controlled inputs here are: website content fetched by `check_website`, sanctions list files downloaded from the internet, application/case JSON, and MCP tool arguments (which an LLM may produce under prompt injection)
+- Does it lead to one of: reaching internal network services (SSRF), a sanctioned party being approved, a decision not produced by policy, secret disclosure, or code execution?
+- Is the finding specific (file, line, input) and actionable?
+
+3. PRECEDENTS - Guidance for common patterns in this codebase:
+- Environment variables, `providers.yaml` and `policy.yaml` are trusted operator configuration
+- Requests to the fixed hosts api.company-information.service.gov.uk, api.gleif.org and rdap.org are expected and are not SSRF
+- The local SQLite files under `~/.kyb-tool-mcp/` (index, cache, audit) are trusted local state
+- Parameterised sqlite3 queries are safe; FTS5 MATCH strings are built only from normalised alphanumeric tokens
+- Logging company names, URLs or list entity ids is acceptable; logging API keys is not
+- The GitHub Pages site (`website/`) is static and has no backend; only flag DOM XSS if untrusted data reaches an unsafe sink

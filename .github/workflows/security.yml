@@ -1,0 +1,46 @@
+name: Security Review
+
+# Claude-powered security review of every pull request.
+# Source: https://github.com/anthropics/claude-code-security-review (pinned to a commit for supply-chain safety).
+#
+# Setup (one-time):
+#   1. Repo Settings -> Secrets and variables -> Actions -> New secret: CLAUDE_API_KEY
+#      (an Anthropic API key enabled for both the Claude API and Claude Code).
+#   2. Repo Settings -> Actions -> General -> "Require approval for all external contributors".
+#      The action is NOT hardened against prompt injection and must only review trusted PRs.
+#
+# Run the same review locally before pushing:  /security-review  (in Claude Code)
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write # to comment findings on the PR
+
+concurrency:
+  group: security-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  security:
+    # Only PRs from branches of this repository (fork PRs have no secrets and are untrusted).
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 2
+
+      - uses: anthropics/claude-code-security-review@0c6a49f1fa56a1d472575da86a94dbc1edb78eda # main @ 2026-11
+        with:
+          claude-api-key: ${{ secrets.CLAUDE_API_KEY }}
+          comment-pr: true
+          upload-results: true
+          claude-model: claude-opus-5-5
+          claudecode-timeout: 20
+          exclude-directories: benchmarks/data,benchmarks/c_cases,tests/fixtures,website/assets
+          custom-security-scan-instructions: .github/security-review/custom-scan.txt
+          false-positive-filtering-instructions: .github/security-review/false-positive-filtering.txt
