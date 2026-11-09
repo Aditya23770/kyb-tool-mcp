@@ -5,10 +5,10 @@ Built by `kyb-tool update-lists` (or `IndexBuilder` directly). Read by `Sanction
 
 from __future__ import annotations
 
+import gc
 import json
 import math
 import os
-import shutil
 import sqlite3
 import tempfile
 import threading
@@ -111,6 +111,7 @@ class IndexBuilder:
             self.tokfreq.update(ent_tokens)
             self.counts[ent.source] += 1
             n += 1
+        cur.close()
         return n
 
     def finish(self, extra_meta: dict[str, Any] | None = None) -> dict[str, Any]:
@@ -127,10 +128,13 @@ class IndexBuilder:
             "INSERT OR REPLACE INTO meta(key, value) VALUES (?,?)",
             [(k, json.dumps(v)) for k, v in meta.items()],
         )
+        cur.close()
         self.conn.commit()
         self.conn.execute("VACUUM")
         self.conn.close()
-        shutil.move(str(self.tmp), str(self.path))
+        # Python 3.11 on Windows keeps the file locked until every statement is released.
+        gc.collect()
+        os.replace(self.tmp, self.path)
         return meta
 
     def abort(self) -> None:
