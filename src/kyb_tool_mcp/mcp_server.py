@@ -127,7 +127,8 @@ def build_server(config: Config | None = None, **pipeline_kwargs: Any) -> MCPSer
 
         Returns reachability, page title and text excerpt (so you can judge what the business sells),
         domain registration date (RDAP), and flags: WEBSITE_UNREACHABLE, PARKED_DOMAIN, NEW_DOMAIN,
-        PROHIBITED_GOODS, INDUSTRY_MISMATCH, DOMAIN_NAME_MISMATCH. Decision support only.
+        PROHIBITED_GOODS, INDUSTRY_MISMATCH, DOMAIN_NAME_MISMATCH, WEBSITE_BLOCKS_AUTOMATION (online but
+        refuses bots, so content was not checked). Decision support only.
         """
         return await pipeline.check_website(url, declared_industry, company_name)
 

@@ -95,7 +95,7 @@ def explain_policy(policy: Policy) -> str:
         f"{s.false_positive.nationality_conflict_name_below}, or person/company schema mismatch. "
         "Anything else is NEEDS_REVIEW (POSSIBLE_MATCH). The LLM may explain hits but never clears them.\n"
         "Step 6 website flags: WEBSITE_UNREACHABLE, PARKED_DOMAIN, NEW_DOMAIN, INDUSTRY_MISMATCH medium; "
-        "PROHIBITED_GOODS high; DOMAIN_NAME_MISMATCH low; NO_WEBSITE_DECLARED low.\n"
+        "PROHIBITED_GOODS high; DOMAIN_NAME_MISMATCH, WEBSITE_BLOCKS_AUTOMATION, NO_WEBSITE_DECLARED low.\n"
         "System: PROVIDER_ERROR high (fail closed), CHECK_NOT_CONFIGURED low.\n"
         "Every flag cites evidence ids. Results are decision support, not legal advice."
     )

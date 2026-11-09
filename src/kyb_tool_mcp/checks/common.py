@@ -84,9 +84,29 @@ def stem(token: str) -> str:
     return token[:5]
 
 
+# Everyday industry words -> words used in SIC descriptions.
+INDUSTRY_SYNONYMS: dict[str, tuple[str, ...]] = {
+    "supermarket": ("retail", "food", "stores"),
+    "grocery": ("retail", "food"),
+    "groceries": ("retail", "food"),
+    "shop": ("retail",),
+    "ecommerce": ("retail",),
+    "restaurant": ("restaurants", "food"),
+    "cafe": ("restaurants", "food"),
+    "software": ("computer", "programming"),
+    "saas": ("computer", "programming"),
+    "bank": ("banking", "monetary", "financial"),
+    "fintech": ("financial",),
+    "oil": ("petroleum", "crude"),
+    "telecom": ("telecommunications",),
+    "builder": ("construction",),
+}
+
+
 def industry_similarity(declared: str, description: str) -> float:
     """0-100 similarity between a declared industry and a SIC / website description."""
     a, b = industry_keywords(declared), industry_keywords(description)
+    a = a + [s for t in a for s in INDUSTRY_SYNONYMS.get(t, ())]
     if not a or not b:
         return 0.0
     sa, sb = {stem(t) for t in a}, {stem(t) for t in b}

@@ -104,6 +104,17 @@ def website_flags(
                     detail=f"{snap.url} unreachable: {snap.error or snap.status_code}.",
                 )
             )
+        elif snap.blocked:
+            flags.append(
+                Flag(
+                    code="WEBSITE_BLOCKS_AUTOMATION",
+                    severity=Severity.low,
+                    evidence=eid,
+                    check="website",
+                    detail=f"{snap.url} is online but refused an automated request (HTTP {snap.status_code}); "
+                    "its content could not be checked.",
+                )
+            )
         else:
             parked = is_parked(snap, policy)
             if parked:

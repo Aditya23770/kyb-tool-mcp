@@ -17,6 +17,17 @@ PERSON_SCHEMAS = {"person"}
 COMPANY_SCHEMAS = {"organization", "company", "legalentity", "publicbody", "entity"}
 
 
+def _same_sound(a: str, b: str) -> bool:
+    """Same Metaphone key (BUTT/BOUT, GASPROM/GAZPROM)."""
+    k = phonetic(a)
+    return len(k) >= 2 and k == phonetic(b)
+
+
+LONG_WORD = 9  # Hamdani/Hamani (7 letters) stays a near-miss; Anatolyevich (12) is a transliteration
+LONG_WORD_SIM = 0.90
+PART_MIN = 0.88  # a name part matches only if this close (Berry vs Barrera ~0.78, Mohamed vs Mohammed ~0.96)
+
+
 @lru_cache(maxsize=200_000)
 def _tok_sim(a: str, b: str) -> float:
     if a == b:
@@ -24,7 +35,7 @@ def _tok_sim(a: str, b: str) -> float:
     if len(a) == 1 or len(b) == 1:  # initials
         return 0.9 if a[0] == b[0] else 0.0
     sim = float(JaroWinkler.normalized_similarity(a, b))
-    if phonetic(a) == phonetic(b) and len(a) >= 3 and len(b) >= 3:
+    if len(a) >= 4 and len(b) >= 4 and _same_sound(a, b):
         sim = max(sim, 0.92)
     return sim
 
@@ -59,7 +70,9 @@ def _strong(src: list[str], dst: list[str]) -> bool:
         if not any(
             a == b
             or (min(len(a), len(b)) == 1 and a[0] == b[0])
-            or (len(a) >= 3 and len(b) >= 3 and phonetic(a) == phonetic(b))
+            or (len(a) >= 3 and len(b) >= 3 and _same_sound(a, b))
+            # Long words (patronymics) transliterated differently: ANATOLYEVICH / ANATOLIJEVITCH 0.92.
+            or (min(len(a), len(b)) >= LONG_WORD and _tok_sim(a, b) >= LONG_WORD_SIM)
             for b in dst
         ):
             return False
@@ -82,6 +95,7 @@ def name_similarity(
     best: dict[str, float] = {"name_score": 0.0}
     both = 0.0  # best (over spelling variants) share of name parts matched on BOTH sides
     strong = False  # any spelling variant where every word matches exactly / phonetically
+    parts = 0.0  # best share of the shorter name's parts with a close counterpart (>= PART_MIN)
     variants_a = _variants(a_tokens)
     variants_b = _variants(b_tokens)
     for va in variants_a:
@@ -94,6 +108,9 @@ def name_similarity(
             align = 100 * (0.75 * d_short + 0.25 * d_long)
             both = max(both, min(d_short, d_long))
             strong = strong or _strong(short, long_)
+            parts = max(
+                parts, sum(any(_tok_sim(a, b) >= PART_MIN for b in long_) for a in short) / len(short)
+            )
             sa, sb = " ".join(va), " ".join(vb)
             ts = float(fuzz.token_sort_ratio(sa, sb))
             joined = float(fuzz.ratio(sa.replace(" ", ""), sb.replace(" ", "")))
@@ -112,6 +129,7 @@ def name_similarity(
     if len(best) > 1:
         best["coverage_both"] = round(both, 3)
         best["all_strong"] = 1.0 if strong else 0.0
+        best["parts_matched"] = round(parts, 3)
     return best
 
 

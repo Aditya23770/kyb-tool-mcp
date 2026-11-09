@@ -40,6 +40,14 @@ def adjudicate(
         extra = " and nationality differs" if f.get("nationality") == "conflict" else ""
         reasons.append(f"birth year differs by {diff} years (> {fp.dob_year_diff_gt}){extra}")
         return HitOutcome.FALSE_POSITIVE, reasons
+    if (
+        subject.type == "person"
+        and float(f.get("parts_matched", 1.0)) < fp.person_parts_matched_min
+        and f.get("dob") not in {"year_month", "year"}
+    ):
+        # "Alia Fazal" vs "Fazal RAHIM": one shared name part is not a match.
+        reasons.append("only part of the name matches (another name part has no close counterpart)")
+        return HitOutcome.FALSE_POSITIVE, reasons
     if f.get("nationality") == "conflict" and name < fp.nationality_conflict_name_below:
         reasons.append(
             f"nationality conflicts and name similarity < {fp.nationality_conflict_name_below:.0f}"
@@ -59,6 +67,12 @@ def adjudicate(
         applicant_contained = s_cov >= tm.company_coverage_min and e_cov >= cr.entity_coverage_min
         if name < cr.name_min and not applicant_contained:
             reasons.append(f"company name similarity below review threshold {cr.name_min:.0f}")
+            return HitOutcome.FALSE_POSITIVE, reasons
+        if f.get("distinctive_words", 2.0) <= 1 and (
+            not f.get("all_strong", 1.0) or float(f.get("one_word_spelling", 1.0)) < cr.one_word_spelling_min
+        ):
+            # One distinctive word that is only similar (NALOW vs NALU): a different name.
+            reasons.append("the only distinctive word is similar but not the same word")
             return HitOutcome.FALSE_POSITIVE, reasons
         if s_cov <= cr.subject_coverage_gt or e_cov < cr.entity_coverage_min:
             reasons.append(f"only part of the names overlap (applicant {s_cov:.0%}, listed {e_cov:.0%})")

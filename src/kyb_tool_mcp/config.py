@@ -98,12 +98,14 @@ class CompanyReviewPolicy(BaseModel):
     name_min: float = 88  # companies have no DOB to clear them; below this similarity they are cleared
     subject_coverage_gt: float = 0.5  # most of the applicant's distinctive words must be in the listed name
     entity_coverage_min: float = 0.5  # at least half of the listed name must be present
-    short_match_full_name_min: float = 90  # acronym-only overlaps (ADF, A7) need a close full-name match
+    short_match_full_name_min: float = 90
+    one_word_spelling_min: float = 0.90  # one-word names: GAZPROM/GASPROM 0.92 kept, NALOW/NALU 0.85 cleared  # acronym-only overlaps (ADF, A7) need a close full-name match
 
 
 class FalsePositivePolicy(BaseModel):
     dob_year_diff_gt: int = 1
     dob_conflict_keep_if_name_gte: float = 100  # exact names are never cleared on DOB alone
+    person_parts_matched_min: float = 1.0  # every part of the shorter name needs a close counterpart
     nationality_conflict_name_below: float = 95
     schema_mismatch: bool = True
 

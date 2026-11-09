@@ -70,9 +70,11 @@ Also works from the terminal (`kyb-tool-mcp review case.json`) and from Python (
 | Real UK companies with no false alert | **92.9%** |
 | Wrongly confirmed as sanctioned | **0.04%** |
 | Test cases decided correctly | **100%** |
+| Live check on real UK companies (20 cases, 8 types) | **20/20** |
 
 Measured on real public UK data the tool was never tuned on (992 sanctioned designations, 5,000
-companies) plus 168 test cases.
+companies), 168 test cases, and a live Companies House run covering clean companies, large PLCs,
+dissolved companies, wrong names, undeclared directors, sanctioned owners and entities, and dead websites.
 
 ## Coming next (phase 2)
 

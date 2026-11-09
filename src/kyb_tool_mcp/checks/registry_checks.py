@@ -144,10 +144,16 @@ def ownership_flags(app: Application, ev: Evidence[CompanyRecord], policy: Regis
                 )
         if not active:
             stmt = f" Statement: {rec.psc_statements[0]}." if rec.psc_statements else ""
+            plc = (rec.company_type or "").lower() in {"plc", "public-limited-company"}
             add(
                 "NO_UBO_DATA",
-                Severity.high,
-                f"Registry shows no active persons with significant control.{stmt}",
+                Severity.medium if plc else Severity.high,
+                f"Registry shows no active persons with significant control.{stmt}"
+                + (
+                    " Listed PLCs disclose major holders to the market instead of a PSC register."
+                    if plc
+                    else ""
+                ),
             )
         individuals = [p for p in active if not p.is_corporate]
         for p in individuals:

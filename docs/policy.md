@@ -31,12 +31,13 @@ Risk level: ≤ 14 LOW, ≤ 39 MEDIUM, else HIGH (REJECT is always HIGH).
 | | `NAME_MISMATCH` (≥ `name_medium` → medium, else high; former name → medium) | medium/high |
 | | `ADDRESS_MISMATCH`, `NEW_ENTITY`, `SIC_INDUSTRY_MISMATCH` | medium |
 | Ownership | `UNDECLARED_DIRECTOR`, `UNKNOWN_DIRECTOR`, `OPAQUE_OWNERSHIP`, `NO_UBO_DATA` | high |
+| | `NO_UBO_DATA` for a PLC (listed companies disclose holders to the market, not a PSC register) | medium |
 | | `OWNERSHIP_MISMATCH` | medium |
 | Screening | `SANCTIONS_MATCH` | critical |
 | | `PEP_MATCH`, `CRIME_MATCH`, `POSSIBLE_MATCH` (needs review) | high |
 | Website | `WEBSITE_UNREACHABLE`, `PARKED_DOMAIN`, `NEW_DOMAIN`, `INDUSTRY_MISMATCH` | medium |
 | | `PROHIBITED_GOODS` | high |
-| | `DOMAIN_NAME_MISMATCH`, `NO_WEBSITE_DECLARED` | low |
+| | `DOMAIN_NAME_MISMATCH`, `WEBSITE_BLOCKS_AUTOMATION` (site online but refuses bots), `NO_WEBSITE_DECLARED` | low |
 | System | `PROVIDER_ERROR` | high |
 | | `CHECK_NOT_CONFIGURED` | low |
 

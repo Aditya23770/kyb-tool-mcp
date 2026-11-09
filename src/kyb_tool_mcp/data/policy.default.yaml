@@ -1,6 +1,6 @@
 # kyb-tool-mcp decision policy. All thresholds live here, never in code.
 # Copy with `kyb-tool init` and point KYB_POLICY_FILE at your copy to tune.
-version: "2026.11-5"   # loop 5: no auto-confirm on near-spelled words (untouched OOD data)
+version: "2026.11-6"   # loop 6: live Companies House run (partial names, short sound-alikes, PLCs, blocked sites)
 
 severity_points: {critical: 100, high: 40, medium: 15, low: 5}
 
@@ -36,10 +36,12 @@ screening:
     name_min: 88
     subject_coverage_gt: 0.5  # most of the applicant's distinctive words must be in the listed name
     entity_coverage_min: 0.5  # at least half of the listed name must be present
+    one_word_spelling_min: 0.90  # one-word company names must be spelled nearly the same (NALOW vs NALU 0.85)
     short_match_full_name_min: 90  # acronym-only overlaps (ADF, A7) need a close full-name match
   false_positive:
     dob_year_diff_gt: 1
     dob_conflict_keep_if_name_gte: 100  # lists disagree on DOBs: exact names never cleared on DOB alone
+    person_parts_matched_min: 1.0  # every part of the shorter name needs a close counterpart, else cleared
     nationality_conflict_name_below: 95
     schema_mismatch: true     # person vs company/vessel/aircraft
   weak_alias_name_min: 97     # OFAC "weak" / UN "low quality" aliases need near-exact names
