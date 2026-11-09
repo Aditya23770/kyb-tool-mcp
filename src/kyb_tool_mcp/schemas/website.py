@@ -20,6 +20,7 @@ class WebsiteSnapshot(BaseModel):
     word_count: int = 0
     redirects: list[str] = Field(default_factory=list)
     truncated: bool = False
+    blocked: bool = False  # the site answered but refused automated requests (401/403/429)
 
 
 class DomainInfo(BaseModel):

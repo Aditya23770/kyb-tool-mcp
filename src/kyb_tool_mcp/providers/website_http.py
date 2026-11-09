@@ -18,6 +18,8 @@ from kyb_tool_mcp.schemas.website import WebsiteSnapshot
 
 MAX_REDIRECTS = 5
 MAX_TEXT_CHARS = 20_000
+# The server is up but refuses bots (Cloudflare, Akamai...): reachable, content unknown.
+BLOCKED_STATUSES = frozenset({401, 403, 429})
 
 
 class _TextExtractor(HTMLParser):
@@ -179,7 +181,8 @@ class WebsiteHttpProvider:
         return WebsiteSnapshot(
             url=url,
             final_url=current,
-            reachable=200 <= status < 400,
+            reachable=200 <= status < 400 or status in BLOCKED_STATUSES,
+            blocked=status in BLOCKED_STATUSES,
             status_code=status,
             error=None if status < 400 else f"HTTP {status}",
             content_type=ctype,
