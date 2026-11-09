@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<sdnList xmlns="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/XSD">
+  <publshInformation><Publish_Date>11/01/2026</Publish_Date><Record_Count>6</Record_Count></publshInformation>
+  <sdnEntry>
+    <uid>1001</uid><firstName>Viktor Ivanovich</firstName><lastName>BOROVKOV</lastName><sdnType>Individual</sdnType>
+    <programList><program>RUSSIA-EO14024</program></programList>
+    <akaList>
+      <aka><uid>11</uid><type>a.k.a.</type><category>strong</category><firstName>Viktor</firstName><lastName>BOROVKOFF</lastName></aka>
+      <aka><uid>12</uid><type>a.k.a.</type><category>weak</category><lastName>THE BEAR</lastName></aka>
+    </akaList>
+    <dateOfBirthList><dateOfBirthItem><uid>13</uid><dateOfBirth>12 Mar 1961</dateOfBirth><mainEntry>true</mainEntry></dateOfBirthItem></dateOfBirthList>
+    <nationalityList><nationality><uid>14</uid><country>Russia</country><mainEntry>true</mainEntry></nationality></nationalityList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>1002</uid><lastName>NORDSTAR SHIPPING LLC</lastName><sdnType>Entity</sdnType>
+    <programList><program>IRAN</program></programList>
+    <akaList><aka><uid>21</uid><type>a.k.a.</type><category>strong</category><lastName>NORD STAR MARITIME COMPANY</lastName></aka></akaList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>1003</uid><firstName>Mohammed Abdullah</firstName><lastName>AL-RASHIDI</lastName><sdnType>Individual</sdnType>
+    <programList><program>SDGT</program></programList>
+    <akaList><aka><uid>31</uid><type>a.k.a.</type><category>strong</category><firstName>Muhammad Abdallah</firstName><lastName>AL RASHIDI</lastName></aka></akaList>
+    <dateOfBirthList><dateOfBirthItem><uid>32</uid><dateOfBirth>1975</dateOfBirth><mainEntry>true</mainEntry></dateOfBirthItem></dateOfBirthList>
+    <nationalityList><nationality><uid>33</uid><country>Yemen</country><mainEntry>true</mainEntry></nationality></nationalityList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>1004</uid><lastName>OCEAN PEARL</lastName><sdnType>Vessel</sdnType>
+    <programList><program>IRAN</program></programList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>1005</uid><firstName>David</firstName><lastName>HARGREAVES</lastName><sdnType>Individual</sdnType>
+    <programList><program>CYBER2</program></programList>
+    <dateOfBirthList><dateOfBirthItem><uid>51</uid><dateOfBirth>Jun 1958</dateOfBirth><mainEntry>true</mainEntry></dateOfBirthItem></dateOfBirthList>
+    <nationalityList><nationality><uid>52</uid><country>Cyprus</country><mainEntry>true</mainEntry></nationality></nationalityList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>1006</uid><firstName>Elena</firstName><lastName>KORZHAKOVA</lastName><sdnType>Individual</sdnType>
+    <programList><program>RUSSIA-EO14024</program></programList>
+  </sdnEntry>
+</sdnList>

@@ -1,0 +1,14 @@
+kyb-tool-mcp
+Copyright 2026 Aditya Raj Pandey and contributors
+
+This product is licensed under the Apache License, Version 2.0.
+
+Data notice: kyb-tool-mcp downloads third-party data at runtime; none is
+redistributed in this package except small reference tables listed below.
+- OFAC SDN list: U.S. Department of the Treasury, public domain.
+- UN Security Council Consolidated List: United Nations, public.
+- UK Companies House data: Crown copyright, Open Government Licence v3.0.
+- GLEIF LEI data: CC0.
+- OpenSanctions data (optional, opt-in): CC BY-NC 4.0, non-commercial use only
+  unless you hold a commercial licence from OpenSanctions.
+- data/sic_codes.csv: UK SIC 2007 condensed list, Companies House, OGL v3.0.

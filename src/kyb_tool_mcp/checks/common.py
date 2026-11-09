@@ -1,0 +1,101 @@
+"""Small helpers shared by the check modules."""
+
+from __future__ import annotations
+
+import csv
+import io
+from functools import cache
+
+from rapidfuzz import fuzz
+
+from kyb_tool_mcp.config import read_package_text
+from kyb_tool_mcp.matching.features import name_similarity
+from kyb_tool_mcp.matching.normalize import fold, person_tokens
+
+STOPWORDS = frozenset(
+    [
+        "a",
+        "an",
+        "and",
+        "or",
+        "of",
+        "the",
+        "for",
+        "to",
+        "in",
+        "on",
+        "with",
+        "by",
+        "from",
+        "other",
+        "n",
+        "e",
+        "c",
+        "not",
+        "elsewhere",
+        "classified",
+        "activities",
+        "activity",
+        "services",
+        "service",
+        "products",
+        "product",
+        "goods",
+        "general",
+        "ltd",
+        "limited",
+        "company",
+        "business",
+        "trade",
+        "trading",
+        "related",
+        "including",
+        "except",
+        "via",
+    ]
+)
+
+
+@cache
+def sic_descriptions() -> dict[str, str]:
+    rows = csv.reader(io.StringIO(read_package_text("sic_codes.csv")))
+    next(rows, None)
+    return {r[0].strip(): r[1].strip() for r in rows if len(r) >= 2}
+
+
+def keywords(text: str) -> list[str]:
+    return [t for t in fold(text).split() if t not in STOPWORDS and len(t) > 2]
+
+
+def stem(token: str) -> str:
+    return token[:5]
+
+
+def industry_similarity(declared: str, description: str) -> float:
+    """0-100 similarity between a declared industry and a SIC / website description."""
+    a, b = keywords(declared), keywords(description)
+    if not a or not b:
+        return 0.0
+    sa, sb = {stem(t) for t in a}, {stem(t) for t in b}
+    overlap = 100 * len(sa & sb) / len(sa)
+    return max(overlap, float(fuzz.token_set_ratio(" ".join(a), " ".join(b))) * 0.8)
+
+
+def person_match(a: str, b: str) -> float:
+    return name_similarity(person_tokens(a), person_tokens(b))["name_score"]
+
+
+def same_person(
+    name_a: str,
+    year_a: int | None,
+    month_a: int | None,
+    name_b: str,
+    year_b: int | None,
+    month_b: int | None,
+    threshold: float,
+) -> bool:
+    if person_match(name_a, name_b) < threshold:
+        return False
+    if year_a and year_b and year_a != year_b:
+        return False
+    return not (month_a and month_b and year_a == year_b and month_a != month_b)

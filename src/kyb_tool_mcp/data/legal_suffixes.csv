@@ -1,0 +1,82 @@
+suffix,jurisdiction
+public limited company,GB
+limited liability partnership,GB
+limited liability company,US
+community interest company,GB
+limited,GB
+ltd,GB
+plc,GB
+llp,GB
+cic,GB
+lp,GB
+llc,US
+inc,US
+incorporated,US
+corp,US
+corporation,US
+co,
+company,
+pllc,US
+lllp,US
+gmbh,DE
+ag,DE
+kg,DE
+gmbh co kg,DE
+ug,DE
+ev,DE
+sa,
+sas,FR
+sarl,FR
+sasu,FR
+eurl,FR
+srl,IT
+spa,IT
+bv,NL
+nv,NL
+vof,NL
+sl,ES
+slu,ES
+oy,FI
+oyj,FI
+ab,SE
+publ,SE
+as,NO
+asa,NO
+aps,DK
+a s,DK
+sp z o o,PL
+spzoo,PL
+sro,CZ
+kft,HU
+zrt,HU
+ooo,RU
+oao,RU
+zao,RU
+pao,RU
+ao,RU
+tov,UA
+pte ltd,SG
+pte,SG
+pty ltd,AU
+pty,AU
+sdn bhd,MY
+bhd,MY
+pvt ltd,IN
+private limited,IN
+pvt,IN
+llc fz,AE
+fze,AE
+fzco,AE
+fzc,AE
+dmcc,AE
+jsc,
+pjsc,
+ojsc,
+cjsc,
+kk,JP
+kabushiki kaisha,JP
+yk,JP
+ltda,BR
+sa de cv,MX
+sab de cv,MX
+holdings,

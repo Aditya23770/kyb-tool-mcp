@@ -1,0 +1,90 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kyb-tool-mcp"
+version = "0.1.0"
+description = "Open-source KYB (Know Your Business) screening and case-review engine, run locally as an MCP server."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+authors = [{ name = "Aditya Raj Pandey" }]
+keywords = ["kyb", "kyc", "aml", "sanctions", "compliance", "mcp", "companies-house", "screening"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: Financial",
+  "Typing :: Typed",
+]
+# Only what the local MCP server needs. LLM SDKs, web/API servers etc. are future work.
+dependencies = [
+  "mcp>=2.3,<3",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "httpx>=0.27",
+  "rapidfuzz>=3.6",
+  "jellyfish>=1.0",
+  "anyascii>=0.3.2",
+  "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://aditya23770.github.io/kyb-tool-mcp/"
+Repository = "https://github.com/Aditya23770/kyb-tool-mcp"
+Issues = "https://github.com/Aditya23770/kyb-tool-mcp/issues"
+
+[project.scripts]
+kyb-tool-mcp = "kyb_tool_mcp.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.2",
+  "pytest-asyncio>=0.23",
+  "pytest-cov>=5.0",
+  "hypothesis>=6.100",
+  "ruff>=0.6",
+  "mypy>=1.11",
+  "types-PyYAML>=6.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kyb_tool_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/", "tests/", "README.md", "LICENSE", "NOTICE", "CHANGELOG.md"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "ASYNC"]
+ignore = ["RUF001", "RUF002", "RUF003", "B008", "E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+plugins = ["pydantic.mypy"]
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = ["jellyfish.*", "anyascii.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+markers = ["live: hits real network APIs (needs keys); skipped by default"]
+addopts = "-m 'not live'"
+
+[tool.coverage.run]
+source = ["kyb_tool_mcp"]

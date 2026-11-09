@@ -1,0 +1,40 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# private notes
+local_files/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+.coverage
+coverage.xml
+htmlcov/
+src/kyb_tool_mcp/_version.py
+
+# runtime data (sanctions index, caches, audit logs)
+.kyb-tool-mcp/
+*.sqlite
+*.sqlite3
+*.db
+
+# raw third-party datasets (never commit; scripts download them)
+benchmarks/**/raw/
+benchmarks/**/*.zip
+benchmarks/**/*.ftm.json
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

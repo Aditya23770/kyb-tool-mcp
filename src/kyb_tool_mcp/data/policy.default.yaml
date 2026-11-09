@@ -1,0 +1,44 @@
+# kyb-tool-mcp decision policy. All thresholds live here, never in code.
+# Copy with `kyb-tool init` and point KYB_POLICY_FILE at your copy to tune.
+version: "2026.11-1"
+
+severity_points: {critical: 100, high: 40, medium: 15, low: 5}
+
+decision:
+  reject_if_any: [critical]
+  escalate_if_any: [high]
+  escalate_if_score_gte: 30
+
+risk_levels: {low_max: 14, medium_max: 39}
+
+registry:
+  name_ok: 96                 # normalised company-name similarity for a clean match (legal names must match closely)
+  name_medium: 75             # below name_ok but >= this => NAME_MISMATCH medium, else high
+  address_min: 80
+  new_entity_months: 6
+  person_name_match: 88
+  sic_match_min: 55           # declared industry vs SIC description similarity
+  inactive_statuses: [dissolved, liquidation, administration, receivership, converted-closed,
+                      insolvency-proceedings, voluntary-arrangement, closed, removed]
+
+screening:
+  candidate_min: 80           # name score needed to become a candidate
+  max_candidates: 200
+  true_match:
+    name_min: 92
+    require_dob_match: true
+    company_name_min: 95      # companies have no DOB; need a stronger name match
+  false_positive:
+    dob_year_diff_gt: 1
+    nationality_conflict_name_below: 95
+    schema_mismatch: true     # person vs company/vessel/aircraft
+  weak_alias_name_min: 97     # OFAC "weak" / UN "low quality" aliases need near-exact names
+  needs_review_escalates: true
+
+website:
+  parked_min_words: 200
+  thin_content_words: 40
+  new_domain_days: 90
+  domain_name_min: 50
+  max_bytes: 2000000
+  timeout_seconds: 15

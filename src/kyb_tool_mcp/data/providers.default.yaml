@@ -1,0 +1,9 @@
+# Which data providers run for each check. A check with no provider is reported
+# as "not_configured" (and flagged CHECK_NOT_CONFIGURED), never silently passed.
+registry: [companies_house, gleif]
+screening:
+  - ofac_sdn
+  - un_consolidated
+  # - opensanctions_bulk   # CC BY-NC: non-commercial use only. Adds PEP + crime topics.
+pep: []                    # e.g. [opensanctions_bulk] (non-commercial)
+website: [website_http, rdap]

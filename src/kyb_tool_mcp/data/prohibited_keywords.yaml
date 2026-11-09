@@ -1,0 +1,48 @@
+# Deterministic phrase list for PROHIBITED_GOODS (step 6). Phrases are matched on
+# normalised website text with word boundaries. Categories mirror common
+# payment-network prohibited / high-risk lists. Tune with benchmark C.
+version: "2026.11-1"
+negation_window: 4      # words before a phrase that cancel it, e.g. "we do not sell"
+negations: ["no", "not", "never", "against", "anti", "without", "free"]
+categories:
+  weapons:
+    - buy firearms
+    - guns for sale
+    - assault rifles
+    - ammunition for sale
+    - untraceable ghost guns
+    - silencers for sale
+  narcotics:
+    - buy cocaine
+    - buy heroin
+    - buy mdma
+    - buy methamphetamine
+    - research chemicals for sale
+    - cannabis delivery
+    - buy weed online
+  counterfeit:
+    - replica designer
+    - counterfeit
+    - fake passports
+    - fake id cards
+    - aaa replica watches
+  financial_crime:
+    - bitcoin mixer
+    - crypto tumbler
+    - money flipping
+    - guaranteed returns
+    - clean your crypto
+    - carding
+    - cvv shop
+  gambling_unlicensed:
+    - no kyc casino
+    - anonymous betting
+  adult:
+    - escort services
+    - adult webcams
+  wildlife:
+    - ivory for sale
+    - rhino horn
+  sanctions_evasion:
+    - bypass sanctions
+    - sanctions-free shipping
