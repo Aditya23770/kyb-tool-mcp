@@ -3,7 +3,6 @@
 **Trust, backed by evidence.** Know-your-business (KYB) checks on UK companies, from inside your AI assistant.
 
 [![PyPI](https://img.shields.io/pypi/v/kyb-tool-mcp)](https://pypi.org/project/kyb-tool-mcp/)
-[![CI](https://github.com/Aditya23770/kyb-tool-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Aditya23770/kyb-tool-mcp/actions/workflows/ci.yml)
 [![Licence](https://img.shields.io/badge/licence-Apache--2.0-blue)](LICENSE)
 [![Website](https://img.shields.io/badge/website-TrustLedger-0f8a55)](https://aditya23770.github.io/kyb-tool-mcp/)
 
@@ -139,16 +138,20 @@ you: the tool compares them with the registry, and anyone missing is flagged `UN
 import asyncio
 from kyb_tool_mcp.pipeline import ReviewPipeline
 
+
 async def main():
     pipe = ReviewPipeline()  # reads COMPANIES_HOUSE_API_KEY from the environment or .env; reuse it
 
-    result = await pipe.review({"case_id": "c1", "legal_name": "Tesco PLC", "registration_number": "00445790"})
-    print(result.decision, result.risk_level)        # e.g. APPROVE LOW
+    result = await pipe.review(
+        {"case_id": "c1", "legal_name": "Tesco PLC", "registration_number": "00445790"}
+    )
+    print(result.decision, result.risk_level)  # e.g. APPROVE LOW
     for flag in result.flags:
         print(flag.severity, flag.code, flag.detail)  # each flag also lists its evidence ids
 
     record = await pipe.registry_lookup("GB", "00445790", None)
     site = await pipe.check_website("https://example.com", "retail", "Example Ltd")
+
 
 asyncio.run(main())
 ```
@@ -166,8 +169,9 @@ from fastapi import FastAPI, Header, HTTPException
 from kyb_tool_mcp.pipeline import ReviewPipeline
 
 app = FastAPI(title="My KYB API")
-pipe = ReviewPipeline()          # one pipeline for the whole app (shares the sanctions index and cache)
-API_TOKEN = "change-me"          # your own token, so only your apps can call this
+pipe = ReviewPipeline()  # one pipeline for the whole app (shares the sanctions index and cache)
+API_TOKEN = "change-me"  # your own token, so only your apps can call this
+
 
 @app.post("/review")
 async def review(application: dict, authorization: str = Header("")):
@@ -176,9 +180,11 @@ async def review(application: dict, authorization: str = Header("")):
     result = await pipe.review(application)
     return result.model_dump(mode="json")
 
+
 @app.get("/screen")
 async def screen(name: str, type: str = "person", birth_year: int | None = None):
     from kyb_tool_mcp.schemas.screening import ScreeningSubject
+
     return await pipe.screen(ScreeningSubject(name=name, type=type, birth_year=birth_year))
 ```
 
