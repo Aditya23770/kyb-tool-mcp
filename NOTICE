@@ -12,3 +12,6 @@ redistributed in this package except small reference tables listed below.
 - OpenSanctions data (optional, opt-in): CC BY-NC 4.0, non-commercial use only
   unless you hold a commercial licence from OpenSanctions.
 - data/sic_codes.csv: UK SIC 2007 condensed list, Companies House, OGL v3.0.
+
+Contains public sector information licensed under the Open Government Licence v3.0.
+https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/

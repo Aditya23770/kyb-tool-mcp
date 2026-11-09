@@ -227,3 +227,6 @@ UK data the tool was never tuned on.
 
 [Policy and flags](docs/policy.md) · [Data sources and licences](docs/providers.md) ·
 [Changelog](CHANGELOG.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [Apache-2.0](LICENSE)
+
+Contains public sector information licensed under the
+[Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
