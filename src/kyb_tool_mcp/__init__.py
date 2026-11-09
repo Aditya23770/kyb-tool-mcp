@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 if TYPE_CHECKING:
     from kyb_tool_mcp.schemas.decision import ReviewResult

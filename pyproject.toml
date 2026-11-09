@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "kyb-tool-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Open-source KYB (Know Your Business) screening and case-review engine, run locally as an MCP server."
 readme = "README.md"
 license = "Apache-2.0"
