@@ -41,6 +41,7 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
+          skip-existing: true  # the rc tag already uploaded this version
 
   pypi:
     # Release candidates (v0.1.0rc1) stop at TestPyPI.
