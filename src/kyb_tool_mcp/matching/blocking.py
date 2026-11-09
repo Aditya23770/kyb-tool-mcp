@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from collections.abc import Callable
 
+from rapidfuzz.distance import JaroWinkler
+
 from kyb_tool_mcp.config import ScreeningPolicy
 from kyb_tool_mcp.matching.features import _directional, _tok_sim, compute_features, name_similarity
 from kyb_tool_mcp.matching.index import SanctionsIndex, entity_name_tokens
@@ -51,6 +53,9 @@ def _company_aware_similarity(
         dsim["full_name_score"] = sim["name_score"]
         dsim["full_name_coverage"] = sim.get("coverage_both", 0.0)
         dsim["full_name_strong"] = sim.get("all_strong", 0.0)
+        if len(ds) == 1 and len(de) == 1:
+            # Plain spelling closeness for one-word names, no sound-alike boost (NALOW vs NALU = 0.85).
+            dsim["one_word_spelling"] = round(float(JaroWinkler.normalized_similarity(ds[0], de[0])), 3)
         # "al", "el", "de" ... are particles, not distinctive words
         dsim["distinctive_words"] = float(max(sum(len(t) > 2 for t in ds), sum(len(t) > 2 for t in de)))
         return dsim
