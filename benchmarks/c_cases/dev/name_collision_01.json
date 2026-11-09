@@ -1,0 +1,147 @@
+{
+  "case_id": "name_collision_01",
+  "type": "name_collision",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [
+    "ofac-40123"
+  ],
+  "application": {
+    "case_id": "name_collision_01",
+    "legal_name": "Silverline Juniper Works Limited",
+    "country": "GB",
+    "registration_number": "07764874",
+    "registered_address": "28 Mill Road, Leeds",
+    "postcode": "LS1 6DF",
+    "declared_industry": "advertising agency",
+    "website": "https://www.silverline-media.co.uk",
+    "directors": [
+      {
+        "name": "Ella Kwame Lloyd",
+        "birth_year": 1956,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mr Henry Begum",
+        "birth_year": 1987,
+        "birth_month": 3,
+        "nationality": "GB"
+      },
+      {
+        "name": "Aoife Isla Davis",
+        "birth_year": 1996,
+        "birth_month": 2,
+        "nationality": "GB"
+      },
+      {
+        "name": "Konstantin Sergeevich Mazurevskii",
+        "birth_year": 1964,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Ella Lloyd",
+        "birth_year": 1956,
+        "birth_month": 9,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Henry Begum",
+        "birth_year": 1987,
+        "birth_month": 3,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "07764874",
+        "name": "SILVERLINE JUNIPER WORKS LIMITED",
+        "status": "active",
+        "incorporated": "2009-04-13",
+        "address": {
+          "premises": "28",
+          "address_line_1": "Mill Road",
+          "locality": "Leeds",
+          "postal_code": "LS1 6DF"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "LLOYD, Ella Kwame",
+            "birth_year": 1956,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "BEGUM, Henry",
+            "birth_year": 1987,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "DAVIS, Aoife Isla",
+            "birth_year": 1996,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "KONSTANTIN SERGEEVICH MAZUREVSKII",
+            "birth_year": 1964,
+            "birth_month": 1,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Ella Lloyd",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1956,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Henry Begum",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1987,
+            "birth_month": 3,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.silverline-media.co.uk",
+        "html": "<html><head><title>Silverline Juniper Works</title></head><body><h1>Silverline Juniper Works</h1><p>Silverline Juniper Works. Creative advertising agency: campaigns, branding, media buying and social advertising. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2009-08-14"
+      }
+    ]
+  }
+}

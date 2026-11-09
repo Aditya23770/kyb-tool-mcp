@@ -1,6 +1,6 @@
 # kyb-tool-mcp decision policy. All thresholds live here, never in code.
 # Copy with `kyb-tool init` and point KYB_POLICY_FILE at your copy to tune.
-version: "2026.11-1"
+version: "2026.11-5"   # loop 5: no auto-confirm on near-spelled words (untouched OOD data)
 
 severity_points: {critical: 100, high: 40, medium: 15, low: 5}
 
@@ -28,12 +28,27 @@ screening:
     name_min: 92
     require_dob_match: true
     company_name_min: 95      # companies have no DOB; need a stronger name match
+    company_coverage_min: 0.97  # ...and every distinctive word on both sides must match
+    company_full_name_min: 90   # ...and the whole name, generic words included, must be close
+    company_full_coverage_min: 0.9  # ...with every word of the whole name matched on both sides
+    person_coverage_min: 0.97   # every name part on both sides must match to auto-confirm a person
+  company_review:            # companies cannot be cleared by DOB, so the name must carry the hit
+    name_min: 88
+    subject_coverage_gt: 0.5  # most of the applicant's distinctive words must be in the listed name
+    entity_coverage_min: 0.5  # at least half of the listed name must be present
+    short_match_full_name_min: 90  # acronym-only overlaps (ADF, A7) need a close full-name match
   false_positive:
     dob_year_diff_gt: 1
+    dob_conflict_keep_if_name_gte: 100  # lists disagree on DOBs: exact names never cleared on DOB alone
     nationality_conflict_name_below: 95
     schema_mismatch: true     # person vs company/vessel/aircraft
   weak_alias_name_min: 97     # OFAC "weak" / UN "low quality" aliases need near-exact names
   needs_review_escalates: true
+
+# Severity overrides (applied by the policy before deciding). A declared website that is down means the
+# business activity cannot be verified at onboarding, so it is escalated for review.
+flag_severity:
+  WEBSITE_UNREACHABLE: high
 
 website:
   parked_min_words: 200

@@ -1,0 +1,134 @@
+{
+  "case_id": "parked_website_02",
+  "type": "parked_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "PARKED_DOMAIN"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "parked_website_02",
+    "legal_name": "Redbridge Clearview Group Ltd",
+    "country": "GB",
+    "registration_number": "02181080",
+    "registered_address": "3 King Street, Cardiff",
+    "postcode": "CF10 7QD",
+    "declared_industry": "computer and electronics wholesale",
+    "website": "https://www.redbridge-electronics.co.uk",
+    "directors": [
+      {
+        "name": "Theo Niamh Webb",
+        "birth_year": 1983,
+        "birth_month": 4,
+        "nationality": "GB"
+      },
+      {
+        "name": "Jacob Clark",
+        "birth_year": 1993,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Hannah Noah Mensah",
+        "birth_year": 1954,
+        "birth_month": 9,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Theo Webb",
+        "birth_year": 1983,
+        "birth_month": 4,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Jacob Clark",
+        "birth_year": 1993,
+        "birth_month": 10,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "02181080",
+        "name": "REDBRIDGE CLEARVIEW GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2020-02-18",
+        "address": {
+          "premises": "3",
+          "address_line_1": "King Street",
+          "locality": "Cardiff",
+          "postal_code": "CF10 7QD"
+        },
+        "sic_codes": [
+          "46510"
+        ],
+        "officers": [
+          {
+            "name": "WEBB, Theo Niamh",
+            "birth_year": 1983,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "CLARK, Jacob",
+            "birth_year": 1993,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MENSAH, Hannah Noah",
+            "birth_year": 1954,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Theo Webb",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1983,
+            "birth_month": 4,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Jacob Clark",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1993,
+            "birth_month": 10,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.redbridge-electronics.co.uk",
+        "html": "<html><head><title>example domain</title></head><body><h1>This domain is for sale</h1><p>Buy this domain today. Related searches: loans, insurance.</p></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2026-10-15"
+      }
+    ]
+  }
+}

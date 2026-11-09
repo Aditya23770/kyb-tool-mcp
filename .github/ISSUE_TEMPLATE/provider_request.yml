@@ -1,0 +1,14 @@
+name: Provider request
+description: Add a registry, sanctions/PEP or website data source
+labels: [provider]
+body:
+  - type: input
+    id: source
+    attributes: { label: Data source, description: "Name and URL" }
+    validations: { required: true }
+  - type: dropdown
+    id: step
+    attributes: { label: Check, options: [registry, sanctions, pep, website] }
+  - type: textarea
+    id: licence
+    attributes: { label: Licence / access terms, description: "Free? Key needed? Commercial use allowed?" }

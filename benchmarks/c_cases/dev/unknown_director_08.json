@@ -1,0 +1,124 @@
+{
+  "case_id": "unknown_director_08",
+  "type": "unknown_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNKNOWN_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "unknown_director_08",
+    "legal_name": "Foxglove Arden Studio Ltd",
+    "country": "GB",
+    "registration_number": "04660332",
+    "registered_address": "197 Park Avenue, London",
+    "postcode": "EC2A 8YR",
+    "declared_industry": "dental practice",
+    "website": "https://www.foxglove-dental.co.uk",
+    "directors": [
+      {
+        "name": "Oscar Edwards",
+        "birth_year": 1981,
+        "birth_month": 1,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mohammed Patel",
+        "birth_year": 1957,
+        "birth_month": 5,
+        "nationality": "GB"
+      },
+      {
+        "name": "Charlotte Hall",
+        "birth_year": 1978
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Oscar Edwards",
+        "birth_year": 1981,
+        "birth_month": 1,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Mohammed Patel",
+        "birth_year": 1957,
+        "birth_month": 5,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "04660332",
+        "name": "FOXGLOVE ARDEN STUDIO LIMITED",
+        "status": "active",
+        "incorporated": "2004-12-24",
+        "address": {
+          "premises": "197",
+          "address_line_1": "Park Avenue",
+          "locality": "London",
+          "postal_code": "EC2A 8YR"
+        },
+        "sic_codes": [
+          "86230"
+        ],
+        "officers": [
+          {
+            "name": "EDWARDS, Oscar",
+            "birth_year": 1981,
+            "birth_month": 1,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "PATEL, Mohammed Jacob",
+            "birth_year": 1957,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Oscar Edwards",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1981,
+            "birth_month": 1,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Ms Mohammed Patel",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1957,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.foxglove-dental.co.uk",
+        "html": "<html><head><title>Foxglove Arden Studio</title></head><body><h1>Foxglove Arden Studio</h1><p>Foxglove Arden Studio. Friendly dental practice offering check-ups, hygienist appointments and dental implants. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2005-03-16"
+      }
+    ]
+  }
+}

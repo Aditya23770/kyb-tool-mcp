@@ -1,0 +1,118 @@
+{
+  "case_id": "clean_03",
+  "type": "clean",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [],
+  "application": {
+    "case_id": "clean_03",
+    "legal_name": "Kestrel Westbrook Holdings Ltd",
+    "country": "GB",
+    "registration_number": "02734420",
+    "registered_address": "203 Station Road, London",
+    "postcode": "EC2A 7LG",
+    "declared_industry": "dental practice",
+    "website": "https://www.kestrel-dental.co.uk",
+    "directors": [
+      {
+        "name": "Sarah George Gray",
+        "birth_year": 1990,
+        "birth_month": 4,
+        "nationality": "GB"
+      },
+      {
+        "name": "Alice Young",
+        "birth_year": 1956,
+        "birth_month": 5,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Sarah Gray",
+        "birth_year": 1990,
+        "birth_month": 4,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Alice Young",
+        "birth_year": 1956,
+        "birth_month": 5,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "02734420",
+        "name": "KESTREL WESTBROOK HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2021-10-07",
+        "address": {
+          "premises": "203",
+          "address_line_1": "Station Road",
+          "locality": "London",
+          "postal_code": "EC2A 7LG"
+        },
+        "sic_codes": [
+          "86230"
+        ],
+        "officers": [
+          {
+            "name": "GRAY, Sarah George",
+            "birth_year": 1990,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "YOUNG, Alice",
+            "birth_year": 1956,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Sarah Gray",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1990,
+            "birth_month": 4,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Alice Young",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1956,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.kestrel-dental.co.uk",
+        "html": "<html><head><title>Kestrel Westbrook Holdings</title></head><body><h1>Kestrel Westbrook Holdings</h1><p>Kestrel Westbrook Holdings. Friendly dental practice offering check-ups, hygienist appointments and dental implants. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2014-03-15"
+      }
+    ]
+  }
+}

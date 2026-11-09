@@ -1,0 +1,102 @@
+{
+  "case_id": "name_collision_04",
+  "type": "name_collision",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [
+    "ofac-56758"
+  ],
+  "application": {
+    "case_id": "name_collision_04",
+    "legal_name": "Silverline Kestrel Group Ltd",
+    "country": "GB",
+    "registration_number": "12374244",
+    "registered_address": "121 Victoria Street, Bristol",
+    "postcode": "BS1 1EX",
+    "declared_industry": "construction of commercial buildings",
+    "website": "https://www.silverline-build.co.uk",
+    "directors": [
+      {
+        "name": "Tomasz Bennett",
+        "birth_year": 1955,
+        "birth_month": 8,
+        "nationality": "GB"
+      },
+      {
+        "name": "Hamid Reza Khamer",
+        "birth_year": 1953,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Tomasz Bennett",
+        "birth_year": 1955,
+        "birth_month": 8,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "12374244",
+        "name": "SILVERLINE KESTREL GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2008-09-14",
+        "address": {
+          "premises": "121",
+          "address_line_1": "Victoria Street",
+          "locality": "Bristol",
+          "postal_code": "BS1 1EX"
+        },
+        "sic_codes": [
+          "41201"
+        ],
+        "officers": [
+          {
+            "name": "BENNETT, Tomasz Grace",
+            "birth_year": 1955,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "HAMID REZA KHAMER",
+            "birth_year": 1953,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Tomasz Bennett",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1955,
+            "birth_month": 8,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.silverline-build.co.uk",
+        "html": "<html><head><title>Silverline Kestrel Group</title></head><body><h1>Silverline Kestrel Group</h1><p>Silverline Kestrel Group. Commercial building contractor delivering offices, warehouses and construction projects. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2007-01-15"
+      }
+    ]
+  }
+}

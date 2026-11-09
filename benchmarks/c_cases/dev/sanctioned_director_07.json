@@ -1,0 +1,149 @@
+{
+  "case_id": "sanctioned_director_07",
+  "type": "sanctioned_director",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-54485"
+  ],
+  "application": {
+    "case_id": "sanctioned_director_07",
+    "legal_name": "Wren Copperleaf Trading Ltd",
+    "country": "GB",
+    "registration_number": "03060778",
+    "registered_address": "103 King Street, Norwich",
+    "postcode": "NR1 5WU",
+    "declared_industry": "licensed restaurant",
+    "website": "https://www.wren-kitchen.co.uk",
+    "directors": [
+      {
+        "name": "Helen Lily Scott",
+        "birth_year": 1993,
+        "birth_month": 3,
+        "nationality": "GB"
+      },
+      {
+        "name": "Siobhan Johnson",
+        "birth_year": 1983,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Callum Hill",
+        "birth_year": 1954,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Abdullah Ahsan Abdullah Dabbash",
+        "birth_year": 1978,
+        "birth_month": 1
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Helen Scott",
+        "birth_year": 1993,
+        "birth_month": 3,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Siobhan Johnson",
+        "birth_year": 1983,
+        "birth_month": 10,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "03060778",
+        "name": "WREN COPPERLEAF TRADING LIMITED",
+        "status": "active",
+        "incorporated": "2022-02-11",
+        "address": {
+          "premises": "103",
+          "address_line_1": "King Street",
+          "locality": "Norwich",
+          "postal_code": "NR1 5WU"
+        },
+        "sic_codes": [
+          "56101"
+        ],
+        "officers": [
+          {
+            "name": "SCOTT, Helen Lily",
+            "birth_year": 1993,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "JOHNSON, Siobhan Elsie",
+            "birth_year": 1983,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "HILL, Callum Isla",
+            "birth_year": 1954,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "ABDULLAH AHSAN ABDULLAH DABBASH",
+            "birth_year": 1978,
+            "birth_month": 1,
+            "nationality": "Unknown",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Helen Scott",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1993,
+            "birth_month": 3,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Siobhan Johnson",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1983,
+            "birth_month": 10,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.wren-kitchen.co.uk",
+        "html": "<html><head><title>Wren Copperleaf Trading</title></head><body><h1>Wren Copperleaf Trading</h1><p>Wren Copperleaf Trading. Our restaurant serves seasonal food, wine and craft beer. Book a table for lunch or dinner. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2013-08-15"
+      }
+    ]
+  }
+}

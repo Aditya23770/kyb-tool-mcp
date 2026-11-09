@@ -1,0 +1,117 @@
+{
+  "case_id": "parked_website_03",
+  "type": "parked_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "PARKED_DOMAIN"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "parked_website_03",
+    "legal_name": "Silverline Fairway Holdings Ltd",
+    "country": "GB",
+    "registration_number": "02261723",
+    "registered_address": "112 Market Place, Leeds",
+    "postcode": "LS1 7RZ",
+    "declared_industry": "construction of commercial buildings",
+    "website": "https://www.silverline-build.co.uk",
+    "directors": [
+      {
+        "name": "Olivia Khan",
+        "birth_year": 1985,
+        "birth_month": 2,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mr Edward Cook",
+        "birth_year": 1993,
+        "birth_month": 12,
+        "nationality": "GB"
+      },
+      {
+        "name": "Aisha Evans",
+        "birth_year": 1962,
+        "birth_month": 7,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Olivia Khan",
+        "birth_year": 1985,
+        "birth_month": 2,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "02261723",
+        "name": "SILVERLINE FAIRWAY HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2017-05-10",
+        "address": {
+          "premises": "112",
+          "address_line_1": "Market Place",
+          "locality": "Leeds",
+          "postal_code": "LS1 7RZ"
+        },
+        "sic_codes": [
+          "41201"
+        ],
+        "officers": [
+          {
+            "name": "KHAN, Olivia Joshua",
+            "birth_year": 1985,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "COOK, Edward",
+            "birth_year": 1993,
+            "birth_month": 12,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "EVANS, Aisha",
+            "birth_year": 1962,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Olivia Khan",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1985,
+            "birth_month": 2,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.silverline-build.co.uk",
+        "html": "<html><head><title>example domain</title></head><body><h1>This domain is for sale</h1><p>Buy this domain today. Related searches: loans, insurance.</p></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2026-10-15"
+      }
+    ]
+  }
+}

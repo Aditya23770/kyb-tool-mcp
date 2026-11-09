@@ -1,0 +1,125 @@
+{
+  "case_id": "undeclared_director_12",
+  "type": "undeclared_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNDECLARED_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "undeclared_director_12",
+    "legal_name": "Cedar Oakfield Holdings Ltd",
+    "country": "GB",
+    "registration_number": "12332531",
+    "registered_address": "209 High Street, Bristol",
+    "postcode": "BS1 1BP",
+    "declared_industry": "computer and electronics wholesale",
+    "website": "https://www.cedar-electronics.co.uk",
+    "directors": [
+      {
+        "name": "Claire Palmer",
+        "birth_year": 1964,
+        "birth_month": 6,
+        "nationality": "GB"
+      },
+      {
+        "name": "Noah Brown",
+        "birth_year": 1954,
+        "birth_month": 4,
+        "nationality": "GB"
+      },
+      {
+        "name": "Emily Palmer",
+        "birth_year": 1962,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Claire Palmer",
+        "birth_year": 1964,
+        "birth_month": 6,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "12332531",
+        "name": "CEDAR OAKFIELD HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2012-01-07",
+        "address": {
+          "premises": "209",
+          "address_line_1": "High Street",
+          "locality": "Bristol",
+          "postal_code": "BS1 1BP"
+        },
+        "sic_codes": [
+          "46510"
+        ],
+        "officers": [
+          {
+            "name": "PALMER, Claire",
+            "birth_year": 1964,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "BROWN, Noah Daisy",
+            "birth_year": 1954,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "PALMER, Emily Owen",
+            "birth_year": 1962,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "BAKER, Rebecca",
+            "birth_year": 1996,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Claire Palmer",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1964,
+            "birth_month": 6,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.cedar-electronics.co.uk",
+        "html": "<html><head><title>Cedar Oakfield Holdings</title></head><body><h1>Cedar Oakfield Holdings</h1><p>Cedar Oakfield Holdings. Wholesale supplier of computers, peripheral equipment and software to resellers. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2019-01-14"
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "case_id": "industry_mismatch_09",
+  "type": "industry_mismatch",
+  "expected": "ESCALATE",
+  "planted": [
+    "INDUSTRY_MISMATCH",
+    "SIC_INDUSTRY_MISMATCH"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "industry_mismatch_09",
+    "legal_name": "Saxon Calder Group Ltd",
+    "country": "GB",
+    "registration_number": "04039291",
+    "registered_address": "136 Mill Road, Leeds",
+    "postcode": "LS1 8GP",
+    "declared_industry": "construction of commercial buildings",
+    "website": "https://www.saxon-clothing.co.uk",
+    "directors": [
+      {
+        "name": "Evelyn Jackson",
+        "birth_year": 1969,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Sophie Ellis",
+        "birth_year": 1997,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Evelyn Jackson",
+        "birth_year": 1969,
+        "birth_month": 9,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "04039291",
+        "name": "SAXON CALDER GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2014-07-12",
+        "address": {
+          "premises": "136",
+          "address_line_1": "Mill Road",
+          "locality": "Leeds",
+          "postal_code": "LS1 8GP"
+        },
+        "sic_codes": [
+          "47710"
+        ],
+        "officers": [
+          {
+            "name": "JACKSON, Evelyn",
+            "birth_year": 1969,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "ELLIS, Sophie",
+            "birth_year": 1997,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Evelyn Jackson",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1969,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.saxon-clothing.co.uk",
+        "html": "<html><head><title>Blooms</title></head><body><h1>Blooms</h1><p>Fresh flowers, bouquets and wedding floristry delivered same day. Order roses and lilies online. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2021-09-13"
+      }
+    ]
+  }
+}

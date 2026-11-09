@@ -1,0 +1,117 @@
+{
+  "case_id": "parked_website_04",
+  "type": "parked_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "PARKED_DOMAIN"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "parked_website_04",
+    "legal_name": "Cobalt Northgate Holdings Ltd",
+    "country": "GB",
+    "registration_number": "15075362",
+    "registered_address": "118 Station Road, Cardiff",
+    "postcode": "CF10 1PR",
+    "declared_industry": "freight transport by road",
+    "website": "https://www.cobalt-freight.co.uk",
+    "directors": [
+      {
+        "name": "Edward Cooper",
+        "birth_year": 1965,
+        "birth_month": 8,
+        "nationality": "GB"
+      },
+      {
+        "name": "Fiona Bailey",
+        "birth_year": 1996,
+        "birth_month": 7,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mr Jack Miller",
+        "birth_year": 1987,
+        "birth_month": 2,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Edward Cooper",
+        "birth_year": 1965,
+        "birth_month": 8,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "15075362",
+        "name": "COBALT NORTHGATE HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2012-07-10",
+        "address": {
+          "premises": "118",
+          "address_line_1": "Station Road",
+          "locality": "Cardiff",
+          "postal_code": "CF10 1PR"
+        },
+        "sic_codes": [
+          "49410"
+        ],
+        "officers": [
+          {
+            "name": "COOPER, Edward",
+            "birth_year": 1965,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "BAILEY, Fiona Alfie",
+            "birth_year": 1996,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MILLER, Jack",
+            "birth_year": 1987,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Edward Cooper",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1965,
+            "birth_month": 8,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.cobalt-freight.co.uk",
+        "html": "<html><head><title>example domain</title></head><body><h1>This domain is for sale</h1><p>Buy this domain today. Related searches: loans, insurance.</p></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2026-10-15"
+      }
+    ]
+  }
+}

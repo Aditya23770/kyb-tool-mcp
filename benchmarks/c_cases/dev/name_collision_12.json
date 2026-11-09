@@ -1,0 +1,116 @@
+{
+  "case_id": "name_collision_12",
+  "type": "name_collision",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [
+    "ofac-40268"
+  ],
+  "application": {
+    "case_id": "name_collision_12",
+    "legal_name": "Pennine Juniper Works Ltd",
+    "country": "GB",
+    "registration_number": "4053337",
+    "registered_address": "122 High Street, Sheffield",
+    "postcode": "S1 9JY",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "pennine-accounts.co.uk",
+    "directors": [
+      {
+        "name": "Declan Murphy",
+        "birth_year": 1996,
+        "birth_month": 11,
+        "nationality": "GB"
+      },
+      {
+        "name": "Daisy Walker",
+        "birth_year": 1987,
+        "birth_month": 8,
+        "nationality": "GB"
+      },
+      {
+        "name": "Alexander Viktorovich Uss",
+        "birth_year": 1975,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Declan Murphy",
+        "birth_year": 1996,
+        "birth_month": 11,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "04053337",
+        "name": "PENNINE JUNIPER WORKS LIMITED",
+        "status": "active",
+        "incorporated": "2008-05-09",
+        "address": {
+          "premises": "122",
+          "address_line_1": "High Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 9JY"
+        },
+        "sic_codes": [
+          "69201"
+        ],
+        "officers": [
+          {
+            "name": "MURPHY, Declan",
+            "birth_year": 1996,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "WALKER, Daisy",
+            "birth_year": 1987,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "ALEXANDER VIKTOROVICH USS",
+            "birth_year": 1975,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Declan Murphy",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1996,
+            "birth_month": 11,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.pennine-accounts.co.uk",
+        "html": "<html><head><title>Pennine Juniper Works</title></head><body><h1>Pennine Juniper Works</h1><p>Pennine Juniper Works. Chartered accountants offering bookkeeping, payroll, tax returns and audit services. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2012-03-18"
+      }
+    ]
+  }
+}

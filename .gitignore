@@ -38,3 +38,12 @@ benchmarks/**/*.ftm.json
 .idea/
 .DS_Store
 Thumbs.db
+
+# benchmark caches
+benchmarks/.cache/
+benchmarks/a_matching/raw/
+
+# Personal / local-only
+.claude/commands/skills/
+# Benchmark D outputs contain real people (names, DOBs) from Companies House: never publish
+benchmarks/d_ood/*.json

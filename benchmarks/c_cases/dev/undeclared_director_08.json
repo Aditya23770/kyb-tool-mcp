@@ -1,0 +1,111 @@
+{
+  "case_id": "undeclared_director_08",
+  "type": "undeclared_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNDECLARED_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "undeclared_director_08",
+    "legal_name": "Redbridge Linden Studio Limited",
+    "country": "GB",
+    "registration_number": "12515524",
+    "registered_address": "94 High Street, Norwich",
+    "postcode": "NR1 8LG",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "https://www.redbridge-accounts.co.uk",
+    "directors": [
+      {
+        "name": "Logan Mensah",
+        "birth_year": 1995,
+        "birth_month": 7,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mr Priya Rogers",
+        "birth_year": 1992,
+        "birth_month": 11,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Logan Mensah",
+        "birth_year": 1995,
+        "birth_month": 7,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "12515524",
+        "name": "REDBRIDGE LINDEN STUDIO LIMITED",
+        "status": "active",
+        "incorporated": "2006-05-14",
+        "address": {
+          "premises": "94",
+          "address_line_1": "High Street",
+          "locality": "Norwich",
+          "postal_code": "NR1 8LG"
+        },
+        "sic_codes": [
+          "69201"
+        ],
+        "officers": [
+          {
+            "name": "MENSAH, Logan",
+            "birth_year": 1995,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "ROGERS, Priya",
+            "birth_year": 1992,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "CLARK, James Harrison",
+            "birth_year": 1984,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Logan Mensah",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1995,
+            "birth_month": 7,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.redbridge-accounts.co.uk",
+        "html": "<html><head><title>Redbridge Linden Studio</title></head><body><h1>Redbridge Linden Studio</h1><p>Redbridge Linden Studio. Chartered accountants offering bookkeeping, payroll, tax returns and audit services. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2018-03-19"
+      }
+    ]
+  }
+}

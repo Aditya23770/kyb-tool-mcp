@@ -167,6 +167,8 @@ class SanctionsIndex:
         self._n = max(int(self._meta.get("entities", 1)), 1)
         self._has_tri = bool(self._meta.get("trigram"))
         self._entity_cache: dict[str, ListEntity] = {}
+        self._idf_cache: dict[str, float] = {}
+        self.candidate_cache: dict[tuple[Any, ...], list[Any]] = {}
 
     @property
     def meta(self) -> dict[str, Any]:
@@ -180,9 +182,15 @@ class SanctionsIndex:
 
     # ---- statistics ------------------------------------------------------
     def idf(self, token: str) -> float:
+        cached = self._idf_cache.get(token)
+        if cached is not None:
+            return cached
         row = self.conn.execute("SELECT n FROM tokfreq WHERE token=?", (token,)).fetchone()
         n = row[0] if row else 0
-        return math.log((self._n + 1) / (n + 1))
+        value = math.log((self._n + 1) / (n + 1))
+        if len(self._idf_cache) < 200_000:
+            self._idf_cache[token] = value
+        return value
 
     def max_idf(self) -> float:
         return math.log(self._n + 1)

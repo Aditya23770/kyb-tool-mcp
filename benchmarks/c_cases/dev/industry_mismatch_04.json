@@ -1,0 +1,90 @@
+{
+  "case_id": "industry_mismatch_04",
+  "type": "industry_mismatch",
+  "expected": "ESCALATE",
+  "planted": [
+    "INDUSTRY_MISMATCH",
+    "SIC_INDUSTRY_MISMATCH"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "industry_mismatch_04",
+    "legal_name": "Lakeside Evergreen Group Ltd",
+    "country": "GB",
+    "registration_number": "5652480",
+    "registered_address": "92 Victoria Street, London",
+    "postcode": "EC2A 6TW",
+    "declared_industry": "construction of commercial buildings",
+    "website": "lakeside-home.co.uk",
+    "directors": [
+      {
+        "name": "Niamh Nowak",
+        "birth_year": 1990,
+        "birth_month": 5,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Niamh Nowak",
+        "birth_year": 1990,
+        "birth_month": 5,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "05652480",
+        "name": "LAKESIDE EVERGREEN GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2004-09-23",
+        "address": {
+          "premises": "92",
+          "address_line_1": "Victoria Street",
+          "locality": "London",
+          "postal_code": "EC2A 6TW"
+        },
+        "sic_codes": [
+          "47910"
+        ],
+        "officers": [
+          {
+            "name": "NOWAK, Niamh Sophie",
+            "birth_year": 1990,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Niamh Nowak",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1990,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.lakeside-home.co.uk",
+        "html": "<html><head><title>Blooms</title></head><body><h1>Blooms</h1><p>Fresh flowers, bouquets and wedding floristry delivered same day. Order roses and lilies online. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2007-07-11"
+      }
+    ]
+  }
+}

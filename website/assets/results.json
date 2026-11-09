@@ -1,0 +1,10 @@
+{
+  "policy_version": "2026.11-5",
+  "false_approvals": 0,
+  "accuracy": "100%",
+  "recall": "100%",
+  "alerts": "12.0",
+  "cross_list": "99.4%",
+  "co_no_alert": "92.9%",
+  "co_wrong": "0.04%"
+}

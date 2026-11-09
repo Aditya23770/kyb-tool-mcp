@@ -1,0 +1,117 @@
+{
+  "case_id": "parked_website_11",
+  "type": "parked_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "PARKED_DOMAIN"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "parked_website_11",
+    "legal_name": "Summit Clearview Trading Ltd",
+    "country": "GB",
+    "registration_number": "09575207",
+    "registered_address": "27 Church Lane, Birmingham",
+    "postcode": "B1 2TN",
+    "declared_industry": "online retail of homeware",
+    "website": "https://www.summit-home.co.uk",
+    "directors": [
+      {
+        "name": "Isla Olivia Ward",
+        "birth_year": 1985,
+        "birth_month": 7,
+        "nationality": "GB"
+      },
+      {
+        "name": "Tomasz Sarah Watson",
+        "birth_year": 1984,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Isaac Elsie Taylor",
+        "birth_year": 1980,
+        "birth_month": 3,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Isla Ward",
+        "birth_year": 1985,
+        "birth_month": 7,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "09575207",
+        "name": "SUMMIT CLEARVIEW TRADING LIMITED",
+        "status": "active",
+        "incorporated": "2021-07-08",
+        "address": {
+          "premises": "27",
+          "address_line_1": "Church Lane",
+          "locality": "Birmingham",
+          "postal_code": "B1 2TN"
+        },
+        "sic_codes": [
+          "47910"
+        ],
+        "officers": [
+          {
+            "name": "WARD, Isla Olivia",
+            "birth_year": 1985,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "WATSON, Tomasz Sarah",
+            "birth_year": 1984,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "TAYLOR, Isaac Elsie",
+            "birth_year": 1980,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Isla Ward",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1985,
+            "birth_month": 7,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.summit-home.co.uk",
+        "html": "<html><head><title>example domain</title></head><body><h1>This domain is for sale</h1><p>Buy this domain today. Related searches: loans, insurance.</p></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2026-10-15"
+      }
+    ]
+  }
+}

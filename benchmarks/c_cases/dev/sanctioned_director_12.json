@@ -1,0 +1,135 @@
+{
+  "case_id": "sanctioned_director_12",
+  "type": "sanctioned_director",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-22953"
+  ],
+  "application": {
+    "case_id": "sanctioned_director_12",
+    "legal_name": "Thornbury Hawthorn Solutions Ltd",
+    "country": "GB",
+    "registration_number": "07743713",
+    "registered_address": "145 High Street, Leeds",
+    "postcode": "LS1 9JD",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "https://www.thornbury-accounts.co.uk",
+    "directors": [
+      {
+        "name": "Joseph Kelly",
+        "birth_year": 1962,
+        "birth_month": 11,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mr Emma Knight",
+        "birth_year": 1956,
+        "birth_month": 1,
+        "nationality": "GB"
+      },
+      {
+        "name": "Hamid Firoozi",
+        "birth_year": 1981,
+        "birth_month": 8
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Joseph Kelly",
+        "birth_year": 1962,
+        "birth_month": 11,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Emma Knight",
+        "birth_year": 1956,
+        "birth_month": 1,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "07743713",
+        "name": "THORNBURY HAWTHORN SOLUTIONS LIMITED",
+        "status": "active",
+        "incorporated": "2009-09-26",
+        "address": {
+          "premises": "145",
+          "address_line_1": "High Street",
+          "locality": "Leeds",
+          "postal_code": "LS1 9JD"
+        },
+        "sic_codes": [
+          "69201"
+        ],
+        "officers": [
+          {
+            "name": "KELLY, Joseph",
+            "birth_year": 1962,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "KNIGHT, Emma",
+            "birth_year": 1956,
+            "birth_month": 1,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "HAMID FIROOZI",
+            "birth_year": 1981,
+            "birth_month": 8,
+            "nationality": "Unknown",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Joseph Kelly",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1962,
+            "birth_month": 11,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Emma Knight",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1956,
+            "birth_month": 1,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.thornbury-accounts.co.uk",
+        "html": "<html><head><title>Thornbury Hawthorn Solutions</title></head><body><h1>Thornbury Hawthorn Solutions</h1><p>Thornbury Hawthorn Solutions. Chartered accountants offering bookkeeping, payroll, tax returns and audit services. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2017-09-15"
+      }
+    ]
+  }
+}

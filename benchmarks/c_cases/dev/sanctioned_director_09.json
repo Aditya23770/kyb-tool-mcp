@@ -1,0 +1,149 @@
+{
+  "case_id": "sanctioned_director_09",
+  "type": "sanctioned_director",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-35581"
+  ],
+  "application": {
+    "case_id": "sanctioned_director_09",
+    "legal_name": "Arden Riverside Group Limited",
+    "country": "GB",
+    "registration_number": "06360755",
+    "registered_address": "93 Bridge Street, Glasgow",
+    "postcode": "G1 9YL",
+    "declared_industry": "online retail of homeware",
+    "website": "arden-home.co.uk",
+    "directors": [
+      {
+        "name": "Sophie Collins",
+        "birth_year": 1970,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Logan Rachel Hall",
+        "birth_year": 1959,
+        "birth_month": 2,
+        "nationality": "GB"
+      },
+      {
+        "name": "Priya Morris",
+        "birth_year": 1967,
+        "birth_month": 2,
+        "nationality": "GB"
+      },
+      {
+        "name": "Roman Mikhaylovich Vodyanov",
+        "birth_year": 1982,
+        "birth_month": 11
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Sophie Collins",
+        "birth_year": 1970,
+        "birth_month": 9,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Logan Hall",
+        "birth_year": 1959,
+        "birth_month": 2,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "06360755",
+        "name": "ARDEN RIVERSIDE GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2007-04-09",
+        "address": {
+          "premises": "93",
+          "address_line_1": "Bridge Street",
+          "locality": "Glasgow",
+          "postal_code": "G1 9YL"
+        },
+        "sic_codes": [
+          "47910"
+        ],
+        "officers": [
+          {
+            "name": "COLLINS, Sophie Joseph",
+            "birth_year": 1970,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "HALL, Logan Rachel",
+            "birth_year": 1959,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MORRIS, Priya",
+            "birth_year": 1967,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "ROMAN MIKHAYLOVICH VODYANOV",
+            "birth_year": 1982,
+            "birth_month": 11,
+            "nationality": "Unknown",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Sophie Collins",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1970,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Ms Logan Hall",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1959,
+            "birth_month": 2,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.arden-home.co.uk",
+        "html": "<html><head><title>Arden Riverside Group</title></head><body><h1>Arden Riverside Group</h1><p>Arden Riverside Group. Online store for homeware, kitchenware, cushions and furniture with free delivery. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2015-08-12"
+      }
+    ]
+  }
+}

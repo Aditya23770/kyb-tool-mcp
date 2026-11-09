@@ -1,0 +1,91 @@
+{
+  "case_id": "sanctioned_company_11",
+  "type": "sanctioned_company",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-26818"
+  ],
+  "application": {
+    "case_id": "sanctioned_company_11",
+    "legal_name": "Arvand Petrochemical Company Ltd",
+    "country": "GB",
+    "registration_number": "08688244",
+    "registered_address": "23 Mill Road, Sheffield",
+    "postcode": "S1 5NA",
+    "declared_industry": "construction of commercial buildings",
+    "website": "fairway-build.co.uk",
+    "directors": [
+      {
+        "name": "Owen Ali",
+        "birth_year": 1965,
+        "birth_month": 2,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Owen Ali",
+        "birth_year": 1965,
+        "birth_month": 2,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "08688244",
+        "name": "ARVAND PETROCHEMICAL COMPANY LIMITED",
+        "status": "active",
+        "incorporated": "2011-06-18",
+        "address": {
+          "premises": "23",
+          "address_line_1": "Mill Road",
+          "locality": "Sheffield",
+          "postal_code": "S1 5NA"
+        },
+        "sic_codes": [
+          "41201"
+        ],
+        "officers": [
+          {
+            "name": "ALI, Owen Florence",
+            "birth_year": 1965,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Owen Ali",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1965,
+            "birth_month": 2,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.fairway-build.co.uk",
+        "html": "<html><head><title>Fairway Willowmere Holdings</title></head><body><h1>Fairway Willowmere Holdings</h1><p>Fairway Willowmere Holdings. Commercial building contractor delivering offices, warehouses and construction projects. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2013-09-13"
+      }
+    ]
+  }
+}

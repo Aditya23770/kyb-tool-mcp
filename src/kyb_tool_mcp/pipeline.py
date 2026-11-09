@@ -26,7 +26,7 @@ from kyb_tool_mcp.config import Config, load_config
 from kyb_tool_mcp.evidence import EvidenceStore, validate_flags
 from kyb_tool_mcp.matching.index import IndexMissingError, SanctionsIndex
 from kyb_tool_mcp.note import analyst_note
-from kyb_tool_mcp.policy import decide, sort_flags
+from kyb_tool_mcp.policy import apply_severity_overrides, decide, sort_flags
 from kyb_tool_mcp.providers.base import ProviderContext, ProviderError, RegistryProvider
 from kyb_tool_mcp.providers.companies_house import CompaniesHouseProvider
 from kyb_tool_mcp.providers.gleif import GleifProvider
@@ -350,7 +350,9 @@ class ReviewPipeline:
         finally:
             await ctx.aclose()
 
-        flags, rejected = validate_flags(_dedupe(run.flags), run.store)
+        flags, rejected = validate_flags(
+            apply_severity_overrides(_dedupe(run.flags), self.config.policy), run.store
+        )
         if rejected:
             run.trace.append(
                 TraceStep(

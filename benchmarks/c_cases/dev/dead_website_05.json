@@ -1,0 +1,89 @@
+{
+  "case_id": "dead_website_05",
+  "type": "dead_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "WEBSITE_UNREACHABLE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dead_website_05",
+    "legal_name": "Linden Arden Holdings Ltd",
+    "country": "GB",
+    "registration_number": "08464144",
+    "registered_address": "30 Church Lane, Norwich",
+    "postcode": "NR1 5BT",
+    "declared_industry": "dental practice",
+    "website": "linden-dental.co.uk",
+    "directors": [
+      {
+        "name": "Ivy Baker",
+        "birth_year": 1963,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Ivy Baker",
+        "birth_year": 1963,
+        "birth_month": 8,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "08464144",
+        "name": "LINDEN ARDEN HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2018-04-20",
+        "address": {
+          "premises": "30",
+          "address_line_1": "Church Lane",
+          "locality": "Norwich",
+          "postal_code": "NR1 5BT"
+        },
+        "sic_codes": [
+          "86230"
+        ],
+        "officers": [
+          {
+            "name": "BAKER, Ivy",
+            "birth_year": 1963,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Ivy Baker",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1963,
+            "birth_month": 8,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.linden-dental.co.uk",
+        "html": "<html><head><title>Linden Arden Holdings</title></head><body><h1>Linden Arden Holdings</h1><p>Linden Arden Holdings. Friendly dental practice offering check-ups, hygienist appointments and dental implants. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 410,
+        "unreachable": false,
+        "domain_registered": "2008-02-17"
+      }
+    ]
+  }
+}

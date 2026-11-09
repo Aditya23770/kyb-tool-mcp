@@ -63,8 +63,21 @@ def sic_descriptions() -> dict[str, str]:
     return {r[0].strip(): r[1].strip() for r in rows if len(r) >= 2}
 
 
+# Words found on almost every website regardless of industry ("my account", "order support"...).
+WEB_GENERIC = frozenset(
+    """account accounts support contact order orders delivery customer customers office hours information
+    details team terms privacy policy cookies quote quotes help login log sign home page about news blog
+    email phone call today free best quality professional""".split()
+)
+
+
 def keywords(text: str) -> list[str]:
     return [t for t in fold(text).split() if t not in STOPWORDS and len(t) > 2]
+
+
+def industry_keywords(text: str) -> list[str]:
+    """Keywords for industry comparisons: generic website vocabulary removed."""
+    return [t for t in keywords(text) if t not in WEB_GENERIC]
 
 
 def stem(token: str) -> str:
@@ -73,7 +86,7 @@ def stem(token: str) -> str:
 
 def industry_similarity(declared: str, description: str) -> float:
     """0-100 similarity between a declared industry and a SIC / website description."""
-    a, b = keywords(declared), keywords(description)
+    a, b = industry_keywords(declared), industry_keywords(description)
     if not a or not b:
         return 0.0
     sa, sb = {stem(t) for t in a}, {stem(t) for t in b}

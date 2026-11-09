@@ -1,0 +1,104 @@
+{
+  "case_id": "sanctioned_director_03",
+  "type": "sanctioned_director",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-9993"
+  ],
+  "application": {
+    "case_id": "sanctioned_director_03",
+    "legal_name": "Redbridge Severn Studio Limited",
+    "country": "GB",
+    "registration_number": "06848771",
+    "registered_address": "73 Park Avenue, Cardiff",
+    "postcode": "CF10 8BF",
+    "declared_industry": "freight transport by road",
+    "website": "https://www.redbridge-freight.co.uk",
+    "directors": [
+      {
+        "name": "Kwame Henry Johnson",
+        "birth_year": 1963,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Yolanda Sofia Cano Alzate",
+        "birth_year": 1957,
+        "birth_month": 4
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Kwame Johnson",
+        "birth_year": 1963,
+        "birth_month": 9,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "06848771",
+        "name": "REDBRIDGE SEVERN STUDIO LIMITED",
+        "status": "active",
+        "incorporated": "2007-10-17",
+        "address": {
+          "premises": "73",
+          "address_line_1": "Park Avenue",
+          "locality": "Cardiff",
+          "postal_code": "CF10 8BF"
+        },
+        "sic_codes": [
+          "49410"
+        ],
+        "officers": [
+          {
+            "name": "JOHNSON, Kwame Henry",
+            "birth_year": 1963,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "YOLANDA SOFIA CANO ALZATE",
+            "birth_year": 1957,
+            "birth_month": 4,
+            "nationality": "Unknown",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Kwame Johnson",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1963,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.redbridge-freight.co.uk",
+        "html": "<html><head><title>Redbridge Severn Studio</title></head><body><h1>Redbridge Severn Studio</h1><p>Redbridge Severn Studio. Road haulage and freight transport across the UK with a modern fleet of lorries. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2021-04-18"
+      }
+    ]
+  }
+}

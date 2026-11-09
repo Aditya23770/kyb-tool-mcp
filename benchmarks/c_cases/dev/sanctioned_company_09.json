@@ -1,0 +1,105 @@
+{
+  "case_id": "sanctioned_company_09",
+  "type": "sanctioned_company",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-51968"
+  ],
+  "application": {
+    "case_id": "sanctioned_company_09",
+    "legal_name": "Limited Liability Company Gazpromneft Angara Ltd",
+    "country": "GB",
+    "registration_number": "8369937",
+    "registered_address": "176 Queen Street, Sheffield",
+    "postcode": "S1 4QZ",
+    "declared_industry": "licensed restaurant",
+    "website": "westbrook-kitchen.co.uk",
+    "directors": [
+      {
+        "name": "Gareth Bennett",
+        "birth_year": 1971,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Joseph Price",
+        "birth_year": 1974,
+        "birth_month": 12,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Gareth Bennett",
+        "birth_year": 1971,
+        "birth_month": 9,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "08369937",
+        "name": "LIMITED LIABILITY COMPANY GAZPROMNEFT ANGARA LIMITED",
+        "status": "active",
+        "incorporated": "2004-02-21",
+        "address": {
+          "premises": "176",
+          "address_line_1": "Queen Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 4QZ"
+        },
+        "sic_codes": [
+          "56101"
+        ],
+        "officers": [
+          {
+            "name": "BENNETT, Gareth",
+            "birth_year": 1971,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "PRICE, Joseph",
+            "birth_year": 1974,
+            "birth_month": 12,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Gareth Bennett",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1971,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.westbrook-kitchen.co.uk",
+        "html": "<html><head><title>Westbrook Copperleaf Works</title></head><body><h1>Westbrook Copperleaf Works</h1><p>Westbrook Copperleaf Works. Our restaurant serves seasonal food, wine and craft beer. Book a table for lunch or dinner. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2021-08-13"
+      }
+    ]
+  }
+}

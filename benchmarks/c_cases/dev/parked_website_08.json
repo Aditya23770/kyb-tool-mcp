@@ -1,0 +1,117 @@
+{
+  "case_id": "parked_website_08",
+  "type": "parked_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "PARKED_DOMAIN"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "parked_website_08",
+    "legal_name": "Arden Willowmere Studio Ltd",
+    "country": "GB",
+    "registration_number": "14235187",
+    "registered_address": "15 Station Road, Glasgow",
+    "postcode": "G1 4PH",
+    "declared_industry": "business software development",
+    "website": "arden-software.co.uk",
+    "directors": [
+      {
+        "name": "Fiona Cook",
+        "birth_year": 1996,
+        "birth_month": 8,
+        "nationality": "GB"
+      },
+      {
+        "name": "Daniel Chowdhury",
+        "birth_year": 1993,
+        "birth_month": 11,
+        "nationality": "GB"
+      },
+      {
+        "name": "Harrison Alice Simpson",
+        "birth_year": 1991,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Fiona Cook",
+        "birth_year": 1996,
+        "birth_month": 8,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "14235187",
+        "name": "ARDEN WILLOWMERE STUDIO LIMITED",
+        "status": "active",
+        "incorporated": "2012-06-11",
+        "address": {
+          "premises": "15",
+          "address_line_1": "Station Road",
+          "locality": "Glasgow",
+          "postal_code": "G1 4PH"
+        },
+        "sic_codes": [
+          "62012"
+        ],
+        "officers": [
+          {
+            "name": "COOK, Fiona",
+            "birth_year": 1996,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "CHOWDHURY, Daniel",
+            "birth_year": 1993,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "SIMPSON, Harrison Alice",
+            "birth_year": 1991,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Fiona Cook",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1996,
+            "birth_month": 8,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.arden-software.co.uk",
+        "html": "<html><head><title>example domain</title></head><body><h1>This domain is for sale</h1><p>Buy this domain today. Related searches: loans, insurance.</p></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2026-10-15"
+      }
+    ]
+  }
+}

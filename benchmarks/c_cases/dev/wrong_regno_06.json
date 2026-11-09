@@ -1,0 +1,89 @@
+{
+  "case_id": "wrong_regno_06",
+  "type": "wrong_regno",
+  "expected": "ESCALATE",
+  "planted": [
+    "NAME_MISMATCH|REGISTRY_NOT_FOUND"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "wrong_regno_06",
+    "legal_name": "Juniper Cedar Group Ltd",
+    "country": "GB",
+    "registration_number": "02226925",
+    "registered_address": "189 Park Avenue, Glasgow",
+    "postcode": "G1 3QL",
+    "declared_industry": "online retail of homeware",
+    "website": "https://www.juniper-home.co.uk",
+    "directors": [
+      {
+        "name": "Mr Declan Clarke",
+        "birth_year": 1954,
+        "birth_month": 6,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Declan Clarke",
+        "birth_year": 1954,
+        "birth_month": 6,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "07053457",
+        "name": "JUNIPER CEDAR GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2009-07-01",
+        "address": {
+          "premises": "189",
+          "address_line_1": "Park Avenue",
+          "locality": "Glasgow",
+          "postal_code": "G1 3QL"
+        },
+        "sic_codes": [
+          "47910"
+        ],
+        "officers": [
+          {
+            "name": "CLARKE, Declan",
+            "birth_year": 1954,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Declan Clarke",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1954,
+            "birth_month": 6,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.juniper-home.co.uk",
+        "html": "<html><head><title>Juniper Cedar Group</title></head><body><h1>Juniper Cedar Group</h1><p>Juniper Cedar Group. Online store for homeware, kitchenware, cushions and furniture with free delivery. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2006-05-12"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "case_id": "sanctioned_company_01",
+  "type": "sanctioned_company",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-10862"
+  ],
+  "application": {
+    "case_id": "sanctioned_company_01",
+    "legal_name": "Ammunition And Metallurgy Industries Group Ltd",
+    "country": "GB",
+    "registration_number": "01000867",
+    "registered_address": "203 Victoria Street, Bristol",
+    "postcode": "BS1 9JA",
+    "declared_industry": "advertising agency",
+    "website": "https://www.wren-media.co.uk",
+    "directors": [
+      {
+        "name": "Mr Owen James",
+        "birth_year": 1983,
+        "birth_month": 5,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Owen James",
+        "birth_year": 1983,
+        "birth_month": 5,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "01000867",
+        "name": "AMMUNITION AND METALLURGY INDUSTRIES GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2011-12-01",
+        "address": {
+          "premises": "203",
+          "address_line_1": "Victoria Street",
+          "locality": "Bristol",
+          "postal_code": "BS1 9JA"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "JAMES, Owen",
+            "birth_year": 1983,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Owen James",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1983,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.wren-media.co.uk",
+        "html": "<html><head><title>Wren Pennine Trading</title></head><body><h1>Wren Pennine Trading</h1><p>Wren Pennine Trading. Creative advertising agency: campaigns, branding, media buying and social advertising. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2018-05-14"
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "case_id": "unknown_director_01",
+  "type": "unknown_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNKNOWN_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "unknown_director_01",
+    "legal_name": "Copperleaf Riverside Services Limited",
+    "country": "GB",
+    "registration_number": "5778347",
+    "registered_address": "177 King Street, Sheffield",
+    "postcode": "S1 4PN",
+    "declared_industry": "licensed restaurant",
+    "website": "https://www.copperleaf-kitchen.co.uk",
+    "directors": [
+      {
+        "name": "Kwame Griffiths",
+        "birth_year": 1958,
+        "birth_month": 1,
+        "nationality": "GB"
+      },
+      {
+        "name": "Alexander Patel",
+        "birth_year": 1958
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Kwame Griffiths",
+        "birth_year": 1958,
+        "birth_month": 1,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "05778347",
+        "name": "COPPERLEAF RIVERSIDE SERVICES LIMITED",
+        "status": "active",
+        "incorporated": "2012-11-21",
+        "address": {
+          "premises": "177",
+          "address_line_1": "King Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 4PN"
+        },
+        "sic_codes": [
+          "56101"
+        ],
+        "officers": [
+          {
+            "name": "GRIFFITHS, Kwame",
+            "birth_year": 1958,
+            "birth_month": 1,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Kwame Griffiths",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1958,
+            "birth_month": 1,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.copperleaf-kitchen.co.uk",
+        "html": "<html><head><title>Copperleaf Riverside Services</title></head><body><h1>Copperleaf Riverside Services</h1><p>Copperleaf Riverside Services. Our restaurant serves seasonal food, wine and craft beer. Book a table for lunch or dinner. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2010-08-14"
+      }
+    ]
+  }
+}

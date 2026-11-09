@@ -32,7 +32,22 @@ class LocalIndexScreeningProvider:
     async def screen(self, subject: ScreeningSubject) -> Evidence[list[Candidate]]:
         def run() -> list[Candidate]:
             with self.index.lock:  # one SQLite connection; serialise queries across threads
-                return generate_candidates(self.index, subject, self.policy, {self.name})
+                key = (
+                    subject.name,
+                    subject.type,
+                    subject.birth_year,
+                    subject.birth_month,
+                    subject.nationality,
+                    id(self.policy),
+                )
+                all_sources = self.index.candidate_cache.get(key)
+                if all_sources is None:
+                    # Scoring does not depend on the list, so one pass serves every configured list.
+                    all_sources = generate_candidates(self.index, subject, self.policy, None)
+                    if len(self.index.candidate_cache) > 4096:
+                        self.index.candidate_cache.clear()
+                    self.index.candidate_cache[key] = all_sources
+                return [c for c in all_sources if c.entity.source == self.name]
 
         cands = await asyncio.to_thread(run)
         request = subject.model_dump(mode="json", exclude_none=True)

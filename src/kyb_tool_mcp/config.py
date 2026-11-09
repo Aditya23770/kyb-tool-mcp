@@ -12,6 +12,7 @@ from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from kyb_tool_mcp import __version__
+from kyb_tool_mcp.schemas.decision import Severity
 
 DATA_PACKAGE = "kyb_tool_mcp.data"
 
@@ -87,10 +88,22 @@ class TrueMatchPolicy(BaseModel):
     name_min: float = 92
     require_dob_match: bool = True
     company_name_min: float = 95
+    company_coverage_min: float = 0.97  # every distinctive word on BOTH sides must match to confirm
+    company_full_name_min: float = 90  # ...and the WHOLE name (generic words included) must be close
+    company_full_coverage_min: float = 0.9  # ...with every word of the whole name matched on both sides
+    person_coverage_min: float = 0.97  # every name part on both sides must match to confirm a person
+
+
+class CompanyReviewPolicy(BaseModel):
+    name_min: float = 88  # companies have no DOB to clear them; below this similarity they are cleared
+    subject_coverage_gt: float = 0.5  # most of the applicant's distinctive words must be in the listed name
+    entity_coverage_min: float = 0.5  # at least half of the listed name must be present
+    short_match_full_name_min: float = 90  # acronym-only overlaps (ADF, A7) need a close full-name match
 
 
 class FalsePositivePolicy(BaseModel):
     dob_year_diff_gt: int = 1
+    dob_conflict_keep_if_name_gte: float = 100  # exact names are never cleared on DOB alone
     nationality_conflict_name_below: float = 95
     schema_mismatch: bool = True
 
@@ -100,6 +113,7 @@ class ScreeningPolicy(BaseModel):
     max_candidates: int = 200
     true_match: TrueMatchPolicy = Field(default_factory=TrueMatchPolicy)
     false_positive: FalsePositivePolicy = Field(default_factory=FalsePositivePolicy)
+    company_review: CompanyReviewPolicy = Field(default_factory=CompanyReviewPolicy)
     weak_alias_name_min: float = 97
     needs_review_escalates: bool = True
     llm_explain_needs_review: bool = True
@@ -125,6 +139,8 @@ class Policy(BaseModel):
     registry: RegistryPolicy = Field(default_factory=RegistryPolicy)
     screening: ScreeningPolicy = Field(default_factory=ScreeningPolicy)
     website: WebsitePolicy = Field(default_factory=WebsitePolicy)
+    # Per-flag severity overrides, applied by the policy before deciding (e.g. WEBSITE_UNREACHABLE: high).
+    flag_severity: dict[str, Severity] = Field(default_factory=dict)
 
 
 def _load_yaml(text: str) -> dict[str, Any]:

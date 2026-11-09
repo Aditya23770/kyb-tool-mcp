@@ -1,0 +1,105 @@
+{
+  "case_id": "sanctioned_company_12",
+  "type": "sanctioned_company",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-49697"
+  ],
+  "application": {
+    "case_id": "sanctioned_company_12",
+    "legal_name": "Atvantic Goods Wholesalers L.L.C Ltd",
+    "country": "GB",
+    "registration_number": "11238310",
+    "registered_address": "201 Church Lane, Leeds",
+    "postcode": "LS1 1WP",
+    "declared_industry": "dental practice",
+    "website": "https://www.highland-dental.co.uk",
+    "directors": [
+      {
+        "name": "Freya Harvey",
+        "birth_year": 1986,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Anjali Jack Jenkins",
+        "birth_year": 1963,
+        "birth_month": 2,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Freya Harvey",
+        "birth_year": 1986,
+        "birth_month": 9,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "11238310",
+        "name": "ATVANTIC GOODS WHOLESALERS L.L.C LIMITED",
+        "status": "active",
+        "incorporated": "2013-08-18",
+        "address": {
+          "premises": "201",
+          "address_line_1": "Church Lane",
+          "locality": "Leeds",
+          "postal_code": "LS1 1WP"
+        },
+        "sic_codes": [
+          "86230"
+        ],
+        "officers": [
+          {
+            "name": "HARVEY, Freya",
+            "birth_year": 1986,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "JENKINS, Anjali Jack",
+            "birth_year": 1963,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Freya Harvey",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1986,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.highland-dental.co.uk",
+        "html": "<html><head><title>Highland Wren Partners</title></head><body><h1>Highland Wren Partners</h1><p>Highland Wren Partners. Friendly dental practice offering check-ups, hygienist appointments and dental implants. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2006-06-14"
+      }
+    ]
+  }
+}

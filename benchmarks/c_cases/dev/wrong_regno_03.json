@@ -1,0 +1,149 @@
+{
+  "case_id": "wrong_regno_03",
+  "type": "wrong_regno",
+  "expected": "ESCALATE",
+  "planted": [
+    "NAME_MISMATCH|REGISTRY_NOT_FOUND"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "wrong_regno_03",
+    "legal_name": "Beacon Orchard Services Limited",
+    "country": "GB",
+    "registration_number": "05576298",
+    "registered_address": "140 Victoria Street, Bristol",
+    "postcode": "BS1 3FX",
+    "declared_industry": "online retail of homeware",
+    "website": "beacon-home.co.uk",
+    "directors": [
+      {
+        "name": "Claire Shaw",
+        "birth_year": 1992,
+        "birth_month": 9,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Claire Shaw",
+        "birth_year": 1992,
+        "birth_month": 9,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "01331858",
+        "name": "BEACON ORCHARD SERVICES LIMITED",
+        "status": "active",
+        "incorporated": "2010-09-21",
+        "address": {
+          "premises": "140",
+          "address_line_1": "Victoria Street",
+          "locality": "Bristol",
+          "postal_code": "BS1 3FX"
+        },
+        "sic_codes": [
+          "47910"
+        ],
+        "officers": [
+          {
+            "name": "SHAW, Claire Ava",
+            "birth_year": 1992,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Claire Shaw",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1992,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      },
+      {
+        "number": "05576298",
+        "name": "HAWTHORN CLEARVIEW PARTNERS LIMITED",
+        "status": "active",
+        "incorporated": "2012-04-14",
+        "address": {
+          "premises": "137",
+          "address_line_1": "Park Avenue",
+          "locality": "Sheffield",
+          "postal_code": "S1 9GD"
+        },
+        "sic_codes": [
+          "49410"
+        ],
+        "officers": [
+          {
+            "name": "BARKER, Freddie Callum",
+            "birth_year": 1988,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "THOMAS, Harry Alfie",
+            "birth_year": 1967,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Freddie Barker",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1988,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Harry Thomas",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1967,
+            "birth_month": 11,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.beacon-home.co.uk",
+        "html": "<html><head><title>Beacon Orchard Services</title></head><body><h1>Beacon Orchard Services</h1><p>Beacon Orchard Services. Online store for homeware, kitchenware, cushions and furniture with free delivery. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2017-07-11"
+      }
+    ]
+  }
+}

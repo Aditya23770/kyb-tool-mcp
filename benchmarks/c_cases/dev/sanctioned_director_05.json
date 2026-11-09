@@ -1,0 +1,149 @@
+{
+  "case_id": "sanctioned_director_05",
+  "type": "sanctioned_director",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-8598"
+  ],
+  "application": {
+    "case_id": "sanctioned_director_05",
+    "legal_name": "Severn Pennine Holdings Ltd",
+    "country": "GB",
+    "registration_number": "04255718",
+    "registered_address": "57 Victoria Street, Sheffield",
+    "postcode": "S1 6QD",
+    "declared_industry": "retail sale of clothing",
+    "website": "severn-clothing.co.uk",
+    "directors": [
+      {
+        "name": "Max Clarke",
+        "birth_year": 1974,
+        "birth_month": 5,
+        "nationality": "GB"
+      },
+      {
+        "name": "Joshua Roberts",
+        "birth_year": 1993,
+        "birth_month": 11,
+        "nationality": "GB"
+      },
+      {
+        "name": "Fiona Harvey",
+        "birth_year": 1997,
+        "birth_month": 12,
+        "nationality": "GB"
+      },
+      {
+        "name": "Ibrahim Buisir",
+        "birth_year": 1962,
+        "birth_month": null
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Max Clarke",
+        "birth_year": 1974,
+        "birth_month": 5,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Joshua Roberts",
+        "birth_year": 1993,
+        "birth_month": 11,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "04255718",
+        "name": "SEVERN PENNINE HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2023-02-14",
+        "address": {
+          "premises": "57",
+          "address_line_1": "Victoria Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 6QD"
+        },
+        "sic_codes": [
+          "47710"
+        ],
+        "officers": [
+          {
+            "name": "CLARKE, Max",
+            "birth_year": 1974,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "ROBERTS, Joshua Rhys",
+            "birth_year": 1993,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "HARVEY, Fiona Chidi",
+            "birth_year": 1997,
+            "birth_month": 12,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "IBRAHIM BUISIR",
+            "birth_year": 1962,
+            "birth_month": null,
+            "nationality": "Unknown",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Max Clarke",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1974,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Ms Joshua Roberts",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1993,
+            "birth_month": 11,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.severn-clothing.co.uk",
+        "html": "<html><head><title>Severn Pennine Holdings</title></head><body><h1>Severn Pennine Holdings</h1><p>Severn Pennine Holdings. Shop our clothing collection: dresses, coats, knitwear and accessories delivered UK-wide. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2013-08-12"
+      }
+    ]
+  }
+}

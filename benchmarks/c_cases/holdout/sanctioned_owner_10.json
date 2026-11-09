@@ -1,0 +1,153 @@
+{
+  "case_id": "sanctioned_owner_10",
+  "type": "sanctioned_owner",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-36781"
+  ],
+  "application": {
+    "case_id": "sanctioned_owner_10",
+    "legal_name": "Stonegate Arden Solutions Ltd",
+    "country": "GB",
+    "registration_number": "14956368",
+    "registered_address": "133 Station Road, Bristol",
+    "postcode": "BS1 3TR",
+    "declared_industry": "computer and electronics wholesale",
+    "website": "stonegate-electronics.co.uk",
+    "directors": [
+      {
+        "name": "Alfie Rhys Smith",
+        "birth_year": 1951,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mr Phoebe Mills",
+        "birth_year": 1968,
+        "birth_month": 6,
+        "nationality": "GB"
+      },
+      {
+        "name": "Chidi Stevens",
+        "birth_year": 1982,
+        "birth_month": 6,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Alfie Smith",
+        "birth_year": 1951,
+        "birth_month": 10,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Phoebe Mills",
+        "birth_year": 1968,
+        "birth_month": 6,
+        "ownership_pct": 40.0
+      },
+      {
+        "name": "Olga Nikolayevna Epifanova",
+        "birth_year": 1966,
+        "birth_month": 8,
+        "ownership_pct": 30
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "14956368",
+        "name": "STONEGATE ARDEN SOLUTIONS LIMITED",
+        "status": "active",
+        "incorporated": "2012-11-14",
+        "address": {
+          "premises": "133",
+          "address_line_1": "Station Road",
+          "locality": "Bristol",
+          "postal_code": "BS1 3TR"
+        },
+        "sic_codes": [
+          "46510"
+        ],
+        "officers": [
+          {
+            "name": "SMITH, Alfie Rhys",
+            "birth_year": 1951,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MILLS, Phoebe",
+            "birth_year": 1968,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "STEVENS, Chidi",
+            "birth_year": 1982,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Alfie Smith",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1951,
+            "birth_month": 10,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Ms Phoebe Mills",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1968,
+            "birth_month": 6,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Olga Nikolayevna EPIFANOVA",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1966,
+            "birth_month": 8,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.stonegate-electronics.co.uk",
+        "html": "<html><head><title>Stonegate Arden Solutions</title></head><body><h1>Stonegate Arden Solutions</h1><p>Stonegate Arden Solutions. Wholesale supplier of computers, peripheral equipment and software to resellers. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2010-04-11"
+      }
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "case_id": "sanctioned_owner_12",
+  "type": "sanctioned_owner",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-22262"
+  ],
+  "application": {
+    "case_id": "sanctioned_owner_12",
+    "legal_name": "Lakeside Pennine Partners Ltd",
+    "country": "GB",
+    "registration_number": "9640061",
+    "registered_address": "183 Bridge Street, Cardiff",
+    "postcode": "CF10 2NT",
+    "declared_industry": "computer and electronics wholesale",
+    "website": "https://www.lakeside-electronics.co.uk",
+    "directors": [
+      {
+        "name": "Hannah Webb",
+        "birth_year": 1985,
+        "birth_month": 12,
+        "nationality": "GB"
+      },
+      {
+        "name": "Sophia Fraser Murray",
+        "birth_year": 1957,
+        "birth_month": 12,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Hannah Webb",
+        "birth_year": 1985,
+        "birth_month": 12,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Sophia Murray",
+        "birth_year": 1957,
+        "birth_month": 12,
+        "ownership_pct": 40.0
+      },
+      {
+        "name": "Mohammad Hassan ABBAS",
+        "birth_year": 1964,
+        "birth_month": 9,
+        "ownership_pct": 30
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "09640061",
+        "name": "LAKESIDE PENNINE PARTNERS LIMITED",
+        "status": "active",
+        "incorporated": "2016-03-20",
+        "address": {
+          "premises": "183",
+          "address_line_1": "Bridge Street",
+          "locality": "Cardiff",
+          "postal_code": "CF10 2NT"
+        },
+        "sic_codes": [
+          "46510"
+        ],
+        "officers": [
+          {
+            "name": "WEBB, Hannah",
+            "birth_year": 1985,
+            "birth_month": 12,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MURRAY, Sophia Fraser",
+            "birth_year": 1957,
+            "birth_month": 12,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Hannah Webb",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1985,
+            "birth_month": 12,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Sophia Murray",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1957,
+            "birth_month": 12,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Muhammad ABBAS",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1964,
+            "birth_month": 9,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.lakeside-electronics.co.uk",
+        "html": "<html><head><title>Lakeside Pennine Partners</title></head><body><h1>Lakeside Pennine Partners</h1><p>Lakeside Pennine Partners. Wholesale supplier of computers, peripheral equipment and software to resellers. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2005-03-10"
+      }
+    ]
+  }
+}

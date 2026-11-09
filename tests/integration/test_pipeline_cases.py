@@ -307,3 +307,50 @@ async def test_company_screened_against_entities(make_pipeline: Any) -> None:
     }
     r = await review(make_pipeline, w, app)
     assert r.decision == "REJECT" and "SANCTIONS_MATCH" in codes(r)
+
+
+# ---- improvement-loop iteration 1 regressions ---------------------------------------------------
+
+
+async def test_loop1_different_postcode_escalates(make_pipeline: Any) -> None:
+    app = clean_application()
+    app["registered_address"] = "88 Market Place, Leeds"
+    app["postcode"] = "LS1 4AA"
+    r = await review(make_pipeline, clean_world(), app)
+    assert "ADDRESS_MISMATCH" in codes(r) and r.decision == "ESCALATE"
+
+
+async def test_loop1_address_formatting_difference_is_not_escalated(make_pipeline: Any) -> None:
+    app = clean_application()
+    app["registered_address"] = "Unit 12, Canal St, Manchester, England"  # same place, same postcode
+    r = await review(make_pipeline, clean_world(), app)
+    assert r.decision == "APPROVE", r.flags
+
+
+async def test_loop1_dead_website_escalates(make_pipeline: Any) -> None:
+    w = clean_world()
+    w.websites["brightwater-analytics.co.uk"].unreachable = True
+    r = await review(make_pipeline, w, clean_application())
+    assert "WEBSITE_UNREACHABLE" in codes(r) and r.decision == "ESCALATE"
+
+
+async def test_loop1_generic_web_words_do_not_satisfy_industry(make_pipeline: Any) -> None:
+    w = clean_world()
+    w.websites["brightwater-analytics.co.uk"].html = business_html(
+        "Blooms", "Fresh flowers and bouquets. Log in to your account for order support and delivery details."
+    )
+    app = clean_application()
+    app["declared_industry"] = "accounting and bookkeeping"
+    r = await review(make_pipeline, w, app)
+    assert "INDUSTRY_MISMATCH" in codes(r)
+
+
+async def test_loop1_policy_severity_override(make_pipeline: Any, config: Config) -> None:
+    from kyb_tool_mcp.schemas.decision import Severity
+
+    config.policy.flag_severity["NO_WEBSITE_DECLARED"] = Severity.high
+    app = clean_application()
+    app["website"] = None
+    r = await review(make_pipeline, clean_world(), app)
+    flag = next(f for f in r.flags if f.code == "NO_WEBSITE_DECLARED")
+    assert flag.severity == Severity.high and r.decision == "ESCALATE"

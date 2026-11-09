@@ -1,0 +1,97 @@
+{
+  "case_id": "undeclared_director_04",
+  "type": "undeclared_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNDECLARED_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "undeclared_director_04",
+    "legal_name": "Falcon Marlow Studio Limited",
+    "country": "GB",
+    "registration_number": "15131276",
+    "registered_address": "119 Mill Road, Cardiff",
+    "postcode": "CF10 5HQ",
+    "declared_industry": "advertising agency",
+    "website": "https://www.falcon-media.co.uk",
+    "directors": [
+      {
+        "name": "Leo Matilda Adams",
+        "birth_year": 1981,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Leo Adams",
+        "birth_year": 1981,
+        "birth_month": 8,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "15131276",
+        "name": "FALCON MARLOW STUDIO LIMITED",
+        "status": "active",
+        "incorporated": "2003-06-23",
+        "address": {
+          "premises": "119",
+          "address_line_1": "Mill Road",
+          "locality": "Cardiff",
+          "postal_code": "CF10 5HQ"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "ADAMS, Leo Matilda",
+            "birth_year": 1981,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "THOMAS, Callum Tariq",
+            "birth_year": 1974,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Leo Adams",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1981,
+            "birth_month": 8,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.falcon-media.co.uk",
+        "html": "<html><head><title>Falcon Marlow Studio</title></head><body><h1>Falcon Marlow Studio</h1><p>Falcon Marlow Studio. Creative advertising agency: campaigns, branding, media buying and social advertising. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2011-04-15"
+      }
+    ]
+  }
+}

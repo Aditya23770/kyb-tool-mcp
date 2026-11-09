@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustLedger</title>
+  <meta name="description" content="TrustLedger: open-source MCP server that runs KYB checks on UK companies: Companies House, OFAC and UN sanctions, and the company website.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#install">Skip to install</a>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap nav-in">
+      <a class="brand" href="./">
+        <span class="mark" aria-hidden="true"><i class="a"></i><i class="e"></i><i class="r"></i></span>
+        TrustLedger
+      </a>
+      <div class="nav-links">
+        <a href="#use">Use it</a>
+        <a href="#examples">Examples</a>
+        <a href="#install">Install</a>
+        <a href="#benchmark">Benchmark</a>
+        <a class="btn btn-sm" href="https://github.com/Aditya23770/kyb-tool-mcp">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero: the decision is the product -->
+    <header class="wrap hero">
+      <div class="hero-copy">
+        <p class="kicker"><span class="dot"></span>Open-source MCP server for KYB · runs on your machine</p>
+        <h1>Trust, backed by evidence.</h1>
+        <p class="lead">Ask your AI assistant to vet a UK company. TrustLedger checks Companies House, the OFAC and UN sanctions lists, and the company website, then returns <b class="d-approve">Approve</b>, <b class="d-escalate">Escalate</b> or <b class="d-reject">Reject</b>. Every flag points to the evidence behind it.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#install">Install</a>
+          <a class="btn" href="https://github.com/Aditya23770/kyb-tool-mcp">View on GitHub</a>
+        </div>
+      </div>
+
+      <figure class="case" aria-label="Example review output">
+        <div class="case-head">
+          <span class="case-label">Example output · <code>review_kyb_case</code></span>
+          <div class="case-picker" role="tablist" aria-label="Example cases">
+            <button role="tab" data-case="0" aria-selected="true">Clean</button>
+            <button role="tab" data-case="1" aria-selected="false">Dead website</button>
+            <button role="tab" data-case="2" aria-selected="false">Sanctioned director</button>
+          </div>
+        </div>
+        <div class="case-body" aria-live="polite">
+          <p class="case-ask" data-f="ask"></p>
+          <div class="verdict">
+            <span class="verdict-word" data-f="decision"></span>
+            <span class="verdict-meta" data-f="meta"></span>
+          </div>
+          <ul class="flags" data-f="flags"></ul>
+        </div>
+        <figcaption>Illustrative output. Flag names, rules and evidence-id format are the tool's real ones.</figcaption>
+      </figure>
+    </header>
+
+    <!-- How it works -->
+    <section class="band" aria-labelledby="how-h">
+      <div class="wrap">
+        <h2 id="how-h" class="h2">How it works</h2>
+        <ol class="flow">
+          <li><span class="flow-k">Your assistant</span><span class="flow-v">Claude Code, Claude Desktop or Cursor calls a tool</span></li>
+          <li><span class="flow-k">TrustLedger</span><span class="flow-v">runs locally over stdio; sanctions are screened against a local index, so names never leave your machine</span></li>
+          <li><span class="flow-k">Public sources</span><span class="flow-v">Companies House, GLEIF, OFAC SDN, UN list, the company website and its domain record</span></li>
+          <li><span class="flow-k">Decision</span><span class="flow-v">a versioned rule policy decides; your assistant explains it but cannot change it</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Where you can use it -->
+    <section id="use" class="wrap" aria-labelledby="use-h">
+      <h2 id="use-h" class="h2">Where you can use it</h2>
+      <p class="sub">Install once. After that, most people never touch the terminal again.</p>
+      <div class="uses">
+        <div class="use"><h3>In your AI assistant</h3><p>Claude Desktop, Claude Code, Cursor or any app that runs local MCP servers. Just ask in plain English.</p></div>
+        <div class="use"><h3>In the terminal</h3><p>One command per check. Good for batches of companies, scripts and CI.</p></div>
+        <div class="use"><h3>In your own code</h3><p>Import it as a Python library and add KYB checks to your onboarding flow.</p></div>
+        <div class="use"><h3>In Docker</h3><p>The same server in an isolated container, with nothing installed on the host.</p></div>
+      </div>
+    </section>
+
+    <!-- Examples -->
+    <section id="examples" class="band" aria-labelledby="ex-h">
+      <div class="wrap">
+        <h2 id="ex-h" class="h2">What you can ask, and what you get back</h2>
+        <div class="examples">
+          <div class="ex">
+            <p class="ex-q">“Run a KYB check on company 09876543. Director Sarah Holloway, born June 1979.”</p>
+            <p class="ex-a">A decision (approve, escalate or reject), the risk level, every flag with its evidence, and a short note an analyst can file.</p>
+          </div>
+          <div class="ex">
+            <p class="ex-q">“Is Viktor Bout, born 1967, on a sanctions list?”</p>
+            <p class="ex-a">Each possible match labelled as a match, needs review or cleared, with the reasons: how close the name is, whether the birth year and nationality agree.</p>
+          </div>
+          <div class="ex">
+            <p class="ex-q">“Who are the directors and owners of company 00445790?”</p>
+            <p class="ex-a">The Companies House record: status, address, industry codes, directors and people with significant control.</p>
+          </div>
+          <div class="ex">
+            <p class="ex-q">“Does harbourline-logistics.co.uk look like a real logistics business?”</p>
+            <p class="ex-a">Whether the site is reachable or parked, how old the domain is, what the page says it sells, and whether that fits the declared industry.</p>
+          </div>
+          <div class="ex">
+            <p class="ex-q">“Why was this case escalated?”</p>
+            <p class="ex-a">The rules behind the decision, in plain words. Your assistant can explain a decision but cannot change it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="wrap" aria-labelledby="tools-h">
+      <h2 id="tools-h" class="h2">What your assistant can call</h2>
+      <dl class="tools">
+        <div><dt><code>review_kyb_case</code></dt><dd>Full review of an onboarding application: registry, owners, sanctions and website, ending in a decision with flags and an analyst note.</dd></div>
+        <div><dt><code>registry_lookup</code></dt><dd>A company's Companies House or GLEIF record: status, address, SIC codes, directors and beneficial owners.</dd></div>
+        <div><dt><code>screen_entity</code></dt><dd>Screen one person or company against OFAC and UN. Hits come labelled as match, needs review or cleared, with the reason.</dd></div>
+        <div><dt><code>check_website</code></dt><dd>Is the site reachable, parked, newly registered, selling prohibited goods, or in a different industry?</dd></div>
+        <div><dt><code>explain_policy</code></dt><dd>The active decision rules, so the assistant can explain why a case was escalated.</dd></div>
+      </dl>
+    </section>
+
+    <!-- Install -->
+    <section id="install" class="band" aria-labelledby="install-h">
+      <div class="wrap">
+        <h2 id="install-h" class="h2">Install</h2>
+        <p class="sub">Needs Python 3.11+ (or Docker) and a free <a href="https://developer.company-information.service.gov.uk/">Companies House API key</a>.</p>
+
+        <div class="install">
+          <div class="methods" role="tablist" aria-label="Install method">
+            <button role="tab" data-m="claude-code" aria-selected="true">Claude Code</button>
+            <button role="tab" data-m="desktop" aria-selected="false">Claude Desktop / Cursor</button>
+            <button role="tab" data-m="pip" aria-selected="false">pip / Python</button>
+            <button role="tab" data-m="docker" aria-selected="false">Docker</button>
+          </div>
+          <div class="method-panel" role="tabpanel" aria-live="polite">
+            <p class="m-intro" data-f="intro"></p>
+            <div class="m-steps" data-f="steps"></div>
+          </div>
+        </div>
+
+        <table class="env">
+          <caption>Environment variables</caption>
+          <tbody>
+            <tr><th><code>COMPANIES_HOUSE_API_KEY</code></th><td><span class="req">Required</span> registry checks. Without it they report <code>not_configured</code>.</td></tr>
+            <tr><th><code>KYB_DATA_DIR</code></th><td><span class="opt">Optional</span> where the sanctions index and cache live. Default <code>~/.kyb-tool-mcp</code>.</td></tr>
+            <tr><th><code>KYB_POLICY_FILE</code></th><td><span class="opt">Optional</span> your own decision policy, created with <code>kyb-tool-mcp init</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Benchmark -->
+    <section id="benchmark" class="wrap" aria-labelledby="bench-h">
+      <h2 id="bench-h" class="h2">Benchmark</h2>
+      <p class="sub">Real UK data the tool was never tuned on, plus 168 synthetic cases.</p>
+      <table class="bench">
+        <thead><tr><th scope="col">Test</th><th scope="col">Result</th></tr></thead>
+        <tbody>
+          <tr><td>Sanctioned UK designations caught (992, UK spellings vs UN list)</td><td data-k="cross_list">99.4%</td></tr>
+          <tr><td>Real UK companies with no alert (5,000)</td><td data-k="co_no_alert">92.9%</td></tr>
+          <tr><td>Real UK companies wrongly confirmed as sanctioned</td><td data-k="co_wrong">0.04%</td></tr>
+          <tr><td>Synthetic end-to-end cases decided correctly (168 × 3 runs)</td><td data-k="accuracy">100%</td></tr>
+        </tbody>
+      </table>
+      <p class="sub small"><a href="https://github.com/Aditya23770/kyb-tool-mcp/blob/main/benchmarks/IMPROVEMENT_LOG.md">How it was measured, including what went wrong</a></p>
+    </section>
+
+    <!-- Phase 2 -->
+    <section id="next" class="band" aria-labelledby="next-h">
+      <div class="wrap">
+        <h2 id="next-h" class="h2">Coming next</h2>
+        <p class="sub">Today it runs on your machine. Phase 2 makes it easier to reach.</p>
+        <ul class="next">
+          <li><b>One-click install for Claude Desktop.</b> A desktop extension file: no config editing.</li>
+          <li><b>Add it as a connector.</b> A hosted version you add to Claude by URL.</li>
+          <li><b>A web form.</b> Fill in a company's details in the browser and get the same decision, no install needed.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GitHub -->
+    <section class="wrap gh" aria-labelledby="gh-h">
+      <h2 id="gh-h" class="h2">Open source, Apache-2.0</h2>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/Aditya23770/kyb-tool-mcp">Star on GitHub</a>
+        <a class="btn" href="https://github.com/Aditya23770/kyb-tool-mcp#readme">Read the docs</a>
+        <a class="btn" href="https://github.com/Aditya23770/kyb-tool-mcp/issues">Report a wrong match</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span>TrustLedger · decision support, not legal advice</span>
+      <span><a href="https://github.com/Aditya23770/kyb-tool-mcp">GitHub</a> · <a href="https://github.com/Aditya23770/kyb-tool-mcp/blob/main/LICENSE">Apache-2.0</a></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

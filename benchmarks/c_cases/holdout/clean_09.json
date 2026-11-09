@@ -1,0 +1,132 @@
+{
+  "case_id": "clean_09",
+  "type": "clean",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [],
+  "application": {
+    "case_id": "clean_09",
+    "legal_name": "Redbridge Highland Services Ltd",
+    "country": "GB",
+    "registration_number": "14204739",
+    "registered_address": "8 Mill Road, Sheffield",
+    "postcode": "S1 7YU",
+    "declared_industry": "construction of commercial buildings",
+    "website": "https://www.redbridge-build.co.uk",
+    "directors": [
+      {
+        "name": "Isla Price",
+        "birth_year": 1955,
+        "birth_month": 5,
+        "nationality": "GB"
+      },
+      {
+        "name": "Harry Jackson",
+        "birth_year": 1963,
+        "birth_month": 1,
+        "nationality": "GB"
+      },
+      {
+        "name": "Tariq Chloe Nowak",
+        "birth_year": 1985,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Isla Price",
+        "birth_year": 1955,
+        "birth_month": 5,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Harry Jackson",
+        "birth_year": 1963,
+        "birth_month": 1,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "14204739",
+        "name": "REDBRIDGE HIGHLAND SERVICES LIMITED",
+        "status": "active",
+        "incorporated": "2004-10-26",
+        "address": {
+          "premises": "8",
+          "address_line_1": "Mill Road",
+          "locality": "Sheffield",
+          "postal_code": "S1 7YU"
+        },
+        "sic_codes": [
+          "41201"
+        ],
+        "officers": [
+          {
+            "name": "PRICE, Isla Daisy",
+            "birth_year": 1955,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "JACKSON, Harry",
+            "birth_year": 1963,
+            "birth_month": 1,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "NOWAK, Tariq Chloe",
+            "birth_year": 1985,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Isla Price",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1955,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Harry Jackson",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1963,
+            "birth_month": 1,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.redbridge-build.co.uk",
+        "html": "<html><head><title>Redbridge Highland Services</title></head><body><h1>Redbridge Highland Services</h1><p>Redbridge Highland Services. Commercial building contractor delivering offices, warehouses and construction projects. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2016-01-17"
+      }
+    ]
+  }
+}

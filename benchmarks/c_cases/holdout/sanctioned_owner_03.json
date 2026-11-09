@@ -1,0 +1,108 @@
+{
+  "case_id": "sanctioned_owner_03",
+  "type": "sanctioned_owner",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-21765"
+  ],
+  "application": {
+    "case_id": "sanctioned_owner_03",
+    "legal_name": "Harbour Larkspur Services Limited",
+    "country": "GB",
+    "registration_number": "4197488",
+    "registered_address": "121 Park Avenue, Sheffield",
+    "postcode": "S1 8EB",
+    "declared_industry": "licensed restaurant",
+    "website": "https://www.harbour-kitchen.co.uk",
+    "directors": [
+      {
+        "name": "Mr Sarah Patel",
+        "birth_year": 1951,
+        "birth_month": 3,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Sarah Patel",
+        "birth_year": 1951,
+        "birth_month": 3,
+        "ownership_pct": 100.0
+      },
+      {
+        "name": "Hamma Hamani",
+        "birth_year": 1967,
+        "birth_month": null,
+        "ownership_pct": 30
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "04197488",
+        "name": "HARBOUR LARKSPUR SERVICES LIMITED",
+        "status": "active",
+        "incorporated": "2020-02-10",
+        "address": {
+          "premises": "121",
+          "address_line_1": "Park Avenue",
+          "locality": "Sheffield",
+          "postal_code": "S1 8EB"
+        },
+        "sic_codes": [
+          "56101"
+        ],
+        "officers": [
+          {
+            "name": "PATEL, Sarah",
+            "birth_year": 1951,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Sarah Patel",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1951,
+            "birth_month": 3,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Hamma HAMANI",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1967,
+            "birth_month": null,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.harbour-kitchen.co.uk",
+        "html": "<html><head><title>Harbour Larkspur Services</title></head><body><h1>Harbour Larkspur Services</h1><p>Harbour Larkspur Services. Our restaurant serves seasonal food, wine and craft beer. Book a table for lunch or dinner. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2018-06-12"
+      }
+    ]
+  }
+}

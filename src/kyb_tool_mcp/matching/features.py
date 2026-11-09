@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable
+from functools import lru_cache
 from typing import Any
 
 from rapidfuzz import fuzz
@@ -16,6 +17,7 @@ PERSON_SCHEMAS = {"person"}
 COMPANY_SCHEMAS = {"organization", "company", "legalentity", "publicbody", "entity"}
 
 
+@lru_cache(maxsize=200_000)
 def _tok_sim(a: str, b: str) -> float:
     if a == b:
         return 1.0
@@ -27,7 +29,7 @@ def _tok_sim(a: str, b: str) -> float:
     return sim
 
 
-def _directional(src: list[str], dst: list[str], weight: Callable[[str], float]) -> float:
+def _directional(src: list[str], dst: list[str], weight: Callable[[str], float], floor: float = 0.0) -> float:
     if not src or not dst:
         return 0.0
     total = 0.0
@@ -39,6 +41,8 @@ def _directional(src: list[str], dst: list[str], weight: Callable[[str], float])
             if j in used:
                 continue
             s = _tok_sim(a, b)
+            if s < floor:
+                s = 0.0
             if s > best:
                 best, best_j = s, j
         if best_j >= 0 and best >= 0.85:
@@ -49,22 +53,47 @@ def _directional(src: list[str], dst: list[str], weight: Callable[[str], float])
     return total / wsum if wsum else 0.0
 
 
+def _strong(src: list[str], dst: list[str]) -> bool:
+    """Every word in `src` has a counterpart in `dst` that is identical, an initial, or sounds the same."""
+    for a in src:
+        if not any(
+            a == b
+            or (min(len(a), len(b)) == 1 and a[0] == b[0])
+            or (len(a) >= 3 and len(b) >= 3 and phonetic(a) == phonetic(b))
+            for b in dst
+        ):
+            return False
+    return True
+
+
+def _variants(tokens: list[str]) -> list[list[str]]:
+    merged = merge_particles(tokens)
+    return [tokens] if merged == tokens else [tokens, merged]
+
+
 def name_similarity(
-    a_tokens: list[str], b_tokens: list[str], weight: Callable[[str], float] | None = None
+    a_tokens: list[str],
+    b_tokens: list[str],
+    weight: Callable[[str], float] | None = None,
+    min_token_sim: float = 0.0,
 ) -> dict[str, float]:
     """Token-alignment similarity, robust to order, dropped middle names and transliteration."""
     w = weight or (lambda _t: 1.0)
     best: dict[str, float] = {"name_score": 0.0}
-    variants_a = [a_tokens, merge_particles(a_tokens)]
-    variants_b = [b_tokens, merge_particles(b_tokens)]
+    both = 0.0  # best (over spelling variants) share of name parts matched on BOTH sides
+    strong = False  # any spelling variant where every word matches exactly / phonetically
+    variants_a = _variants(a_tokens)
+    variants_b = _variants(b_tokens)
     for va in variants_a:
         for vb in variants_b:
             if not va or not vb:
                 continue
             short, long_ = (va, vb) if len(va) <= len(vb) else (vb, va)
-            d_short = _directional(short, long_, w)
-            d_long = _directional(long_, short, w)
+            d_short = _directional(short, long_, w, min_token_sim)
+            d_long = _directional(long_, short, w, min_token_sim)
             align = 100 * (0.75 * d_short + 0.25 * d_long)
+            both = max(both, min(d_short, d_long))
+            strong = strong or _strong(short, long_)
             sa, sb = " ".join(va), " ".join(vb)
             ts = float(fuzz.token_sort_ratio(sa, sb))
             joined = float(fuzz.ratio(sa.replace(" ", ""), sb.replace(" ", "")))
@@ -80,6 +109,9 @@ def name_similarity(
                     "coverage_long": round(d_long, 3),
                     "token_diff": float(abs(len(va) - len(vb))),
                 }
+    if len(best) > 1:
+        best["coverage_both"] = round(both, 3)
+        best["all_strong"] = 1.0 if strong else 0.0
     return best
 
 

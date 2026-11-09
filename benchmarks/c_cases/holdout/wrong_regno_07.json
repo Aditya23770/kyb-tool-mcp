@@ -1,0 +1,117 @@
+{
+  "case_id": "wrong_regno_07",
+  "type": "wrong_regno",
+  "expected": "ESCALATE",
+  "planted": [
+    "NAME_MISMATCH|REGISTRY_NOT_FOUND"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "wrong_regno_07",
+    "legal_name": "Cobalt Foxglove Services Ltd",
+    "country": "GB",
+    "registration_number": "10720415",
+    "registered_address": "148 Queen Street, Glasgow",
+    "postcode": "G1 9PF",
+    "declared_industry": "licensed restaurant",
+    "website": "cobalt-kitchen.co.uk",
+    "directors": [
+      {
+        "name": "Claire Chapman",
+        "birth_year": 1956,
+        "birth_month": 8,
+        "nationality": "GB"
+      },
+      {
+        "name": "Jessica Moore",
+        "birth_year": 1966,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Emma Holmes",
+        "birth_year": 1953,
+        "birth_month": 10,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Claire Chapman",
+        "birth_year": 1956,
+        "birth_month": 8,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "07971945",
+        "name": "COBALT FOXGLOVE SERVICES LIMITED",
+        "status": "active",
+        "incorporated": "2020-12-17",
+        "address": {
+          "premises": "148",
+          "address_line_1": "Queen Street",
+          "locality": "Glasgow",
+          "postal_code": "G1 9PF"
+        },
+        "sic_codes": [
+          "56101"
+        ],
+        "officers": [
+          {
+            "name": "CHAPMAN, Claire",
+            "birth_year": 1956,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MOORE, Jessica",
+            "birth_year": 1966,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "HOLMES, Emma Niamh",
+            "birth_year": 1953,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Claire Chapman",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1956,
+            "birth_month": 8,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.cobalt-kitchen.co.uk",
+        "html": "<html><head><title>Cobalt Foxglove Services</title></head><body><h1>Cobalt Foxglove Services</h1><p>Cobalt Foxglove Services. Our restaurant serves seasonal food, wine and craft beer. Book a table for lunch or dinner. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2021-08-10"
+      }
+    ]
+  }
+}

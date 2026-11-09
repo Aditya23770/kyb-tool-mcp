@@ -1,0 +1,117 @@
+{
+  "case_id": "dead_website_03",
+  "type": "dead_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "WEBSITE_UNREACHABLE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dead_website_03",
+    "legal_name": "Summit Linden Partners Limited",
+    "country": "GB",
+    "registration_number": "10689377",
+    "registered_address": "206 Church Lane, Manchester",
+    "postcode": "M1 9RT",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "https://www.summit-accounts.co.uk",
+    "directors": [
+      {
+        "name": "Mohammed Laura Shaw",
+        "birth_year": 1974,
+        "birth_month": 5,
+        "nationality": "GB"
+      },
+      {
+        "name": "Kwame Matilda Turner",
+        "birth_year": 1952,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Oliver Bell",
+        "birth_year": 1983,
+        "birth_month": 6,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Mohammed Shaw",
+        "birth_year": 1974,
+        "birth_month": 5,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "10689377",
+        "name": "SUMMIT LINDEN PARTNERS LIMITED",
+        "status": "active",
+        "incorporated": "2004-01-13",
+        "address": {
+          "premises": "206",
+          "address_line_1": "Church Lane",
+          "locality": "Manchester",
+          "postal_code": "M1 9RT"
+        },
+        "sic_codes": [
+          "69201"
+        ],
+        "officers": [
+          {
+            "name": "SHAW, Mohammed Laura",
+            "birth_year": 1974,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "TURNER, Kwame Matilda",
+            "birth_year": 1952,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "BELL, Oliver",
+            "birth_year": 1983,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Mohammed Shaw",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1974,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.summit-accounts.co.uk",
+        "html": "<html><head><title>Summit Linden Partners</title></head><body><h1>Summit Linden Partners</h1><p>Summit Linden Partners. Chartered accountants offering bookkeeping, payroll, tax returns and audit services. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 500,
+        "unreachable": false,
+        "domain_registered": "2020-08-19"
+      }
+    ]
+  }
+}

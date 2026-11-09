@@ -1,0 +1,131 @@
+{
+  "c_cases": {
+    "by_type": {
+      "clean": {
+        "expected": "APPROVE",
+        "n": 4,
+        "naive_ok": 4,
+        "tool_ok": 4
+      },
+      "corporate_psc": {
+        "expected": "ESCALATE",
+        "n": 4,
+        "naive_ok": 0,
+        "tool_ok": 4
+      },
+      "dead_website": {
+        "expected": "ESCALATE",
+        "n": 4,
+        "naive_ok": 4,
+        "tool_ok": 4
+      },
+      "dissolved": {
+        "expected": "REJECT",
+        "n": 4,
+        "naive_ok": 4,
+        "tool_ok": 4
+      },
+      "industry_mismatch": {
+        "expected": "ESCALATE",
+        "n": 4,
+        "naive_ok": 0,
+        "tool_ok": 4
+      },
+      "name_collision": {
+        "expected": "APPROVE",
+        "n": 4,
+        "naive_ok": 0,
+        "tool_ok": 3
+      },
+      "parked_website": {
+        "expected": "ESCALATE",
+        "n": 4,
+        "naive_ok": 0,
+        "tool_ok": 4
+      },
+      "sanctioned_company": {
+        "expected": "REJECT",
+        "n": 4,
+        "naive_ok": 1,
+        "tool_ok": 4
+      },
+      "sanctioned_director": {
+        "expected": "REJECT",
+        "n": 4,
+        "naive_ok": 4,
+        "tool_ok": 4
+      },
+      "sanctioned_owner": {
+        "expected": "REJECT",
+        "n": 4,
+        "naive_ok": 4,
+        "tool_ok": 4
+      },
+      "undeclared_director": {
+        "expected": "ESCALATE",
+        "n": 4,
+        "naive_ok": 0,
+        "tool_ok": 4
+      },
+      "unknown_director": {
+        "expected": "ESCALATE",
+        "n": 4,
+        "naive_ok": 0,
+        "tool_ok": 4
+      },
+      "wrong_address": {
+        "expected": "ESCALATE",
+        "n": 4,
+        "naive_ok": 0,
+        "tool_ok": 4
+      },
+      "wrong_regno": {
+        "expected": "ESCALATE",
+        "n": 4,
+        "naive_ok": 4,
+        "tool_ok": 4
+      }
+    },
+    "errors": [
+      {
+        "case_id": "name_collision_06",
+        "decision": "ESCALATE",
+        "expected": "APPROVE",
+        "flags": [
+          "CHECK_NOT_CONFIGURED",
+          "POSSIBLE_MATCH"
+        ],
+        "split": "holdout"
+      }
+    ],
+    "systems": {
+      "kyb-tool-mcp": {
+        "accuracy": 0.9821,
+        "cases": 56,
+        "consistency": 1.0,
+        "false_approvals": 0,
+        "false_rejects": 0,
+        "flag_recall": 1.0,
+        "over_decisions": 1,
+        "p50_ms": 149.84,
+        "p95_ms": 233.24,
+        "under_decisions": 0,
+        "unsupported_flags": 0
+      },
+      "naive-fuzzy": {
+        "accuracy": 0.4464,
+        "cases": 56,
+        "false_approvals": 24,
+        "false_rejects": 4,
+        "over_decisions": 4,
+        "under_decisions": 27
+      }
+    }
+  },
+  "created_at": "20261109T091437Z",
+  "label": "holdout",
+  "repeats": 3,
+  "splits": [
+    "holdout"
+  ]
+}

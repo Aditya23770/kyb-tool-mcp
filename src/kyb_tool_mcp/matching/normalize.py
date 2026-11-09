@@ -156,8 +156,111 @@ def strip_legal_suffixes(tokens: list[str]) -> list[str]:
     return toks
 
 
+# Legal forms that PRECEDE the name (common in CIS / list data): "OOO Romashka", "Open Joint-Stock Company X".
+LEADING_LEGAL_FORMS: tuple[tuple[str, ...], ...] = tuple(
+    sorted(
+        (
+            tuple(x.split())
+            for x in (
+                "open joint stock company",
+                "closed joint stock company",
+                "public joint stock company",
+                "joint stock company",
+                "limited liability company",
+                "private joint stock company",
+                "joint stock commercial bank",
+                "ooo",
+                "oao",
+                "zao",
+                "pao",
+                "ao",
+                "jsc",
+                "ojsc",
+                "cjsc",
+                "pjsc",
+                "tov",
+                "pt",
+                "cv",
+            )
+        ),
+        key=len,
+        reverse=True,
+    )
+)
+
+# Words shared by huge numbers of unrelated companies. They must not carry a company-name match.
+GENERIC_COMPANY_WORDS = frozenset(
+    """trading trade traders group groups holding holdings company companies co corporation corp inc
+    limited ltd llc international intl global general services service solutions enterprises enterprise
+    industries industry industrial works partners partnership management investments investment ventures
+    consulting consultants technologies technology tech systems logistics import export imports exports
+    impex uk of the and for establishment est firm agency center centre office plc
+    advanced advance construction central house media it properties property consultancy education products
+    home care digital design studio capital finance financial engineering electrical building developments
+    development estates recovery class business first 1st new premier auto motors cars foods""".split()
+)
+
+
+def strip_leading_legal_forms(tokens: list[str]) -> list[str]:
+    for form in LEADING_LEGAL_FORMS:
+        n = len(form)
+        if len(tokens) > n and tuple(tokens[:n]) == form:
+            return tokens[n:]
+    return tokens
+
+
+# Legal forms that also appear INSIDE names in list data ("Era-Media TOV Group", "X JSC Holding").
+INNER_LEGAL_FORMS: tuple[tuple[str, ...], ...] = tuple(
+    sorted(
+        {
+            *LEADING_LEGAL_FORMS,
+            *(
+                tuple(x.split())
+                for x in (
+                    "limited liability company",
+                    "llc",
+                    "tov",
+                    "dmcc",
+                    "fzco",
+                    "fze",
+                    "fzc",
+                    "pte",
+                    "gmbh",
+                    "ltda",
+                    "srl",
+                    "spa",
+                    "sarl",
+                    "kft",
+                    "sdn bhd",
+                    "bhd",
+                )
+            ),
+        },
+        key=len,
+        reverse=True,
+    )
+)
+
+
+def strip_inner_legal_forms(tokens: list[str]) -> list[str]:
+    toks = list(tokens)
+    for form in INNER_LEGAL_FORMS:
+        n = len(form)
+        i = 0
+        while i <= len(toks) - n and len(toks) > n:
+            if tuple(toks[i : i + n]) == form:
+                toks = toks[:i] + toks[i + n :]
+            else:
+                i += 1
+    return toks
+
+
 def company_tokens(name: str) -> list[str]:
-    return strip_legal_suffixes(fold(name).split())
+    return strip_inner_legal_forms(strip_leading_legal_forms(strip_legal_suffixes(fold(name).split())))
+
+
+def distinctive_company_tokens(tokens: list[str]) -> list[str]:
+    return [t for t in tokens if t not in GENERIC_COMPANY_WORDS]
 
 
 def normalize_company(name: str) -> str:

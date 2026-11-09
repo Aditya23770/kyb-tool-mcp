@@ -19,6 +19,15 @@ class Outcome:
     reasons: tuple[str, ...]
 
 
+def apply_severity_overrides(flags: list[Flag], policy: Policy) -> list[Flag]:
+    """Operator-configured severities (policy YAML `flag_severity`) replace check defaults."""
+    out: list[Flag] = []
+    for f in flags:
+        sev = policy.flag_severity.get(f.code)
+        out.append(f.model_copy(update={"severity": sev}) if sev and sev != f.severity else f)
+    return out
+
+
 def score_flags(flags: list[Flag], policy: Policy) -> int:
     return sum(policy.severity_points.get(f.severity.value, 0) for f in flags)
 

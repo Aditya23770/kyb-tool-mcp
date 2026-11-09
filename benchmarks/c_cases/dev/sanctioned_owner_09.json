@@ -1,0 +1,139 @@
+{
+  "case_id": "sanctioned_owner_09",
+  "type": "sanctioned_owner",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-43917"
+  ],
+  "application": {
+    "case_id": "sanctioned_owner_09",
+    "legal_name": "Orchard Oakfield Holdings Ltd",
+    "country": "GB",
+    "registration_number": "07071992",
+    "registered_address": "172 Station Road, Sheffield",
+    "postcode": "S1 3UX",
+    "declared_industry": "retail sale of clothing",
+    "website": "orchard-clothing.co.uk",
+    "directors": [
+      {
+        "name": "Claire Price",
+        "birth_year": 1950,
+        "birth_month": 5,
+        "nationality": "GB"
+      },
+      {
+        "name": "Tomasz Cook",
+        "birth_year": 1988,
+        "birth_month": 5,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Claire Price",
+        "birth_year": 1950,
+        "birth_month": 5,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Tomasz Cook",
+        "birth_year": 1988,
+        "birth_month": 5,
+        "ownership_pct": 40.0
+      },
+      {
+        "name": "Youssef Ben Azza",
+        "birth_year": 1987,
+        "birth_month": 1,
+        "ownership_pct": 30
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "07071992",
+        "name": "ORCHARD OAKFIELD HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2020-04-15",
+        "address": {
+          "premises": "172",
+          "address_line_1": "Station Road",
+          "locality": "Sheffield",
+          "postal_code": "S1 3UX"
+        },
+        "sic_codes": [
+          "47710"
+        ],
+        "officers": [
+          {
+            "name": "PRICE, Claire",
+            "birth_year": 1950,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "COOK, Tomasz",
+            "birth_year": 1988,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Claire Price",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1950,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Tomasz Cook",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1988,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Youssef BEN AZZA",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1987,
+            "birth_month": 1,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.orchard-clothing.co.uk",
+        "html": "<html><head><title>Orchard Oakfield Holdings</title></head><body><h1>Orchard Oakfield Holdings</h1><p>Orchard Oakfield Holdings. Shop our clothing collection: dresses, coats, knitwear and accessories delivered UK-wide. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2021-04-11"
+      }
+    ]
+  }
+}

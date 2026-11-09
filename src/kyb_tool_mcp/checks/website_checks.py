@@ -10,13 +10,15 @@ from typing import Any
 import yaml
 from rapidfuzz import fuzz
 
-from kyb_tool_mcp.checks.common import industry_similarity, keywords, sic_descriptions, stem
+from kyb_tool_mcp.checks.common import industry_keywords, industry_similarity, sic_descriptions, stem
 from kyb_tool_mcp.config import WebsitePolicy, read_package_text
 from kyb_tool_mcp.matching.normalize import domain_label, fold, normalize_company
 from kyb_tool_mcp.schemas.application import Application
 from kyb_tool_mcp.schemas.decision import Flag, Severity
 from kyb_tool_mcp.schemas.evidence import Evidence
 from kyb_tool_mcp.schemas.website import DomainInfo, WebsiteSnapshot
+
+MAJORITY = 0.5  # more than half of the industry keywords must appear on the page
 
 PARKED_PHRASES = [
     "this domain is for sale",
@@ -181,18 +183,18 @@ def website_flags(
 def _industry_flag(declared: str, snap: WebsiteSnapshot, sic_codes: list[str]) -> str | None:
     """INDUSTRY_MISMATCH when neither the declared industry nor the SIC descriptions show up on the site."""
     page = f"{snap.title or ''} {snap.text}"
-    page_stems = {stem(t) for t in keywords(page)}
-    declared_kw = keywords(declared)
+    page_stems = {stem(t) for t in industry_keywords(page)}
+    declared_kw = industry_keywords(declared)
     if not declared_kw:
         return None
     declared_hit = sum(stem(t) in page_stems for t in declared_kw) / len(declared_kw)
     sic_hit = 0.0
     for code in sic_codes:
         desc = sic_descriptions().get(code, "")
-        kw = keywords(desc)
+        kw = industry_keywords(desc)
         if kw:
             sic_hit = max(sic_hit, sum(stem(t) in page_stems for t in kw) / len(kw))
-    if declared_hit >= 0.5 or sic_hit >= 0.5 or industry_similarity(declared, page[:3000]) >= 60:
+    if declared_hit > MAJORITY or sic_hit > MAJORITY or industry_similarity(declared, page[:3000]) >= 60:
         return None
     return (
         f"Website content does not mention the declared industry '{declared}' "

@@ -1,0 +1,89 @@
+{
+  "case_id": "dissolved_04",
+  "type": "dissolved",
+  "expected": "REJECT",
+  "planted": [
+    "COMPANY_INACTIVE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dissolved_04",
+    "legal_name": "Foxglove Arden Services Limited",
+    "country": "GB",
+    "registration_number": "08781679",
+    "registered_address": "85 Bridge Street, Manchester",
+    "postcode": "M1 6DP",
+    "declared_industry": "retail sale of clothing",
+    "website": "foxglove-clothing.co.uk",
+    "directors": [
+      {
+        "name": "Kwame Osei",
+        "birth_year": 1952,
+        "birth_month": 11,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Kwame Osei",
+        "birth_year": 1952,
+        "birth_month": 11,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "08781679",
+        "name": "FOXGLOVE ARDEN SERVICES LIMITED",
+        "status": "administration",
+        "incorporated": "2019-10-04",
+        "address": {
+          "premises": "85",
+          "address_line_1": "Bridge Street",
+          "locality": "Manchester",
+          "postal_code": "M1 6DP"
+        },
+        "sic_codes": [
+          "47710"
+        ],
+        "officers": [
+          {
+            "name": "OSEI, Kwame Henry",
+            "birth_year": 1952,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Kwame Osei",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1952,
+            "birth_month": 11,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.foxglove-clothing.co.uk",
+        "html": "<html><head><title>Foxglove Arden Services</title></head><body><h1>Foxglove Arden Services</h1><p>Foxglove Arden Services. Shop our clothing collection: dresses, coats, knitwear and accessories delivered UK-wide. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2016-03-13"
+      }
+    ]
+  }
+}

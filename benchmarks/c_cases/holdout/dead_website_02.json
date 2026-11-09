@@ -1,0 +1,89 @@
+{
+  "case_id": "dead_website_02",
+  "type": "dead_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "WEBSITE_UNREACHABLE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dead_website_02",
+    "legal_name": "Marlow Highland Group Ltd",
+    "country": "GB",
+    "registration_number": "06702043",
+    "registered_address": "112 Victoria Street, London",
+    "postcode": "EC2A 9XA",
+    "declared_industry": "retail sale of clothing",
+    "website": "https://www.marlow-clothing.co.uk",
+    "directors": [
+      {
+        "name": "Ewan Richards",
+        "birth_year": 1976,
+        "birth_month": 12,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Ewan Richards",
+        "birth_year": 1976,
+        "birth_month": 12,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "06702043",
+        "name": "MARLOW HIGHLAND GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2020-04-17",
+        "address": {
+          "premises": "112",
+          "address_line_1": "Victoria Street",
+          "locality": "London",
+          "postal_code": "EC2A 9XA"
+        },
+        "sic_codes": [
+          "47710"
+        ],
+        "officers": [
+          {
+            "name": "RICHARDS, Ewan Harrison",
+            "birth_year": 1976,
+            "birth_month": 12,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Ewan Richards",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1976,
+            "birth_month": 12,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.marlow-clothing.co.uk",
+        "html": "<html><head><title>Marlow Highland Group</title></head><body><h1>Marlow Highland Group</h1><p>Marlow Highland Group. Shop our clothing collection: dresses, coats, knitwear and accessories delivered UK-wide. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": true,
+        "domain_registered": "2018-04-14"
+      }
+    ]
+  }
+}

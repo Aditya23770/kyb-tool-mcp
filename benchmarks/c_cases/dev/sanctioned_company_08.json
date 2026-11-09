@@ -1,0 +1,119 @@
+{
+  "case_id": "sanctioned_company_08",
+  "type": "sanctioned_company",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-36636"
+  ],
+  "application": {
+    "case_id": "sanctioned_company_08",
+    "legal_name": "Ooo Khartiya Ltd",
+    "country": "GB",
+    "registration_number": "03296260",
+    "registered_address": "170 Mill Road, Norwich",
+    "postcode": "NR1 3EN",
+    "declared_industry": "licensed restaurant",
+    "website": "thornbury-kitchen.co.uk",
+    "directors": [
+      {
+        "name": "Matilda Turner",
+        "birth_year": 1974,
+        "birth_month": 4,
+        "nationality": "GB"
+      },
+      {
+        "name": "Noah Palmer",
+        "birth_year": 1968,
+        "birth_month": 11,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mr Oliver Wright",
+        "birth_year": 1996,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Matilda Turner",
+        "birth_year": 1974,
+        "birth_month": 4,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "03296260",
+        "name": "OOO KHARTIYA LIMITED",
+        "status": "active",
+        "incorporated": "2008-07-04",
+        "address": {
+          "premises": "170",
+          "address_line_1": "Mill Road",
+          "locality": "Norwich",
+          "postal_code": "NR1 3EN"
+        },
+        "sic_codes": [
+          "56101"
+        ],
+        "officers": [
+          {
+            "name": "TURNER, Matilda",
+            "birth_year": 1974,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "PALMER, Noah Ciaran",
+            "birth_year": 1968,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "WRIGHT, Oliver",
+            "birth_year": 1996,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Matilda Turner",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1974,
+            "birth_month": 4,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.thornbury-kitchen.co.uk",
+        "html": "<html><head><title>Thornbury Severn Holdings</title></head><body><h1>Thornbury Severn Holdings</h1><p>Thornbury Severn Holdings. Our restaurant serves seasonal food, wine and craft beer. Book a table for lunch or dinner. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2020-02-10"
+      }
+    ]
+  }
+}

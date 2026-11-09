@@ -1,0 +1,132 @@
+{
+  "case_id": "clean_11",
+  "type": "clean",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [],
+  "application": {
+    "case_id": "clean_11",
+    "legal_name": "Clearview Brightwater Partners Limited",
+    "country": "GB",
+    "registration_number": "09790842",
+    "registered_address": "2 Bridge Street, Sheffield",
+    "postcode": "S1 2QQ",
+    "declared_industry": "advertising agency",
+    "website": "clearview-media.co.uk",
+    "directors": [
+      {
+        "name": "Mohammed Murray",
+        "birth_year": 1967,
+        "birth_month": 4,
+        "nationality": "GB"
+      },
+      {
+        "name": "Ella Kwame Campbell",
+        "birth_year": 1984,
+        "birth_month": 7,
+        "nationality": "GB"
+      },
+      {
+        "name": "Archie Cook",
+        "birth_year": 1958,
+        "birth_month": 5,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Mohammed Murray",
+        "birth_year": 1967,
+        "birth_month": 4,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Ella Campbell",
+        "birth_year": 1984,
+        "birth_month": 7,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "09790842",
+        "name": "CLEARVIEW BRIGHTWATER PARTNERS LIMITED",
+        "status": "active",
+        "incorporated": "2006-03-20",
+        "address": {
+          "premises": "2",
+          "address_line_1": "Bridge Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 2QQ"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "MURRAY, Mohammed",
+            "birth_year": 1967,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "CAMPBELL, Ella Kwame",
+            "birth_year": 1984,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "COOK, Archie Tomasz",
+            "birth_year": 1958,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Mohammed Murray",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1967,
+            "birth_month": 4,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Ella Campbell",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1984,
+            "birth_month": 7,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.clearview-media.co.uk",
+        "html": "<html><head><title>Clearview Brightwater Partners</title></head><body><h1>Clearview Brightwater Partners</h1><p>Clearview Brightwater Partners. Creative advertising agency: campaigns, branding, media buying and social advertising. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2022-09-19"
+      }
+    ]
+  }
+}

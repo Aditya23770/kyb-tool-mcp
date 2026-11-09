@@ -1,0 +1,97 @@
+{
+  "case_id": "undeclared_director_10",
+  "type": "undeclared_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNDECLARED_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "undeclared_director_10",
+    "legal_name": "Linden Ironbridge Holdings Limited",
+    "country": "GB",
+    "registration_number": "9765742",
+    "registered_address": "130 Church Lane, Cardiff",
+    "postcode": "CF10 3WU",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "https://www.linden-accounts.co.uk",
+    "directors": [
+      {
+        "name": "Harper Edwards",
+        "birth_year": 1953,
+        "birth_month": 3,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Harper Edwards",
+        "birth_year": 1953,
+        "birth_month": 3,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "09765742",
+        "name": "LINDEN IRONBRIDGE HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2008-02-22",
+        "address": {
+          "premises": "130",
+          "address_line_1": "Church Lane",
+          "locality": "Cardiff",
+          "postal_code": "CF10 3WU"
+        },
+        "sic_codes": [
+          "69201"
+        ],
+        "officers": [
+          {
+            "name": "EDWARDS, Harper",
+            "birth_year": 1953,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "TAYLOR, Ethan",
+            "birth_year": 1981,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Harper Edwards",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1953,
+            "birth_month": 3,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.linden-accounts.co.uk",
+        "html": "<html><head><title>Linden Ironbridge Holdings</title></head><body><h1>Linden Ironbridge Holdings</h1><p>Linden Ironbridge Holdings. Chartered accountants offering bookkeeping, payroll, tax returns and audit services. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2013-06-14"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "case_id": "corporate_psc_05",
+  "type": "corporate_psc",
+  "expected": "ESCALATE",
+  "planted": [
+    "OPAQUE_OWNERSHIP"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "corporate_psc_05",
+    "legal_name": "Summit Calder Group Limited",
+    "country": "GB",
+    "registration_number": "02055860",
+    "registered_address": "127 Bridge Street, York",
+    "postcode": "YO1 9JG",
+    "declared_industry": "computer and electronics wholesale",
+    "website": "https://www.summit-electronics.co.uk",
+    "directors": [
+      {
+        "name": "Daniel Shaw",
+        "birth_year": 1954,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Lily Okafor",
+        "birth_year": 1993,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": []
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "02055860",
+        "name": "SUMMIT CALDER GROUP LIMITED",
+        "status": "active",
+        "incorporated": "2022-08-20",
+        "address": {
+          "premises": "127",
+          "address_line_1": "Bridge Street",
+          "locality": "York",
+          "postal_code": "YO1 9JG"
+        },
+        "sic_codes": [
+          "46510"
+        ],
+        "officers": [
+          {
+            "name": "SHAW, Daniel",
+            "birth_year": 1954,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "OKAFOR, Lily",
+            "birth_year": 1993,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Halcyon Kestrel Holdings Holdings Limited",
+            "kind": "corporate-entity-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": null,
+            "birth_month": null,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.summit-electronics.co.uk",
+        "html": "<html><head><title>Summit Calder Group</title></head><body><h1>Summit Calder Group</h1><p>Summit Calder Group. Wholesale supplier of computers, peripheral equipment and software to resellers. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2008-06-11"
+      }
+    ]
+  }
+}

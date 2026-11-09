@@ -1,0 +1,102 @@
+{
+  "case_id": "name_collision_08",
+  "type": "name_collision",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [
+    "ofac-31772"
+  ],
+  "application": {
+    "case_id": "name_collision_08",
+    "legal_name": "Larkspur Beacon Solutions Limited",
+    "country": "GB",
+    "registration_number": "05313766",
+    "registered_address": "15 Church Lane, Leeds",
+    "postcode": "LS1 5BF",
+    "declared_industry": "freight transport by road",
+    "website": "https://www.larkspur-freight.co.uk",
+    "directors": [
+      {
+        "name": "Evelyn Cook",
+        "birth_year": 1994,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Khin Maung Swe",
+        "birth_year": 1966,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Evelyn Cook",
+        "birth_year": 1994,
+        "birth_month": 9,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "05313766",
+        "name": "LARKSPUR BEACON SOLUTIONS LIMITED",
+        "status": "active",
+        "incorporated": "2018-06-14",
+        "address": {
+          "premises": "15",
+          "address_line_1": "Church Lane",
+          "locality": "Leeds",
+          "postal_code": "LS1 5BF"
+        },
+        "sic_codes": [
+          "49410"
+        ],
+        "officers": [
+          {
+            "name": "COOK, Evelyn",
+            "birth_year": 1994,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "KHIN MAUNG SWE",
+            "birth_year": 1966,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Evelyn Cook",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1994,
+            "birth_month": 9,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.larkspur-freight.co.uk",
+        "html": "<html><head><title>Larkspur Beacon Solutions</title></head><body><h1>Larkspur Beacon Solutions</h1><p>Larkspur Beacon Solutions. Road haulage and freight transport across the UK with a modern fleet of lorries. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2018-02-12"
+      }
+    ]
+  }
+}

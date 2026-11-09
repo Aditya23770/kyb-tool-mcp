@@ -1,0 +1,89 @@
+{
+  "case_id": "dissolved_12",
+  "type": "dissolved",
+  "expected": "REJECT",
+  "planted": [
+    "COMPANY_INACTIVE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dissolved_12",
+    "legal_name": "Fairway Bluebell Services Ltd",
+    "country": "GB",
+    "registration_number": "11871996",
+    "registered_address": "50 Bridge Street, Bristol",
+    "postcode": "BS1 4ZD",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "https://www.fairway-accounts.co.uk",
+    "directors": [
+      {
+        "name": "Rhys Carter",
+        "birth_year": 1965,
+        "birth_month": 4,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Rhys Carter",
+        "birth_year": 1965,
+        "birth_month": 4,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "11871996",
+        "name": "FAIRWAY BLUEBELL SERVICES LIMITED",
+        "status": "administration",
+        "incorporated": "2012-06-04",
+        "address": {
+          "premises": "50",
+          "address_line_1": "Bridge Street",
+          "locality": "Bristol",
+          "postal_code": "BS1 4ZD"
+        },
+        "sic_codes": [
+          "69201"
+        ],
+        "officers": [
+          {
+            "name": "CARTER, Rhys Anjali",
+            "birth_year": 1965,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Rhys Carter",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1965,
+            "birth_month": 4,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.fairway-accounts.co.uk",
+        "html": "<html><head><title>Fairway Bluebell Services</title></head><body><h1>Fairway Bluebell Services</h1><p>Fairway Bluebell Services. Chartered accountants offering bookkeeping, payroll, tax returns and audit services. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2018-09-19"
+      }
+    ]
+  }
+}

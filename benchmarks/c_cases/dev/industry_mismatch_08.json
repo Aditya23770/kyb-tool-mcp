@@ -1,0 +1,118 @@
+{
+  "case_id": "industry_mismatch_08",
+  "type": "industry_mismatch",
+  "expected": "ESCALATE",
+  "planted": [
+    "INDUSTRY_MISMATCH",
+    "SIC_INDUSTRY_MISMATCH"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "industry_mismatch_08",
+    "legal_name": "Wren Falcon Partners Limited",
+    "country": "GB",
+    "registration_number": "06560319",
+    "registered_address": "189 Victoria Street, Sheffield",
+    "postcode": "S1 8YP",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "https://www.wren-media.co.uk",
+    "directors": [
+      {
+        "name": "James Arthur Okafor",
+        "birth_year": 1970,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Henry Bailey",
+        "birth_year": 1993,
+        "birth_month": 6,
+        "nationality": "GB"
+      },
+      {
+        "name": "Chen Chapman",
+        "birth_year": 1966,
+        "birth_month": 6,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "James Okafor",
+        "birth_year": 1970,
+        "birth_month": 10,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "06560319",
+        "name": "WREN FALCON PARTNERS LIMITED",
+        "status": "active",
+        "incorporated": "2022-02-16",
+        "address": {
+          "premises": "189",
+          "address_line_1": "Victoria Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 8YP"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "OKAFOR, James Arthur",
+            "birth_year": 1970,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "BAILEY, Henry",
+            "birth_year": 1993,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "CHAPMAN, Chen",
+            "birth_year": 1966,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr James Okafor",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1970,
+            "birth_month": 10,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.wren-media.co.uk",
+        "html": "<html><head><title>Blooms</title></head><body><h1>Blooms</h1><p>Fresh flowers, bouquets and wedding floristry delivered same day. Order roses and lilies online. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2012-09-18"
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "case_id": "dead_website_04",
+  "type": "dead_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "WEBSITE_UNREACHABLE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dead_website_04",
+    "legal_name": "Willowmere Linden Holdings Limited",
+    "country": "GB",
+    "registration_number": "02632871",
+    "registered_address": "108 Bridge Street, Sheffield",
+    "postcode": "S1 1RA",
+    "declared_industry": "business software development",
+    "website": "https://www.willowmere-software.co.uk",
+    "directors": [
+      {
+        "name": "Alexander Cook",
+        "birth_year": 1993,
+        "birth_month": 3,
+        "nationality": "GB"
+      },
+      {
+        "name": "Owen Price",
+        "birth_year": 1952,
+        "birth_month": 11,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Alexander Cook",
+        "birth_year": 1993,
+        "birth_month": 3,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "02632871",
+        "name": "WILLOWMERE LINDEN HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2009-12-14",
+        "address": {
+          "premises": "108",
+          "address_line_1": "Bridge Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 1RA"
+        },
+        "sic_codes": [
+          "62012"
+        ],
+        "officers": [
+          {
+            "name": "COOK, Alexander",
+            "birth_year": 1993,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "PRICE, Owen",
+            "birth_year": 1952,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Alexander Cook",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1993,
+            "birth_month": 3,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.willowmere-software.co.uk",
+        "html": "<html><head><title>Willowmere Linden Holdings</title></head><body><h1>Willowmere Linden Holdings</h1><p>Willowmere Linden Holdings. We design and develop business software and cloud applications for clients. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 404,
+        "unreachable": false,
+        "domain_registered": "2015-01-18"
+      }
+    ]
+  }
+}

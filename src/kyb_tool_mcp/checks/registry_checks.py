@@ -75,7 +75,7 @@ def registry_flags(
         if pc_conflict or addr_score < policy.address_min:
             add(
                 "ADDRESS_MISMATCH",
-                Severity.medium,
+                Severity.high if pc_conflict else Severity.medium,
                 f"Declared address/postcode does not match registered office '{rec.address.one_line()}' "
                 f"(similarity {addr_score:.0f}{', postcode differs' if pc_conflict else ''}).",
             )

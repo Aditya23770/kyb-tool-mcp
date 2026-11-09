@@ -1,0 +1,103 @@
+{
+  "case_id": "dissolved_08",
+  "type": "dissolved",
+  "expected": "REJECT",
+  "planted": [
+    "COMPANY_INACTIVE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dissolved_08",
+    "legal_name": "Beacon Fairway Trading Ltd",
+    "country": "GB",
+    "registration_number": "12738301",
+    "registered_address": "60 Market Place, Cardiff",
+    "postcode": "CF10 8HL",
+    "declared_industry": "retail sale of clothing",
+    "website": "https://www.beacon-clothing.co.uk",
+    "directors": [
+      {
+        "name": "Jacob Charlotte King",
+        "birth_year": 1997,
+        "birth_month": 11,
+        "nationality": "GB"
+      },
+      {
+        "name": "Alexander Russell",
+        "birth_year": 1975,
+        "birth_month": 6,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Jacob King",
+        "birth_year": 1997,
+        "birth_month": 11,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "12738301",
+        "name": "BEACON FAIRWAY TRADING LIMITED",
+        "status": "administration",
+        "incorporated": "2017-04-17",
+        "address": {
+          "premises": "60",
+          "address_line_1": "Market Place",
+          "locality": "Cardiff",
+          "postal_code": "CF10 8HL"
+        },
+        "sic_codes": [
+          "47710"
+        ],
+        "officers": [
+          {
+            "name": "KING, Jacob Charlotte",
+            "birth_year": 1997,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "RUSSELL, Alexander Hannah",
+            "birth_year": 1975,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Jacob King",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1997,
+            "birth_month": 11,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.beacon-clothing.co.uk",
+        "html": "<html><head><title>Beacon Fairway Trading</title></head><body><h1>Beacon Fairway Trading</h1><p>Beacon Fairway Trading. Shop our clothing collection: dresses, coats, knitwear and accessories delivered UK-wide. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2021-05-12"
+      }
+    ]
+  }
+}

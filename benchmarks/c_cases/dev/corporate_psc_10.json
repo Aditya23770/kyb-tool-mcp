@@ -1,0 +1,82 @@
+{
+  "case_id": "corporate_psc_10",
+  "type": "corporate_psc",
+  "expected": "ESCALATE",
+  "planted": [
+    "OPAQUE_OWNERSHIP"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "corporate_psc_10",
+    "legal_name": "Saxon Bluebell Trading Ltd",
+    "country": "GB",
+    "registration_number": "09801960",
+    "registered_address": "201 Church Lane, Glasgow",
+    "postcode": "G1 1UH",
+    "declared_industry": "dental practice",
+    "website": "saxon-dental.co.uk",
+    "directors": [
+      {
+        "name": "Laura Clark",
+        "birth_year": 1991,
+        "birth_month": 10,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": []
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "09801960",
+        "name": "SAXON BLUEBELL TRADING LIMITED",
+        "status": "active",
+        "incorporated": "2004-03-04",
+        "address": {
+          "premises": "201",
+          "address_line_1": "Church Lane",
+          "locality": "Glasgow",
+          "postal_code": "G1 1UH"
+        },
+        "sic_codes": [
+          "86230"
+        ],
+        "officers": [
+          {
+            "name": "CLARK, Laura George",
+            "birth_year": 1991,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Severn Wexford Solutions Holdings Limited",
+            "kind": "corporate-entity-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": null,
+            "birth_month": null,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.saxon-dental.co.uk",
+        "html": "<html><head><title>Saxon Bluebell Trading</title></head><body><h1>Saxon Bluebell Trading</h1><p>Saxon Bluebell Trading. Friendly dental practice offering check-ups, hygienist appointments and dental implants. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2010-07-10"
+      }
+    ]
+  }
+}

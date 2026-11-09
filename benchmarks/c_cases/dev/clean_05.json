@@ -1,0 +1,118 @@
+{
+  "case_id": "clean_05",
+  "type": "clean",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [],
+  "application": {
+    "case_id": "clean_05",
+    "legal_name": "Driftwood Blackthorn Trading Ltd",
+    "country": "GB",
+    "registration_number": "2795663",
+    "registered_address": "32 Mill Road, Leeds",
+    "postcode": "LS1 8DJ",
+    "declared_industry": "advertising agency",
+    "website": "https://www.driftwood-media.co.uk",
+    "directors": [
+      {
+        "name": "Mr Owen Cox",
+        "birth_year": 1981,
+        "birth_month": 3,
+        "nationality": "GB"
+      },
+      {
+        "name": "Fraser Tomasz Bennett",
+        "birth_year": 1973,
+        "birth_month": 4,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Owen Cox",
+        "birth_year": 1981,
+        "birth_month": 3,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Fraser Bennett",
+        "birth_year": 1973,
+        "birth_month": 4,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "02795663",
+        "name": "DRIFTWOOD BLACKTHORN TRADING LIMITED",
+        "status": "active",
+        "incorporated": "2011-01-17",
+        "address": {
+          "premises": "32",
+          "address_line_1": "Mill Road",
+          "locality": "Leeds",
+          "postal_code": "LS1 8DJ"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "COX, Owen",
+            "birth_year": 1981,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "BENNETT, Fraser Tomasz",
+            "birth_year": 1973,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Owen Cox",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1981,
+            "birth_month": 3,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Ms Fraser Bennett",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1973,
+            "birth_month": 4,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.driftwood-media.co.uk",
+        "html": "<html><head><title>Driftwood Blackthorn Trading</title></head><body><h1>Driftwood Blackthorn Trading</h1><p>Driftwood Blackthorn Trading. Creative advertising agency: campaigns, branding, media buying and social advertising. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2013-01-14"
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "case_id": "dead_website_01",
+  "type": "dead_website",
+  "expected": "ESCALATE",
+  "planted": [
+    "WEBSITE_UNREACHABLE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dead_website_01",
+    "legal_name": "Foxglove Riverside Solutions Ltd",
+    "country": "GB",
+    "registration_number": "10033288",
+    "registered_address": "141 Park Avenue, Norwich",
+    "postcode": "NR1 6PS",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "https://www.foxglove-accounts.co.uk",
+    "directors": [
+      {
+        "name": "James Archie Martin",
+        "birth_year": 1984,
+        "birth_month": 7,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "James Martin",
+        "birth_year": 1984,
+        "birth_month": 7,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "10033288",
+        "name": "FOXGLOVE RIVERSIDE SOLUTIONS LIMITED",
+        "status": "active",
+        "incorporated": "2018-02-13",
+        "address": {
+          "premises": "141",
+          "address_line_1": "Park Avenue",
+          "locality": "Norwich",
+          "postal_code": "NR1 6PS"
+        },
+        "sic_codes": [
+          "69201"
+        ],
+        "officers": [
+          {
+            "name": "MARTIN, James Archie",
+            "birth_year": 1984,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr James Martin",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1984,
+            "birth_month": 7,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.foxglove-accounts.co.uk",
+        "html": "<html><head><title>Foxglove Riverside Solutions</title></head><body><h1>Foxglove Riverside Solutions</h1><p>Foxglove Riverside Solutions. Chartered accountants offering bookkeeping, payroll, tax returns and audit services. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": true,
+        "domain_registered": "2007-01-11"
+      }
+    ]
+  }
+}

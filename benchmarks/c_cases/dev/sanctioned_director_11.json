@@ -1,0 +1,104 @@
+{
+  "case_id": "sanctioned_director_11",
+  "type": "sanctioned_director",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-7760"
+  ],
+  "application": {
+    "case_id": "sanctioned_director_11",
+    "legal_name": "Kestrel Cobalt Partners Ltd",
+    "country": "GB",
+    "registration_number": "01145549",
+    "registered_address": "60 Church Lane, York",
+    "postcode": "YO1 7DA",
+    "declared_industry": "licensed restaurant",
+    "website": "kestrel-kitchen.co.uk",
+    "directors": [
+      {
+        "name": "James Ewan Chapman",
+        "birth_year": 1973,
+        "birth_month": 11,
+        "nationality": "GB"
+      },
+      {
+        "name": "Momir Nikolic",
+        "birth_year": 1955,
+        "birth_month": 2
+      }
+    ],
+    "ubos": [
+      {
+        "name": "James Chapman",
+        "birth_year": 1973,
+        "birth_month": 11,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "01145549",
+        "name": "KESTREL COBALT PARTNERS LIMITED",
+        "status": "active",
+        "incorporated": "2013-06-18",
+        "address": {
+          "premises": "60",
+          "address_line_1": "Church Lane",
+          "locality": "York",
+          "postal_code": "YO1 7DA"
+        },
+        "sic_codes": [
+          "56101"
+        ],
+        "officers": [
+          {
+            "name": "CHAPMAN, James Ewan",
+            "birth_year": 1973,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MOMIR NIKOLIC",
+            "birth_year": 1955,
+            "birth_month": 2,
+            "nationality": "Unknown",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms James Chapman",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1973,
+            "birth_month": 11,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.kestrel-kitchen.co.uk",
+        "html": "<html><head><title>Kestrel Cobalt Partners</title></head><body><h1>Kestrel Cobalt Partners</h1><p>Kestrel Cobalt Partners. Our restaurant serves seasonal food, wine and craft beer. Book a table for lunch or dinner. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2016-07-18"
+      }
+    ]
+  }
+}

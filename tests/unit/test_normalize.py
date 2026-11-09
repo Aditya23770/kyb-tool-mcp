@@ -23,8 +23,9 @@ from kyb_tool_mcp.matching.normalize import (
         ("The Acme Group plc", "acme group"),
         ("Nordstar Shipping L.L.C.", "nordstar shipping"),
         ("Müller & Söhne GmbH", "muller and sohne"),
-        ("OOO Rosneft", "ooo rosneft"),  # leading legal form kept (only trailing stripped)
-        ("ООО Ромашка", "ooo romashka"),
+        ("OOO Rosneft", "rosneft"),  # leading CIS legal form stripped (loop 1)
+        ("ООО Ромашка", "romashka"),
+        ("Open Joint-Stock Company Rosneft Oil Company", "rosneft oil"),
         ("Limited", "limited"),  # never strip to empty
     ],
 )

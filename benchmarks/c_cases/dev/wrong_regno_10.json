@@ -1,0 +1,158 @@
+{
+  "case_id": "wrong_regno_10",
+  "type": "wrong_regno",
+  "expected": "ESCALATE",
+  "planted": [
+    "NAME_MISMATCH|REGISTRY_NOT_FOUND"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "wrong_regno_10",
+    "legal_name": "Riverside Evergreen Solutions Ltd",
+    "country": "GB",
+    "registration_number": "06260481",
+    "registered_address": "163 Mill Road, Norwich",
+    "postcode": "NR1 5FH",
+    "declared_industry": "freight transport by road",
+    "website": "riverside-freight.co.uk",
+    "directors": [
+      {
+        "name": "Priya Laura Cooper",
+        "birth_year": 1965,
+        "birth_month": 5,
+        "nationality": "GB"
+      },
+      {
+        "name": "Niamh Griffiths",
+        "birth_year": 1988,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Olivia Walker",
+        "birth_year": 1979,
+        "birth_month": 8,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Priya Cooper",
+        "birth_year": 1965,
+        "birth_month": 5,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "06490005",
+        "name": "RIVERSIDE EVERGREEN SOLUTIONS LIMITED",
+        "status": "active",
+        "incorporated": "2021-06-15",
+        "address": {
+          "premises": "163",
+          "address_line_1": "Mill Road",
+          "locality": "Norwich",
+          "postal_code": "NR1 5FH"
+        },
+        "sic_codes": [
+          "49410"
+        ],
+        "officers": [
+          {
+            "name": "COOPER, Priya Laura",
+            "birth_year": 1965,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "GRIFFITHS, Niamh",
+            "birth_year": 1988,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "WALKER, Olivia",
+            "birth_year": 1979,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Priya Cooper",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1965,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      },
+      {
+        "number": "06260481",
+        "name": "GRANITE COBALT WORKS LIMITED",
+        "status": "active",
+        "incorporated": "2022-03-02",
+        "address": {
+          "premises": "59",
+          "address_line_1": "Bridge Street",
+          "locality": "Birmingham",
+          "postal_code": "B1 7DU"
+        },
+        "sic_codes": [
+          "41201"
+        ],
+        "officers": [
+          {
+            "name": "GRAY, Arthur Jessica",
+            "birth_year": 1968,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Arthur Gray",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1968,
+            "birth_month": 7,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.riverside-freight.co.uk",
+        "html": "<html><head><title>Riverside Evergreen Solutions</title></head><body><h1>Riverside Evergreen Solutions</h1><p>Riverside Evergreen Solutions. Road haulage and freight transport across the UK with a modern fleet of lorries. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2012-03-11"
+      }
+    ]
+  }
+}

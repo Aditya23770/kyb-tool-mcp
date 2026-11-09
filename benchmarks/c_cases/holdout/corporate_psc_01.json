@@ -1,0 +1,110 @@
+{
+  "case_id": "corporate_psc_01",
+  "type": "corporate_psc",
+  "expected": "ESCALATE",
+  "planted": [
+    "OPAQUE_OWNERSHIP"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "corporate_psc_01",
+    "legal_name": "Hawthorn Kestrel Solutions Ltd",
+    "country": "GB",
+    "registration_number": "02368549",
+    "registered_address": "146 Church Lane, Sheffield",
+    "postcode": "S1 3BQ",
+    "declared_industry": "online retail of homeware",
+    "website": "https://www.hawthorn-home.co.uk",
+    "directors": [
+      {
+        "name": "Ade Morris",
+        "birth_year": 1994,
+        "birth_month": 8,
+        "nationality": "GB"
+      },
+      {
+        "name": "James Mensah",
+        "birth_year": 1958,
+        "birth_month": 6,
+        "nationality": "GB"
+      },
+      {
+        "name": "James Cox",
+        "birth_year": 1968,
+        "birth_month": 7,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": []
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "02368549",
+        "name": "HAWTHORN KESTREL SOLUTIONS LIMITED",
+        "status": "active",
+        "incorporated": "2005-06-01",
+        "address": {
+          "premises": "146",
+          "address_line_1": "Church Lane",
+          "locality": "Sheffield",
+          "postal_code": "S1 3BQ"
+        },
+        "sic_codes": [
+          "47910"
+        ],
+        "officers": [
+          {
+            "name": "MORRIS, Ade",
+            "birth_year": 1994,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MENSAH, James",
+            "birth_year": 1958,
+            "birth_month": 6,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "COX, James",
+            "birth_year": 1968,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Severn Highland Trading Holdings Limited",
+            "kind": "corporate-entity-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": null,
+            "birth_month": null,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.hawthorn-home.co.uk",
+        "html": "<html><head><title>Hawthorn Kestrel Solutions</title></head><body><h1>Hawthorn Kestrel Solutions</h1><p>Hawthorn Kestrel Solutions. Online store for homeware, kitchenware, cushions and furniture with free delivery. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2005-05-19"
+      }
+    ]
+  }
+}

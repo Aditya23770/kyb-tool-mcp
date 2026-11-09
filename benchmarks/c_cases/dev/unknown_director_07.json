@@ -1,0 +1,93 @@
+{
+  "case_id": "unknown_director_07",
+  "type": "unknown_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNKNOWN_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "unknown_director_07",
+    "legal_name": "Juniper Meridian Trading Ltd",
+    "country": "GB",
+    "registration_number": "6570172",
+    "registered_address": "159 Queen Street, Sheffield",
+    "postcode": "S1 4DG",
+    "declared_industry": "computer and electronics wholesale",
+    "website": "https://www.juniper-electronics.co.uk",
+    "directors": [
+      {
+        "name": "Mr George Parker",
+        "birth_year": 1989,
+        "birth_month": 12,
+        "nationality": "GB"
+      },
+      {
+        "name": "Max Harrison",
+        "birth_year": 1972
+      }
+    ],
+    "ubos": [
+      {
+        "name": "George Parker",
+        "birth_year": 1989,
+        "birth_month": 12,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "06570172",
+        "name": "JUNIPER MERIDIAN TRADING LIMITED",
+        "status": "active",
+        "incorporated": "2010-12-03",
+        "address": {
+          "premises": "159",
+          "address_line_1": "Queen Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 4DG"
+        },
+        "sic_codes": [
+          "46510"
+        ],
+        "officers": [
+          {
+            "name": "PARKER, George",
+            "birth_year": 1989,
+            "birth_month": 12,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms George Parker",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1989,
+            "birth_month": 12,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.juniper-electronics.co.uk",
+        "html": "<html><head><title>Juniper Meridian Trading</title></head><body><h1>Juniper Meridian Trading</h1><p>Juniper Meridian Trading. Wholesale supplier of computers, peripheral equipment and software to resellers. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2020-08-13"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "case_id": "corporate_psc_06",
+  "type": "corporate_psc",
+  "expected": "ESCALATE",
+  "planted": [
+    "OPAQUE_OWNERSHIP"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "corporate_psc_06",
+    "legal_name": "Tamar Westbrook Works Limited",
+    "country": "GB",
+    "registration_number": "11295570",
+    "registered_address": "181 Station Road, Birmingham",
+    "postcode": "B1 9PT",
+    "declared_industry": "advertising agency",
+    "website": "https://www.tamar-media.co.uk",
+    "directors": [
+      {
+        "name": "Jessica Edwards",
+        "birth_year": 1973,
+        "birth_month": 5,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": []
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "11295570",
+        "name": "TAMAR WESTBROOK WORKS LIMITED",
+        "status": "active",
+        "incorporated": "2015-01-02",
+        "address": {
+          "premises": "181",
+          "address_line_1": "Station Road",
+          "locality": "Birmingham",
+          "postal_code": "B1 9PT"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "EDWARDS, Jessica Fraser",
+            "birth_year": 1973,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Oakfield Cedar Solutions Holdings Limited",
+            "kind": "corporate-entity-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": null,
+            "birth_month": null,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.tamar-media.co.uk",
+        "html": "<html><head><title>Tamar Westbrook Works</title></head><body><h1>Tamar Westbrook Works</h1><p>Tamar Westbrook Works. Creative advertising agency: campaigns, branding, media buying and social advertising. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2019-02-15"
+      }
+    ]
+  }
+}

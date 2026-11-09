@@ -1,0 +1,139 @@
+{
+  "case_id": "sanctioned_owner_01",
+  "type": "sanctioned_owner",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-25308"
+  ],
+  "application": {
+    "case_id": "sanctioned_owner_01",
+    "legal_name": "Kestrel Severn Works Ltd",
+    "country": "GB",
+    "registration_number": "7288273",
+    "registered_address": "66 Victoria Street, York",
+    "postcode": "YO1 5FS",
+    "declared_industry": "computer and electronics wholesale",
+    "website": "https://www.kestrel-electronics.co.uk",
+    "directors": [
+      {
+        "name": "Rosie Richards",
+        "birth_year": 1981,
+        "birth_month": 8,
+        "nationality": "GB"
+      },
+      {
+        "name": "Callum Johnson",
+        "birth_year": 1955,
+        "birth_month": 7,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Rosie Richards",
+        "birth_year": 1981,
+        "birth_month": 8,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Callum Johnson",
+        "birth_year": 1955,
+        "birth_month": 7,
+        "ownership_pct": 40.0
+      },
+      {
+        "name": "Xiaobing Yan",
+        "birth_year": 1977,
+        "birth_month": 3,
+        "ownership_pct": 30
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "07288273",
+        "name": "KESTREL SEVERN WORKS LIMITED",
+        "status": "active",
+        "incorporated": "2009-10-18",
+        "address": {
+          "premises": "66",
+          "address_line_1": "Victoria Street",
+          "locality": "York",
+          "postal_code": "YO1 5FS"
+        },
+        "sic_codes": [
+          "46510"
+        ],
+        "officers": [
+          {
+            "name": "RICHARDS, Rosie Alice",
+            "birth_year": 1981,
+            "birth_month": 8,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "JOHNSON, Callum",
+            "birth_year": 1955,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Rosie Richards",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1981,
+            "birth_month": 8,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Ms Callum Johnson",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1955,
+            "birth_month": 7,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Xiaobing YAN",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1977,
+            "birth_month": 3,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.kestrel-electronics.co.uk",
+        "html": "<html><head><title>Kestrel Severn Works</title></head><body><h1>Kestrel Severn Works</h1><p>Kestrel Severn Works. Wholesale supplier of computers, peripheral equipment and software to resellers. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2005-06-12"
+      }
+    ]
+  }
+}

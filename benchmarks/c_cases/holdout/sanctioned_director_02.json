@@ -1,0 +1,104 @@
+{
+  "case_id": "sanctioned_director_02",
+  "type": "sanctioned_director",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-15693"
+  ],
+  "application": {
+    "case_id": "sanctioned_director_02",
+    "legal_name": "Wren Northgate Partners Ltd",
+    "country": "GB",
+    "registration_number": "02589325",
+    "registered_address": "88 King Street, Glasgow",
+    "postcode": "G1 4ZB",
+    "declared_industry": "advertising agency",
+    "website": "wren-media.co.uk",
+    "directors": [
+      {
+        "name": "Wei Scott",
+        "birth_year": 1968,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Monica Janeth Verdugo Garcia",
+        "birth_year": 1992,
+        "birth_month": 7
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Wei Scott",
+        "birth_year": 1968,
+        "birth_month": 10,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "02589325",
+        "name": "WREN NORTHGATE PARTNERS LIMITED",
+        "status": "active",
+        "incorporated": "2018-12-23",
+        "address": {
+          "premises": "88",
+          "address_line_1": "King Street",
+          "locality": "Glasgow",
+          "postal_code": "G1 4ZB"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "SCOTT, Wei",
+            "birth_year": 1968,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "MONICA JANETH VERDUGO GARCIA",
+            "birth_year": 1992,
+            "birth_month": 7,
+            "nationality": "Unknown",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Wei Scott",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1968,
+            "birth_month": 10,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.wren-media.co.uk",
+        "html": "<html><head><title>Wren Northgate Partners</title></head><body><h1>Wren Northgate Partners</h1><p>Wren Northgate Partners. Creative advertising agency: campaigns, branding, media buying and social advertising. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2022-09-15"
+      }
+    ]
+  }
+}

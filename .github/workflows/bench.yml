@@ -1,0 +1,49 @@
+name: Nightly benchmarks
+
+# Runs against FRESH sanctions lists to catch list format changes and data drift.
+# Opens an issue when a target breaks; that issue feeds the next improvement-loop session.
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+          enable-cache: true
+      - run: uv sync --locked
+      - name: Download lists and build the full index
+        run: uv run kyb-tool-mcp update-lists
+      - name: Full benchmark (dev + holdout, full index for B)
+        id: run
+        run: uv run python -m benchmarks.run --full --b-index full --label nightly --gate
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nightly-results
+          path: |
+            benchmarks/RESULTS.md
+            benchmarks/results/latest-nightly.json
+      - name: Open an issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.existsSync('benchmarks/RESULTS.md') ? fs.readFileSync('benchmarks/RESULTS.md', 'utf8') : 'Benchmark run failed before results were written.';
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: `Nightly benchmark regression (${new Date().toISOString().slice(0, 10)})`,
+              body: `${body}\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              labels: ['benchmark-regression'],
+            });

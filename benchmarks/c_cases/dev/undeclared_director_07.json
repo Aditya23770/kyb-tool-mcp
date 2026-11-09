@@ -1,0 +1,111 @@
+{
+  "case_id": "undeclared_director_07",
+  "type": "undeclared_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNDECLARED_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "undeclared_director_07",
+    "legal_name": "Linden Northgate Solutions Ltd",
+    "country": "GB",
+    "registration_number": "08021487",
+    "registered_address": "147 High Street, Norwich",
+    "postcode": "NR1 7GF",
+    "declared_industry": "advertising agency",
+    "website": "https://www.linden-media.co.uk",
+    "directors": [
+      {
+        "name": "Ruby Martin",
+        "birth_year": 1962,
+        "birth_month": 2,
+        "nationality": "GB"
+      },
+      {
+        "name": "Leo Harrison",
+        "birth_year": 1950,
+        "birth_month": 7,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Ruby Martin",
+        "birth_year": 1962,
+        "birth_month": 2,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "08021487",
+        "name": "LINDEN NORTHGATE SOLUTIONS LIMITED",
+        "status": "active",
+        "incorporated": "2022-10-14",
+        "address": {
+          "premises": "147",
+          "address_line_1": "High Street",
+          "locality": "Norwich",
+          "postal_code": "NR1 7GF"
+        },
+        "sic_codes": [
+          "73110"
+        ],
+        "officers": [
+          {
+            "name": "MARTIN, Ruby",
+            "birth_year": 1962,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "HARRISON, Leo",
+            "birth_year": 1950,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "PATEL, Isaac",
+            "birth_year": 1997,
+            "birth_month": 7,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Ruby Martin",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1962,
+            "birth_month": 2,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.linden-media.co.uk",
+        "html": "<html><head><title>Linden Northgate Solutions</title></head><body><h1>Linden Northgate Solutions</h1><p>Linden Northgate Solutions. Creative advertising agency: campaigns, branding, media buying and social advertising. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2015-09-13"
+      }
+    ]
+  }
+}

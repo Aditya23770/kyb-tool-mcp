@@ -230,16 +230,18 @@ class Person(BaseModel):
     name: str
     birth_year: int | None = None
     birth_month: int | None = None
-    nationality: str | None = None          # ISO-3166 alpha-2
+    nationality: str | None = None  # ISO-3166 alpha-2
+
 
 class DeclaredUBO(Person):
     ownership_pct: float | None = None
+
 
 class Application(BaseModel):
     case_id: str
     legal_name: str
     trading_name: str | None = None
-    country: str                             # "GB" in v1 free tier
+    country: str  # "GB" in v1 free tier
     registration_number: str | None = None
     registered_address: str | None = None
     postcode: str | None = None
@@ -248,19 +250,27 @@ class Application(BaseModel):
     directors: list[Person] = []
     ubos: list[DeclaredUBO] = []
 
+
 # schemas/decision.py
-class Severity(str, Enum): critical="critical"; high="high"; medium="medium"; low="low"
+class Severity(str, Enum):
+    critical = "critical"
+    high = "high"
+    medium = "medium"
+    low = "low"
+
 
 class Flag(BaseModel):
-    code: str                                # e.g. UNDECLARED_DIRECTOR
+    code: str  # e.g. UNDECLARED_DIRECTOR
     severity: Severity
     detail: str
-    evidence: list[str]                      # evidence ids, must exist
+    evidence: list[str]  # evidence ids, must exist
+
 
 class CheckStatus(BaseModel):
-    check: str                               # registry | sanctions | pep | website
+    check: str  # registry | sanctions | pep | website
     status: Literal["done", "not_configured", "error"]
     providers: list[str]
+
 
 class ReviewResult(BaseModel):
     case_id: str
@@ -269,7 +279,7 @@ class ReviewResult(BaseModel):
     score: int
     flags: list[Flag]
     checks: list[CheckStatus]
-    aml_info: AmlInfo                        # result, num_hits, hits[], cleared[]
+    aml_info: AmlInfo  # result, num_hits, hits[], cleared[]
     analyst_note: str | None
     policy_version: str
     kyb_tool_mcp_version: str
@@ -281,15 +291,20 @@ Provider protocols:
 ```python
 class RegistryProvider(Protocol):
     name: str
+
     async def lookup(self, country: str, reg_no: str | None, name: str) -> Evidence[CompanyRecord]: ...
+
 
 class ScreeningProvider(Protocol):
     name: str
-    topics: set[str]                         # {"sanction", "role.pep", "crime"}
+    topics: set[str]  # {"sanction", "role.pep", "crime"}
+
     async def screen(self, subject: ScreeningSubject) -> Evidence[list[Candidate]]: ...
+
 
 class WebsiteProvider(Protocol):
     name: str
+
     async def fetch(self, url: str) -> Evidence[WebsiteSnapshot]: ...
 ```
 
@@ -382,7 +397,8 @@ Pipeline per subject: **normalise → block → score → adjudicate → (option
 ### Library
 ```python
 from kyb_tool_mcp import review_case, screen_entity
-result = await review_case(application_dict)          # ReviewResult
+
+result = await review_case(application_dict)  # ReviewResult
 hits = await screen_entity({"name": "...", "birth_year": 1971, "type": "person"})
 ```
 

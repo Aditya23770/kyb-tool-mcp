@@ -1,0 +1,116 @@
+{
+  "case_id": "name_collision_09",
+  "type": "name_collision",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [
+    "ofac-46811"
+  ],
+  "application": {
+    "case_id": "name_collision_09",
+    "legal_name": "Brightwater Granite Holdings Ltd",
+    "country": "GB",
+    "registration_number": "13550714",
+    "registered_address": "59 Park Avenue, Cardiff",
+    "postcode": "CF10 3PJ",
+    "declared_industry": "licensed restaurant",
+    "website": "https://www.brightwater-kitchen.co.uk",
+    "directors": [
+      {
+        "name": "Daniel Davies",
+        "birth_year": 1973,
+        "birth_month": 2,
+        "nationality": "GB"
+      },
+      {
+        "name": "Joshua Ward",
+        "birth_year": 1980,
+        "birth_month": 9,
+        "nationality": "GB"
+      },
+      {
+        "name": "Sergey Skvortsov",
+        "birth_year": 1942,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Daniel Davies",
+        "birth_year": 1973,
+        "birth_month": 2,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "13550714",
+        "name": "BRIGHTWATER GRANITE HOLDINGS LIMITED",
+        "status": "active",
+        "incorporated": "2013-10-28",
+        "address": {
+          "premises": "59",
+          "address_line_1": "Park Avenue",
+          "locality": "Cardiff",
+          "postal_code": "CF10 3PJ"
+        },
+        "sic_codes": [
+          "56101"
+        ],
+        "officers": [
+          {
+            "name": "DAVIES, Daniel",
+            "birth_year": 1973,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "WARD, Joshua Emily",
+            "birth_year": 1980,
+            "birth_month": 9,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "SERGEY SKVORTSOV",
+            "birth_year": 1942,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Daniel Davies",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1973,
+            "birth_month": 2,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.brightwater-kitchen.co.uk",
+        "html": "<html><head><title>Brightwater Granite Holdings</title></head><body><h1>Brightwater Granite Holdings</h1><p>Brightwater Granite Holdings. Our restaurant serves seasonal food, wine and craft beer. Book a table for lunch or dinner. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2018-01-18"
+      }
+    ]
+  }
+}

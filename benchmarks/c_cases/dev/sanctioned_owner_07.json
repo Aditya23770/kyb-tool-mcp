@@ -1,0 +1,108 @@
+{
+  "case_id": "sanctioned_owner_07",
+  "type": "sanctioned_owner",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-26531"
+  ],
+  "application": {
+    "case_id": "sanctioned_owner_07",
+    "legal_name": "Juniper Bluebell Partners Ltd",
+    "country": "GB",
+    "registration_number": "09180325",
+    "registered_address": "104 Bridge Street, Sheffield",
+    "postcode": "S1 5ZF",
+    "declared_industry": "accounting and bookkeeping",
+    "website": "https://www.juniper-accounts.co.uk",
+    "directors": [
+      {
+        "name": "Lucas Phoebe Roberts",
+        "birth_year": 1978,
+        "birth_month": 4,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Lucas Roberts",
+        "birth_year": 1978,
+        "birth_month": 4,
+        "ownership_pct": 100.0
+      },
+      {
+        "name": "Alireza Atabaki",
+        "birth_year": 1961,
+        "birth_month": null,
+        "ownership_pct": 30
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "09180325",
+        "name": "JUNIPER BLUEBELL PARTNERS LIMITED",
+        "status": "active",
+        "incorporated": "2021-05-15",
+        "address": {
+          "premises": "104",
+          "address_line_1": "Bridge Street",
+          "locality": "Sheffield",
+          "postal_code": "S1 5ZF"
+        },
+        "sic_codes": [
+          "69201"
+        ],
+        "officers": [
+          {
+            "name": "ROBERTS, Lucas Phoebe",
+            "birth_year": 1978,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Lucas Roberts",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1978,
+            "birth_month": 4,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Alireza ATABAKI",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1961,
+            "birth_month": null,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.juniper-accounts.co.uk",
+        "html": "<html><head><title>Juniper Bluebell Partners</title></head><body><h1>Juniper Bluebell Partners</h1><p>Juniper Bluebell Partners. Chartered accountants offering bookkeeping, payroll, tax returns and audit services. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2021-02-13"
+      }
+    ]
+  }
+}

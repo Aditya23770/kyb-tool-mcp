@@ -1,0 +1,124 @@
+{
+  "case_id": "unknown_director_10",
+  "type": "unknown_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNKNOWN_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "unknown_director_10",
+    "legal_name": "Riverside Brightwater Trading Limited",
+    "country": "GB",
+    "registration_number": "10086793",
+    "registered_address": "138 Market Place, Manchester",
+    "postcode": "M1 1HS",
+    "declared_industry": "business software development",
+    "website": "https://www.riverside-software.co.uk",
+    "directors": [
+      {
+        "name": "Mr Henry Evans",
+        "birth_year": 1966,
+        "birth_month": 2,
+        "nationality": "GB"
+      },
+      {
+        "name": "Charlie Chowdhury",
+        "birth_year": 1959,
+        "birth_month": 1,
+        "nationality": "GB"
+      },
+      {
+        "name": "Piotr Jenkins",
+        "birth_year": 1957
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Henry Evans",
+        "birth_year": 1966,
+        "birth_month": 2,
+        "ownership_pct": 60.0
+      },
+      {
+        "name": "Charlie Chowdhury",
+        "birth_year": 1959,
+        "birth_month": 1,
+        "ownership_pct": 40.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "10086793",
+        "name": "RIVERSIDE BRIGHTWATER TRADING LIMITED",
+        "status": "active",
+        "incorporated": "2011-06-14",
+        "address": {
+          "premises": "138",
+          "address_line_1": "Market Place",
+          "locality": "Manchester",
+          "postal_code": "M1 1HS"
+        },
+        "sic_codes": [
+          "62012"
+        ],
+        "officers": [
+          {
+            "name": "EVANS, Henry",
+            "birth_year": 1966,
+            "birth_month": 2,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "CHOWDHURY, Charlie",
+            "birth_year": 1959,
+            "birth_month": 1,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Henry Evans",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-50-to-75-percent"
+            ],
+            "birth_year": 1966,
+            "birth_month": 2,
+            "nationality": "British",
+            "ceased_on": null
+          },
+          {
+            "name": "Mr Charlie Chowdhury",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-25-to-50-percent"
+            ],
+            "birth_year": 1959,
+            "birth_month": 1,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.riverside-software.co.uk",
+        "html": "<html><head><title>Riverside Brightwater Trading</title></head><body><h1>Riverside Brightwater Trading</h1><p>Riverside Brightwater Trading. We design and develop business software and cloud applications for clients. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2012-05-11"
+      }
+    ]
+  }
+}

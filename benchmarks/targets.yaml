@@ -1,0 +1,13 @@
+# Gate for the improvement loop and CI. A change that breaks a target, or makes any
+# metric worse than the previous run, is rejected (see docs/testing.md).
+c_cases:
+  false_approvals: 0        # the metric that must be zero
+  accuracy_min: 0.95
+  consistency_min: 1.0      # same decision on every repeat run
+  unsupported_flags: 0      # flags citing evidence that does not exist
+b_screening:
+  recall_min: 0.99          # listed person found (TRUE_MATCH or NEEDS_REVIEW)
+  alerts_per_1k_max: 30     # alerts raised on 1,000 clean UK decoys
+  p95_ms_max: 200           # per-subject screening latency
+a_matching:
+  f1_min: 0.90              # only when the OpenSanctions pairs file is available

@@ -1,0 +1,82 @@
+{
+  "case_id": "corporate_psc_08",
+  "type": "corporate_psc",
+  "expected": "ESCALATE",
+  "planted": [
+    "OPAQUE_OWNERSHIP"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "corporate_psc_08",
+    "legal_name": "Ironbridge Lakeside Works Limited",
+    "country": "GB",
+    "registration_number": "08405589",
+    "registered_address": "111 Queen Street, Bristol",
+    "postcode": "BS1 1XQ",
+    "declared_industry": "dental practice",
+    "website": "https://www.ironbridge-dental.co.uk",
+    "directors": [
+      {
+        "name": "Fiona Johnson",
+        "birth_year": 1950,
+        "birth_month": 12,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": []
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "08405589",
+        "name": "IRONBRIDGE LAKESIDE WORKS LIMITED",
+        "status": "active",
+        "incorporated": "2014-03-27",
+        "address": {
+          "premises": "111",
+          "address_line_1": "Queen Street",
+          "locality": "Bristol",
+          "postal_code": "BS1 1XQ"
+        },
+        "sic_codes": [
+          "86230"
+        ],
+        "officers": [
+          {
+            "name": "JOHNSON, Fiona",
+            "birth_year": 1950,
+            "birth_month": 12,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Calder Marlow Studio Holdings Limited",
+            "kind": "corporate-entity-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": null,
+            "birth_month": null,
+            "nationality": null,
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.ironbridge-dental.co.uk",
+        "html": "<html><head><title>Ironbridge Lakeside Works</title></head><body><h1>Ironbridge Lakeside Works</h1><p>Ironbridge Lakeside Works. Friendly dental practice offering check-ups, hygienist appointments and dental implants. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2005-08-17"
+      }
+    ]
+  }
+}

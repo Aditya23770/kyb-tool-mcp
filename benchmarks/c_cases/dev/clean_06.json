@@ -1,0 +1,87 @@
+{
+  "case_id": "clean_06",
+  "type": "clean",
+  "expected": "APPROVE",
+  "planted": [],
+  "list_entities": [],
+  "application": {
+    "case_id": "clean_06",
+    "legal_name": "Bluebell Foxglove Trading Limited",
+    "country": "GB",
+    "registration_number": "04033382",
+    "registered_address": "184 Bridge Street, Leeds",
+    "postcode": "LS1 7LT",
+    "declared_industry": "online retail of homeware",
+    "website": "https://www.bluebell-home.co.uk",
+    "directors": [
+      {
+        "name": "Siobhan Anjali Wright",
+        "birth_year": 1993,
+        "birth_month": 3,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Siobhan Wright",
+        "birth_year": 1993,
+        "birth_month": 3,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "04033382",
+        "name": "BLUEBELL FOXGLOVE TRADING LIMITED",
+        "status": "active",
+        "incorporated": "2018-06-01",
+        "address": {
+          "premises": "184",
+          "address_line_1": "Bridge Street",
+          "locality": "Leeds",
+          "postal_code": "LS1 7LT"
+        },
+        "sic_codes": [
+          "47910"
+        ],
+        "officers": [
+          {
+            "name": "WRIGHT, Siobhan Anjali",
+            "birth_year": 1993,
+            "birth_month": 3,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Ms Siobhan Wright",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1993,
+            "birth_month": 3,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.bluebell-home.co.uk",
+        "html": "<html><head><title>Bluebell Foxglove Trading</title></head><body><h1>Bluebell Foxglove Trading</h1><p>Bluebell Foxglove Trading. Online store for homeware, kitchenware, cushions and furniture with free delivery. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2015-04-14"
+      }
+    ]
+  }
+}

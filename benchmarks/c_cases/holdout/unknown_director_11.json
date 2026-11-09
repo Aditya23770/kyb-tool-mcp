@@ -1,0 +1,121 @@
+{
+  "case_id": "unknown_director_11",
+  "type": "unknown_director",
+  "expected": "ESCALATE",
+  "planted": [
+    "UNKNOWN_DIRECTOR"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "unknown_director_11",
+    "legal_name": "Kestrel Arden Studio Limited",
+    "country": "GB",
+    "registration_number": "03593507",
+    "registered_address": "147 Market Place, Sheffield",
+    "postcode": "S1 1SB",
+    "declared_industry": "business software development",
+    "website": "https://www.kestrel-software.co.uk",
+    "directors": [
+      {
+        "name": "Aoife Nowak",
+        "birth_year": 1956,
+        "birth_month": 4,
+        "nationality": "GB"
+      },
+      {
+        "name": "Mr Isla Collins",
+        "birth_year": 1958,
+        "birth_month": 10,
+        "nationality": "GB"
+      },
+      {
+        "name": "Helen Turner",
+        "birth_year": 1966,
+        "birth_month": 11,
+        "nationality": "GB"
+      },
+      {
+        "name": "Declan Owen",
+        "birth_year": 1971
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Aoife Nowak",
+        "birth_year": 1956,
+        "birth_month": 4,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "03593507",
+        "name": "KESTREL ARDEN STUDIO LIMITED",
+        "status": "active",
+        "incorporated": "2010-08-04",
+        "address": {
+          "premises": "147",
+          "address_line_1": "Market Place",
+          "locality": "Sheffield",
+          "postal_code": "S1 1SB"
+        },
+        "sic_codes": [
+          "62012"
+        ],
+        "officers": [
+          {
+            "name": "NOWAK, Aoife",
+            "birth_year": 1956,
+            "birth_month": 4,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "COLLINS, Isla",
+            "birth_year": 1958,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          },
+          {
+            "name": "TURNER, Helen",
+            "birth_year": 1966,
+            "birth_month": 11,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Aoife Nowak",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1956,
+            "birth_month": 4,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.kestrel-software.co.uk",
+        "html": "<html><head><title>Kestrel Arden Studio</title></head><body><h1>Kestrel Arden Studio</h1><p>Kestrel Arden Studio. We design and develop business software and cloud applications for clients. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2021-02-12"
+      }
+    ]
+  }
+}

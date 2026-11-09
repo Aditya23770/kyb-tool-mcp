@@ -1,0 +1,22 @@
+name: False match / missed match
+description: The screening engine cleared a true match or alerted on a clean name
+labels: [matching]
+body:
+  - type: markdown
+    attributes: { value: "Use public list data only (e.g. the OFAC/UN entry id). Do not paste private customer data." }
+  - type: input
+    id: query
+    attributes: { label: Query, description: "Name (+ birth year / nationality) you screened" }
+    validations: { required: true }
+  - type: input
+    id: entity
+    attributes: { label: List entry, description: "e.g. ofac-12345 or un-6908555" }
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options: ["Missed a listed person/entity (false negative)", "Alert on a clean name (false positive)"]
+    validations: { required: true }
+  - type: textarea
+    id: output
+    attributes: { label: screen_entity output, render: json }

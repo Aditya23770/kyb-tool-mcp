@@ -1,0 +1,89 @@
+{
+  "case_id": "dissolved_06",
+  "type": "dissolved",
+  "expected": "REJECT",
+  "planted": [
+    "COMPANY_INACTIVE"
+  ],
+  "list_entities": [],
+  "application": {
+    "case_id": "dissolved_06",
+    "legal_name": "Silverline Evergreen Holdings Limited",
+    "country": "GB",
+    "registration_number": "03027276",
+    "registered_address": "184 Bridge Street, Cardiff",
+    "postcode": "CF10 5ZZ",
+    "declared_industry": "computer and electronics wholesale",
+    "website": "https://www.silverline-electronics.co.uk",
+    "directors": [
+      {
+        "name": "Oliver Anderson",
+        "birth_year": 1959,
+        "birth_month": 5,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Oliver Anderson",
+        "birth_year": 1959,
+        "birth_month": 5,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "03027276",
+        "name": "SILVERLINE EVERGREEN HOLDINGS LIMITED",
+        "status": "administration",
+        "incorporated": "2019-04-06",
+        "address": {
+          "premises": "184",
+          "address_line_1": "Bridge Street",
+          "locality": "Cardiff",
+          "postal_code": "CF10 5ZZ"
+        },
+        "sic_codes": [
+          "46510"
+        ],
+        "officers": [
+          {
+            "name": "ANDERSON, Oliver",
+            "birth_year": 1959,
+            "birth_month": 5,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Oliver Anderson",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1959,
+            "birth_month": 5,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.silverline-electronics.co.uk",
+        "html": "<html><head><title>Silverline Evergreen Holdings</title></head><body><h1>Silverline Evergreen Holdings</h1><p>Silverline Evergreen Holdings. Wholesale supplier of computers, peripheral equipment and software to resellers. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2020-07-10"
+      }
+    ]
+  }
+}

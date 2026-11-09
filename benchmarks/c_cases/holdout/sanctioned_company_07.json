@@ -1,0 +1,91 @@
+{
+  "case_id": "sanctioned_company_07",
+  "type": "sanctioned_company",
+  "expected": "REJECT",
+  "planted": [
+    "SANCTIONS_MATCH"
+  ],
+  "list_entities": [
+    "ofac-23577"
+  ],
+  "application": {
+    "case_id": "sanctioned_company_07",
+    "legal_name": "Joint Stock Company Surgutneftegasbank Ltd",
+    "country": "GB",
+    "registration_number": "15561525",
+    "registered_address": "27 King Street, Leeds",
+    "postcode": "LS1 4XY",
+    "declared_industry": "freight transport by road",
+    "website": "riverside-freight.co.uk",
+    "directors": [
+      {
+        "name": "Mr Sienna Turner",
+        "birth_year": 1959,
+        "birth_month": 10,
+        "nationality": "GB"
+      }
+    ],
+    "ubos": [
+      {
+        "name": "Sienna Turner",
+        "birth_year": 1959,
+        "birth_month": 10,
+        "ownership_pct": 100.0
+      }
+    ]
+  },
+  "world": {
+    "companies": [
+      {
+        "number": "15561525",
+        "name": "JOINT STOCK COMPANY SURGUTNEFTEGASBANK LIMITED",
+        "status": "active",
+        "incorporated": "2022-08-19",
+        "address": {
+          "premises": "27",
+          "address_line_1": "King Street",
+          "locality": "Leeds",
+          "postal_code": "LS1 4XY"
+        },
+        "sic_codes": [
+          "49410"
+        ],
+        "officers": [
+          {
+            "name": "TURNER, Sienna",
+            "birth_year": 1959,
+            "birth_month": 10,
+            "nationality": "British",
+            "role": "director",
+            "resigned_on": null
+          }
+        ],
+        "pscs": [
+          {
+            "name": "Mr Sienna Turner",
+            "kind": "individual-person-with-significant-control",
+            "natures_of_control": [
+              "ownership-of-shares-75-to-100-percent"
+            ],
+            "birth_year": 1959,
+            "birth_month": 10,
+            "nationality": "British",
+            "ceased_on": null
+          }
+        ],
+        "previous_names": [],
+        "company_type": "ltd",
+        "psc_statement": null
+      }
+    ],
+    "websites": [
+      {
+        "url": "https://www.riverside-freight.co.uk",
+        "html": "<html><head><title>Riverside Fairway Group</title></head><body><h1>Riverside Fairway Group</h1><p>Riverside Fairway Group. Road haulage and freight transport across the UK with a modern fleet of lorries. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. Our team works with customers across the United Kingdom and Europe. We publish clear terms, a returns policy, a privacy notice and our company registration details. Contact our office during business hours for quotes, delivery information and account support. </p><footer>Registered in England and Wales.</footer></body></html>",
+        "status": 200,
+        "unreachable": false,
+        "domain_registered": "2011-09-18"
+      }
+    ]
+  }
+}
