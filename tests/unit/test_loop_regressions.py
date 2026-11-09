@@ -266,3 +266,76 @@ def test_transliteration_variant_still_confirms() -> None:
     assert person_outcome("Mohamed Abdullah", 1970, "Mohammed ABDULLAH") == HitOutcome.TRUE_MATCH
     assert company_outcome("B-Finance Ltd", "B-FINANCE LTD")[0] == HitOutcome.TRUE_MATCH
     assert company_outcome("Ocean Inc", "OCEAN INC.")[0] == HitOutcome.TRUE_MATCH
+
+
+# ---- iteration 6: live Companies House run (real directors of real companies) ----
+
+
+def person_unknown_dob(subject: str, listed: str) -> HitOutcome | None:
+    s = ScreeningSubject(name=subject)
+    e = ListEntity(id="p", source="ofac_sdn", schema="Person", caption=listed, names=[listed])
+    cand = score_entity(None, s, tokens_for(s.name, "person"), e)
+    if cand is None or cand.name_score < POLICY.candidate_min:
+        return None
+    return adjudicate(s, cand, POLICY)[0]
+
+
+@pytest.mark.parametrize(
+    ("subject", "listed"),
+    [
+        ("Alia Fazal", "Fazal RAHIM"),  # only the surname-ish token is shared
+        ("Alia Fazal", "Muhammad AL-GHAZALI"),
+        ("Robert Berry", "Robert BARRERA"),  # only the given name is shared
+        ("Alasdair George Murray", "George AL HASAWANI"),
+        ("Allan Douglas Pelan", "Douglas MPANO"),
+    ],
+)
+def test_one_shared_name_part_is_cleared(subject: str, listed: str) -> None:
+    assert person_unknown_dob(subject, listed) in (None, HitOutcome.FALSE_POSITIVE)
+
+
+@pytest.mark.parametrize(
+    ("subject", "listed"),
+    [
+        ("Viktor Bout", "Viktor Anatolyevich BOUT"),
+        ("Viktor Butt", "Viktor BOUT"),
+        ("Mohamed Ali Hassan", "Mohammed Ali HASAN"),
+    ],
+)
+def test_full_or_variant_names_still_alert(subject: str, listed: str) -> None:
+    assert person_unknown_dob(subject, listed) in (HitOutcome.NEEDS_REVIEW, HitOutcome.TRUE_MATCH)
+
+
+@pytest.mark.parametrize(
+    ("subject", "entity"),
+    [("Tesco PLC", "OOO 'DSK'"), ("Nalow Ltd", "NALU"), ("Nalow Ltd", "NLA")],
+)
+def test_short_sound_alike_company_is_cleared(subject: str, entity: str) -> None:
+    outcome, score = company_outcome(subject, entity)
+    assert outcome in (None, HitOutcome.FALSE_POSITIVE), (outcome, score)
+
+
+def test_one_word_spelling_variant_still_alerts() -> None:
+    assert company_outcome("Gasprom Ltd", "GAZPROM")[0] in (HitOutcome.NEEDS_REVIEW, HitOutcome.TRUE_MATCH)
+
+
+def test_retail_supermarket_matches_retail_sic() -> None:
+    from kyb_tool_mcp.checks.common import industry_similarity
+
+    sic = "Retail sale in non-specialised stores with food, beverages or tobacco predominating"
+    assert industry_similarity("retail supermarket", sic) >= load_policy().registry.sic_match_min
+    assert (
+        industry_similarity("florist", "Accounting and auditing activities")
+        < load_policy().registry.sic_match_min
+    )
+
+
+def test_long_transliterated_patronymic_confirms_with_dob() -> None:
+    # Live run: "Viktor Anatolyevich Bout" vs OFAC "Viktor Anatolijevitch BOUT", same DOB -> must reject.
+    assert (
+        person_outcome("Viktor Anatolyevich Bout", 1967, "Viktor Anatolijevitch BOUT")
+        == HitOutcome.TRUE_MATCH
+    )
+    assert (
+        person_outcome("Mohammed Hamdani", 1967, "Mohammed HAMANI") == HitOutcome.NEEDS_REVIEW
+    )  # short: still review
