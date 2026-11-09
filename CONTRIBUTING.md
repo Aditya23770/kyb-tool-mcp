@@ -17,7 +17,6 @@ uv run kyb-tool-mcp update-lists         # optional: real OFAC + UN index for ma
 ```bash
 uv run ruff check . && uv run ruff format --check . && uv run mypy src
 uv run pytest -q
-uv run python -m benchmarks.run --gate   # must not breach targets or regress any metric
 ```
 
 ## Design rules (enforced in review)
@@ -29,17 +28,10 @@ uv run python -m benchmarks.run --gate   # must not breach targets or regress an
 5. Thresholds live in `src/kyb_tool_mcp/data/policy.default.yaml`. Bump its `version` when they change.
 6. No network in tests.
 
-## Improving matching quality (the loop)
+## Improving matching quality
 
-1. Run `uv run python -m benchmarks.run` and open `benchmarks/RESULTS.md`.
-2. Pick the highest-priority failure: false approvals, then missed listed subjects (B recall), then
-   wrong decisions, then alert volume.
-3. **Write a regression test first** (`tests/unit/test_matching_golden.py` or an integration case).
-4. Fix it (usually in `matching/normalize.py`, `matching/features.py` or the policy YAML).
-5. Re-run. Keep the change only if no metric gets worse; `--gate` enforces this.
-6. Add an entry to `benchmarks/IMPROVEMENT_LOG.md`.
-7. Tune on the `dev` split only. Check `--split holdout` occasionally; if dev improves while holdout
-   drops, you are overfitting.
+Found a wrong match? Open a "false match" issue with the name you screened and the list entry.
+Fixes need a regression test first (`tests/unit/test_loop_regressions.py` or `test_matching_golden.py`).
 
 ## Adding a provider
 

@@ -24,7 +24,6 @@ const CASES = [
   },
 ];
 
-const IMAGE = "ghcr.io/aditya23770/kyb-tool-mcp";
 const METHODS = {
   "claude-code": {
     intro: "Build the local sanctions index once, then register the server with Claude Code.",
@@ -56,13 +55,6 @@ kyb-tool-mcp registry 00445790`],
       ["Or from Python", `from kyb_tool_mcp import review_case
 
 result = await review_case({"case_id": "c1", "legal_name": "Acme Ltd", "registration_number": "01234567"})`],
-    ],
-  },
-  docker: {
-    intro: "Runs the server in an isolated container over stdio. The index lives in a named volume.",
-    steps: [
-      ["Build the sanctions index", `docker run --rm -i -v kyb-data:/data ${IMAGE} update-lists`],
-      ["Run the server (point your MCP client at this command)", `docker run --rm -i -e COMPANIES_HOUSE_API_KEY=your-key -v kyb-data:/data ${IMAGE}`],
     ],
   },
 };

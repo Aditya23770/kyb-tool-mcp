@@ -160,7 +160,7 @@ section { padding: 88px 0; }
 }
 
 /* Where / examples / next */
-.uses { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 8px; border-top: 1px solid var(--line); }
+.uses { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 8px; border-top: 1px solid var(--line); }
 .use { padding: 20px 20px 4px 0; }
 .use h3 { font: 600 18px var(--display); margin: 0 0 6px; }
 .use p { margin: 0; font-size: 15px; color: var(--muted); }

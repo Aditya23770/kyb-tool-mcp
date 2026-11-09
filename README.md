@@ -17,7 +17,7 @@ It runs on your machine: the names you screen never leave it.
 
 ## Install
 
-Needs Python 3.11+ (or Docker) and a free [Companies House API key](https://developer.company-information.service.gov.uk/).
+Needs Python 3.11+ and a free [Companies House API key](https://developer.company-information.service.gov.uk/).
 No Claude or other LLM API key is needed: your assistant is the LLM.
 
 ```bash
@@ -44,11 +44,10 @@ claude mcp add kyb-tool-mcp -e COMPANIES_HOUSE_API_KEY=your-key -- uvx kyb-tool-
 }
 ```
 
-**pip / Docker**
+**pip**
 
 ```bash
 pip install kyb-tool-mcp
-docker run --rm -i -e COMPANIES_HOUSE_API_KEY=your-key -v kyb-data:/data ghcr.io/aditya23770/kyb-tool-mcp
 ```
 
 Without the Companies House key, registry checks report `not_configured`. Sanctions and website checks still run.
@@ -73,7 +72,7 @@ Also works from the terminal (`kyb-tool-mcp review case.json`) and from Python (
 | Test cases decided correctly | **100%** |
 
 Measured on real public UK data the tool was never tuned on (992 sanctioned designations, 5,000
-companies) plus 168 test cases. Details: [benchmarks/IMPROVEMENT_LOG.md](benchmarks/IMPROVEMENT_LOG.md).
+companies) plus 168 test cases.
 
 ## Coming next (phase 2)
 
@@ -83,5 +82,5 @@ companies) plus 168 test cases. Details: [benchmarks/IMPROVEMENT_LOG.md](benchma
 
 ## More
 
-[Policy and flags](docs/policy.md) · [Data sources](docs/providers.md) · [Testing](docs/testing.md) ·
+[Policy and flags](docs/policy.md) · [Data sources](docs/providers.md) ·
 [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [Apache-2.0](LICENSE) ([data licences](NOTICE))

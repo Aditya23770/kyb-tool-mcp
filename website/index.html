@@ -85,7 +85,6 @@
         <div class="use"><h3>In your AI assistant</h3><p>Claude Desktop, Claude Code, Cursor or any app that runs local MCP servers. Just ask in plain English.</p></div>
         <div class="use"><h3>In the terminal</h3><p>One command per check. Good for batches of companies, scripts and CI.</p></div>
         <div class="use"><h3>In your own code</h3><p>Import it as a Python library and add KYB checks to your onboarding flow.</p></div>
-        <div class="use"><h3>In Docker</h3><p>The same server in an isolated container, with nothing installed on the host.</p></div>
       </div>
     </section>
 
@@ -134,14 +133,13 @@
     <section id="install" class="band" aria-labelledby="install-h">
       <div class="wrap">
         <h2 id="install-h" class="h2">Install</h2>
-        <p class="sub">Needs Python 3.11+ (or Docker) and a free <a href="https://developer.company-information.service.gov.uk/">Companies House API key</a>.</p>
+        <p class="sub">Needs Python 3.11+ and a free <a href="https://developer.company-information.service.gov.uk/">Companies House API key</a>.</p>
 
         <div class="install">
           <div class="methods" role="tablist" aria-label="Install method">
             <button role="tab" data-m="claude-code" aria-selected="true">Claude Code</button>
             <button role="tab" data-m="desktop" aria-selected="false">Claude Desktop / Cursor</button>
             <button role="tab" data-m="pip" aria-selected="false">pip / Python</button>
-            <button role="tab" data-m="docker" aria-selected="false">Docker</button>
           </div>
           <div class="method-panel" role="tabpanel" aria-live="polite">
             <p class="m-intro" data-f="intro"></p>
@@ -173,7 +171,6 @@
           <tr><td>Synthetic end-to-end cases decided correctly (168 × 3 runs)</td><td data-k="accuracy">100%</td></tr>
         </tbody>
       </table>
-      <p class="sub small"><a href="https://github.com/Aditya23770/kyb-tool-mcp/blob/main/benchmarks/IMPROVEMENT_LOG.md">How it was measured, including what went wrong</a></p>
     </section>
 
     <!-- Phase 2 -->
