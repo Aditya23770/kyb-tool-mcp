@@ -87,22 +87,113 @@ as a fallback).
 - **Step by step:** `registry_lookup`, `screen_entity`, `check_website` and `explain_policy` let your
   assistant investigate one thing at a time.
 
-**Without an assistant**, for scripts, CI or your own product:
-
-```bash
-kyb-tool-mcp review case.json --exit-code   # exit code 0 approve, 3 escalate, 4 reject
-kyb-tool-mcp screen "Viktor Bout" --dob 1967-01
-```
-
-```python
-from kyb_tool_mcp import review_case
-
-result = await review_case({"case_id": "c1", "legal_name": "Tesco PLC", "registration_number": "00445790"})
-print(result.decision)
-```
-
 Without a Companies House key, registry checks report `not_configured` and fall back to GLEIF.
 Sanctions and website checks still run.
+
+## Use it with pip (no assistant needed)
+
+The same checks work from the terminal and from Python, which is how you automate them.
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate            # Windows  (macOS/Linux: source .venv/bin/activate)
+pip install kyb-tool-mcp
+kyb-tool-mcp update-lists         # once, then daily
+```
+
+Put your key in a `.env` file in the folder you run from (or set it as an environment variable):
+
+```bash
+COMPANIES_HOUSE_API_KEY=your-key
+```
+
+### Command line
+
+| Command | What it does |
+| --- | --- |
+| `kyb-tool-mcp review case.json --exit-code` | Full review. Exit code 0 approve, 3 escalate, 4 reject, 1 error |
+| `kyb-tool-mcp screen "Viktor Bout" --dob 1967-01` | Screen one person (`--type company` for a company, `--nationality RU`) |
+| `kyb-tool-mcp registry 00445790` | Companies House record: status, address, SIC, directors, owners |
+| `kyb-tool-mcp website https://example.com --industry "retail"` | Website checks |
+| `kyb-tool-mcp status` | Shows whether the key and the sanctions index are set up |
+| `kyb-tool-mcp init` | Writes an editable `policy.yaml` so you can change thresholds |
+
+`case.json` is the application you want to check. Declare the directors and owners the applicant gave
+you: the tool compares them with the registry, and anyone missing is flagged `UNDECLARED_DIRECTOR`.
+
+```json
+{
+  "case_id": "case-001",
+  "legal_name": "Tesco PLC",
+  "registration_number": "00445790",
+  "website": "https://www.tesco.com",
+  "declared_industry": "retail supermarket",
+  "directors": [{ "name": "Jane Example", "birth_year": 1975, "birth_month": 6, "nationality": "GB" }],
+  "ubos": []
+}
+```
+
+### Python
+
+```python
+import asyncio
+from kyb_tool_mcp.pipeline import ReviewPipeline
+
+async def main():
+    pipe = ReviewPipeline()  # reads COMPANIES_HOUSE_API_KEY from the environment or .env; reuse it
+
+    result = await pipe.review({"case_id": "c1", "legal_name": "Tesco PLC", "registration_number": "00445790"})
+    print(result.decision, result.risk_level)        # e.g. APPROVE LOW
+    for flag in result.flags:
+        print(flag.severity, flag.code, flag.detail)  # each flag also lists its evidence ids
+
+    record = await pipe.registry_lookup("GB", "00445790", None)
+    site = await pipe.check_website("https://example.com", "retail", "Example Ltd")
+
+asyncio.run(main())
+```
+
+`result.model_dump_json()` gives the whole result as JSON for storage: it is your audit trail.
+
+## Build your own API
+
+Wrap the library in your own web service, for example to call it from another app or a form.
+TrustLedger does not ship a web server, so install one yourself (`pip install fastapi uvicorn`):
+
+```python
+# api.py  ->  run with: uvicorn api:app
+from fastapi import FastAPI, Header, HTTPException
+from kyb_tool_mcp.pipeline import ReviewPipeline
+
+app = FastAPI(title="My KYB API")
+pipe = ReviewPipeline()          # one pipeline for the whole app (shares the sanctions index and cache)
+API_TOKEN = "change-me"          # your own token, so only your apps can call this
+
+@app.post("/review")
+async def review(application: dict, authorization: str = Header("")):
+    if authorization != f"Bearer {API_TOKEN}":
+        raise HTTPException(401, "missing or wrong token")
+    result = await pipe.review(application)
+    return result.model_dump(mode="json")
+
+@app.get("/screen")
+async def screen(name: str, type: str = "person", birth_year: int | None = None):
+    from kyb_tool_mcp.schemas.screening import ScreeningSubject
+    return await pipe.screen(ScreeningSubject(name=name, type=type, birth_year=birth_year))
+```
+
+Before you expose it:
+
+- Keep the Companies House key on the server only, never in a browser or app.
+- Protect the endpoint (a token as above, or your usual auth) and rate-limit it: Companies House
+  allows 600 requests per 5 minutes per key.
+- Schedule `kyb-tool-mcp update-lists` daily so sanctions data stays current.
+- Treat **ESCALATE** as "send to a person": the tool is decision support, not a sign-off.
+
+### Add your own data sources
+
+You can plug in another registry, sanctions list or screening service (for example a paid PEP
+provider) without touching the decision rules. See [docs/providers.md](docs/providers.md).
 
 ## Benchmark
 
