@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.2.0
+
+Hosted connector: add TrustLedger to Claude by URL.
+
+- New `kyb-tool-mcp serve --http [--host] [--port]`: the same tools over Streamable HTTP at `/mcp`
+  (stateless, JSON responses), plus `GET /healthz` (503 when the sanctions index is missing or older
+  than `KYB_INDEX_MAX_AGE_HOURS`, default 48).
+- Each caller sends their own Companies House key in the `X-Companies-House-Key` request header. It is
+  used for that call only: never stored, logged or returned. Without it, registry checks report
+  `not_configured` with setup instructions (fail closed, as before).
+- HTTP mode turns off the audit log and HTTP cache (shared server, nothing stored about users).
+  `KYB_ALLOWED_HOSTS` enables Host-header checking.
+- Library: `ReviewPipeline.review()` and `registry_lookup()` accept `companies_house_api_key=` per call;
+  `ReviewPipeline(missing_key_hint=...)` customises the `not_configured` note.
+- Security: `COMPANIES_HOUSE_API_KEY` is held as a `SecretStr`; a rejected key reports
+  "the Companies House API key was rejected" without the key.
+- `FakeWorld.companies_house_key` lets tests require a specific key.
+- Docker image for hosting; website moved to https://trustledger.vercel.app/.
+- No decision-rule changes (policy version unchanged).
+
 ## 0.1.1
 
 Fixes from the first live run against real Companies House data.

@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -46,7 +47,12 @@ def _err(msg: str) -> None:
     print(msg, file=sys.stderr)
 
 
-def cmd_serve(_: argparse.Namespace) -> int:
+def cmd_serve(a: argparse.Namespace) -> int:
+    if getattr(a, "http", False):
+        from kyb_tool_mcp.mcp_server import run_http
+
+        run_http(host=a.host, port=a.port)
+        return 0
     from kyb_tool_mcp.mcp_server import run_stdio
 
     run_stdio()
@@ -173,7 +179,24 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--version", action="version", version=f"kyb-tool-mcp {__version__}")
     sub = p.add_subparsers(dest="command")
 
-    sub.add_parser("serve", help="run the MCP server on stdio (default)").set_defaults(fn=cmd_serve)
+    sv = sub.add_parser("serve", help="run the MCP server on stdio (default), or over HTTP with --http")
+    sv.add_argument(
+        "--http",
+        action="store_true",
+        help="serve Streamable HTTP at /mcp (hosted connector) instead of stdio",
+    )
+    sv.add_argument(
+        "--host",
+        default="127.0.0.1",
+        help="HTTP bind address (default 127.0.0.1; use 0.0.0.0 in a container)",
+    )
+    sv.add_argument(
+        "--port",
+        type=int,
+        default=int(os.environ.get("PORT", "8080")),
+        help="HTTP port (default $PORT or 8080)",
+    )
+    sv.set_defaults(fn=cmd_serve)
 
     u = sub.add_parser("update-lists", help="download sanctions lists and build the local index")
     u.add_argument(

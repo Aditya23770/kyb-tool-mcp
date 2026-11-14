@@ -11,6 +11,7 @@ writing a provider can review cases with zero network access and fully determini
 
 from __future__ import annotations
 
+import base64
 import json
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
@@ -132,6 +133,8 @@ class FakeWorld:
         self.companies: dict[str, FakeCompany] = {}
         self.websites: dict[str, FakeWebsite] = {}
         self.requests: list[str] = []
+        # When set, Companies House answers 401 unless the request carries this key (HTTP Basic).
+        self.companies_house_key: str | None = None
 
     # ---- building ------------------------------------------------------------
     def add_company(self, c: FakeCompany) -> FakeCompany:
@@ -190,6 +193,10 @@ class FakeWorld:
         )
 
     def _companies_house(self, request: httpx.Request) -> httpx.Response:
+        if self.companies_house_key is not None:
+            expected = "Basic " + base64.b64encode(f"{self.companies_house_key}:".encode()).decode()
+            if request.headers.get("authorization") != expected:
+                return httpx.Response(401, json={"error": "Invalid Authorization"})
         path = request.url.path.strip("/").split("/")
         if path[:2] == ["search", "companies"]:
             q = normalize_company(parse_qs(urlparse(str(request.url)).query).get("q", [""])[0])

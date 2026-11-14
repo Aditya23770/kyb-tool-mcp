@@ -1,6 +1,9 @@
 // Content lives here, separate from the markup. The page reads fine without this script
 // (except the example card and install panel, which need it).
 const DOCS = "https://github.com/Aditya23770/kyb-tool-mcp#readme";
+// The hosted connector. Replace with the Cloud Run URL after the first deploy (one place only).
+const CONNECTOR_URL = "https://CONNECTOR-URL-PENDING.run.app/mcp";
+const CH_KEY_URL = "https://developer.company-information.service.gov.uk/";
 
 // Illustrative review outputs. Flag codes, severities and the decision rule are the real ones.
 const CASES = [
@@ -24,30 +27,22 @@ const CASES = [
   },
 ];
 
+// Each step is [label, code]. A null code renders the label as a plain instruction.
 const METHODS = {
-  "claude-code": {
-    intro: "Build the local sanctions index once, then register the server with Claude Code.",
+  claude: {
+    intro: "Works on claude.ai (web and mobile) and Claude Desktop. About 5 minutes, most of it getting the free key.",
     steps: [
-      ["Build the sanctions index (OFAC SDN + UN, about 20k entries)", "uvx kyb-tool-mcp update-lists"],
-      ["Add the server", "claude mcp add kyb-tool-mcp -e COMPANIES_HOUSE_API_KEY=your-key -- uvx kyb-tool-mcp"],
+      [`1. Get a free Companies House API key: register at ${CH_KEY_URL}, create an application, then create a REST key.`, null],
+      ["2. In Claude, open Customize → Connectors → Add custom connector. Name it TrustLedger and paste this URL:", CONNECTOR_URL],
+      ["3. Under Request headers, add this header name, with your Companies House key as the value:", "X-Companies-House-Key"],
+      ["4. Click Add, then Connect. Try: “Run a KYB check on company 00445790, website tesco.com.”", null],
     ],
-  },
-  desktop: {
-    intro: "Build the index once, then add this to your MCP config file and restart the app.",
-    steps: [
-      ["Build the sanctions index", "uvx kyb-tool-mcp update-lists"],
-      ["Add to claude_desktop_config.json or .cursor/mcp.json", JSON.stringify({
-        mcpServers: { "kyb-tool-mcp": {
-          command: "uvx", args: ["kyb-tool-mcp"],
-          env: { COMPANIES_HOUSE_API_KEY: "your-key" },
-        } },
-      }, null, 2)],
-    ],
+    note: "Free plan: one custom connector. Team and Enterprise: an Owner adds it in Organization settings, then members click Connect. Never paste your key into the chat.",
   },
   pip: {
-    intro: "Install the package into your own environment. You get the MCP server, the CLI and the Python library.",
+    intro: "Install the package into your own environment (Python 3.11+). You get the CLI, the Python library and the MCP server.",
     steps: [
-      ["Install and build the index", `pip install kyb-tool-mcp
+      ["Install and build the sanctions index (re-run daily)", `pip install kyb-tool-mcp
 kyb-tool-mcp update-lists`],
       ["Use it from the command line", `kyb-tool-mcp review case.json --exit-code   # 0 approve, 3 escalate, 4 reject
 kyb-tool-mcp screen "Viktor Borovkov" --dob 1961-03
@@ -55,6 +50,25 @@ kyb-tool-mcp registry 00445790`],
       ["Or from Python", `from kyb_tool_mcp import review_case
 
 result = await review_case({"case_id": "c1", "legal_name": "Acme Ltd", "registration_number": "01234567"})`],
+      ["Or run your own connector (Streamable HTTP at /mcp)", "kyb-tool-mcp serve --http --port 8080"],
+    ],
+  },
+  other: {
+    intro: "Claude Code, Cursor, VS Code and other MCP clients. Use the hosted URL, or run it locally so nothing leaves your machine.",
+    steps: [
+      ["Claude Code (hosted)", `claude mcp add --transport http trustledger ${CONNECTOR_URL} \\
+  --header "X-Companies-House-Key: your-key"`],
+      ["Cursor .cursor/mcp.json (hosted)", JSON.stringify({
+        mcpServers: { trustledger: { url: CONNECTOR_URL, headers: { "X-Companies-House-Key": "your-key" } } },
+      }, null, 2)],
+      ["Local instead: build the sanctions index once, then add the server", `uvx kyb-tool-mcp update-lists
+claude mcp add kyb-tool-mcp -e COMPANIES_HOUSE_API_KEY=your-key -- uvx kyb-tool-mcp`],
+      ["Local in Claude Desktop or Cursor config", JSON.stringify({
+        mcpServers: { "kyb-tool-mcp": {
+          command: "uvx", args: ["kyb-tool-mcp"],
+          env: { COMPANIES_HOUSE_API_KEY: "your-key" },
+        } },
+      }, null, 2)],
     ],
   },
 };
@@ -105,20 +119,37 @@ function showMethod(key) {
   $('[data-f="intro"]').textContent = m.intro;
   const steps = m.steps.map(([label, cmd]) => {
     const wrap = el("div", "m-step");
-    const code = el("div", "code");
-    code.append(el("pre", null, cmd), copyButton(cmd));
-    wrap.append(el("p", "m-step-label", label), code);
+    wrap.append(el("p", "m-step-label", label));
+    if (cmd != null) {
+      const code = el("div", "code");
+      code.append(el("pre", null, cmd), copyButton(cmd));
+      wrap.append(code);
+    }
     return wrap;
   });
+  const extra = m.note ? [el("p", "m-note", m.note)] : [];
   const more = el("p", "sub small");
   const a = el("a", null, "Full setup and troubleshooting in the README");
   a.href = DOCS; more.append(a);
-  $('[data-f="steps"]').replaceChildren(...steps, more);
+  $('[data-f="steps"]').replaceChildren(...steps, ...extra, more);
 }
-$$(".methods button").forEach((b) => b.addEventListener("click", () => {
-  selectTab($(".methods"), b); showMethod(b.dataset.m);
-}));
-showMethod("claude-code");
+function openMethod(key) {
+  const btn = $(`.methods button[data-m="${key}"]`);
+  if (btn) { selectTab($(".methods"), btn); showMethod(key); }
+}
+$$(".methods button").forEach((b) => b.addEventListener("click", () => openMethod(b.dataset.m)));
+$$("[data-goto]").forEach((a) => a.addEventListener("click", () => openMethod(a.dataset.goto)));
+showMethod("claude");
+
+// Connector URL in the hero, with a copy button
+(() => {
+  const box = $(".connector");
+  if (!box) return;
+  $('[data-f="connector-url"]', box).textContent = CONNECTOR_URL;
+  const b = copyButton(CONNECTOR_URL);
+  b.classList.add("copy-light");
+  box.append(b);
+})();
 
 // Arrow-key navigation inside tab lists
 $$('[role="tablist"]').forEach((list) => list.addEventListener("keydown", (e) => {

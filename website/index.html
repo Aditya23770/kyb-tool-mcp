@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TrustLedger</title>
-  <meta name="description" content="TrustLedger: open-source MCP server that runs KYB checks on UK companies: Companies House, OFAC and UN sanctions, and the company website.">
+  <meta name="description" content="TrustLedger: open-source KYB connector for Claude. Checks UK companies against Companies House, the OFAC and UN sanctions lists, and the company website.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#install">Skip to install</a>
+  <a class="skip" href="#setup">Skip to setup</a>
 
   <nav class="nav" aria-label="Main">
     <div class="wrap nav-in">
@@ -23,9 +23,10 @@
       <div class="nav-links">
         <a href="#use">Use it</a>
         <a href="#examples">Examples</a>
-        <a href="#install">Install</a>
+        <a href="#setup">Setup</a>
         <a href="#benchmark">Benchmark</a>
-        <a class="btn btn-sm" href="https://github.com/Aditya23770/kyb-tool-mcp">GitHub</a>
+        <a href="https://github.com/Aditya23770/kyb-tool-mcp">GitHub</a>
+        <a class="btn btn-sm btn-primary" href="#setup">Add to Claude</a>
       </div>
     </div>
   </nav>
@@ -34,13 +35,19 @@
     <!-- Hero: the decision is the product -->
     <header class="wrap hero">
       <div class="hero-copy">
-        <p class="kicker"><span class="dot"></span>Open-source MCP server for KYB · runs on your machine</p>
+        <p class="kicker"><span class="dot"></span>Open-source KYB connector for Claude · free</p>
         <h1>Trust, backed by evidence.</h1>
-        <p class="lead">Ask your AI assistant to vet a UK company. TrustLedger checks Companies House, the OFAC and UN sanctions lists, and the company website, then returns <b class="d-approve">Approve</b>, <b class="d-escalate">Escalate</b> or <b class="d-reject">Reject</b>. Every flag points to the evidence behind it.</p>
+        <p class="lead">Add TrustLedger to Claude and ask it to vet a UK company. It checks Companies House, the OFAC and UN sanctions lists, and the company website, then returns <b class="d-approve">Approve</b>, <b class="d-escalate">Escalate</b> or <b class="d-reject">Reject</b>. Every flag points to the evidence behind it.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="#install">Install</a>
+          <a class="btn btn-primary" href="#setup">Add to Claude</a>
+          <a class="btn" href="#setup" data-goto="pip">Install with pip</a>
           <a class="btn" href="https://github.com/Aditya23770/kyb-tool-mcp">View on GitHub</a>
         </div>
+        <div class="connector" aria-label="Connector URL">
+          <span class="connector-label">Connector URL</span>
+          <code class="connector-url" data-f="connector-url"></code>
+        </div>
+        <p class="hero-note">Works on claude.ai and Claude Desktop. Needs a free Companies House API key.</p>
       </div>
 
       <figure class="case" aria-label="Example review output">
@@ -69,8 +76,8 @@
       <div class="wrap">
         <h2 id="how-h" class="h2">How it works</h2>
         <ol class="flow">
-          <li><span class="flow-k">Your assistant</span><span class="flow-v">Claude Code, Claude Desktop or Cursor calls a tool</span></li>
-          <li><span class="flow-k">TrustLedger</span><span class="flow-v">runs locally over stdio; sanctions are screened against a local index, so names never leave your machine</span></li>
+          <li><span class="flow-k">Claude</span><span class="flow-v">claude.ai, Claude Desktop, Claude Code or another AI tool calls a TrustLedger tool</span></li>
+          <li><span class="flow-k">TrustLedger</span><span class="flow-v">runs as a hosted connector or on your own machine; sanctions are screened against its own copy of the lists</span></li>
           <li><span class="flow-k">Public sources</span><span class="flow-v">Companies House, GLEIF, OFAC SDN, UN list, the company website and its domain record</span></li>
           <li><span class="flow-k">Decision</span><span class="flow-v">a versioned rule policy decides; your assistant explains it but cannot change it</span></li>
         </ol>
@@ -80,11 +87,11 @@
     <!-- Where you can use it -->
     <section id="use" class="wrap" aria-labelledby="use-h">
       <h2 id="use-h" class="h2">Where you can use it</h2>
-      <p class="sub">Install once. After that, most people never touch the terminal again.</p>
+      <p class="sub">Start in Claude with no install. Move to pip when you want scripts, batches or your own server.</p>
       <div class="uses">
-        <div class="use"><h3>In your AI assistant</h3><p>Claude Desktop, Claude Code, Cursor or any app that runs local MCP servers. Just ask in plain English.</p></div>
-        <div class="use"><h3>In the terminal</h3><p>One command per check. Good for batches of companies, scripts and CI.</p></div>
-        <div class="use"><h3>In your own code</h3><p>Import it as a Python library and add KYB checks to your onboarding flow.</p></div>
+        <div class="use"><h3>In Claude</h3><p>Add the connector URL to claude.ai or Claude Desktop, then ask in plain English. Nothing to install.</p></div>
+        <div class="use"><h3>With pip</h3><p>The terminal tool and Python library for batches, scripts, CI and your onboarding flow. It can also run your own connector.</p></div>
+        <div class="use"><h3>In other AI tools</h3><p>Claude Code, Cursor, VS Code and other MCP clients, through the hosted URL or a local install.</p></div>
       </div>
     </section>
 
@@ -129,17 +136,17 @@
       </dl>
     </section>
 
-    <!-- Install -->
-    <section id="install" class="band" aria-labelledby="install-h">
-      <div class="wrap">
-        <h2 id="install-h" class="h2">Install</h2>
-        <p class="sub">Needs Python 3.11+ and a free <a href="https://developer.company-information.service.gov.uk/">Companies House API key</a>.</p>
+    <!-- Setup -->
+    <section id="setup" class="band" aria-labelledby="setup-h">
+      <div class="wrap" id="install">
+        <h2 id="setup-h" class="h2">Set up</h2>
+        <p class="sub">Registry checks need a free <a href="https://developer.company-information.service.gov.uk/">Companies House API key</a>. Sanctions and website checks work without it.</p>
 
         <div class="install">
-          <div class="methods" role="tablist" aria-label="Install method">
-            <button role="tab" data-m="claude-code" aria-selected="true">Claude Code</button>
-            <button role="tab" data-m="desktop" aria-selected="false">Claude Desktop / Cursor</button>
+          <div class="methods" role="tablist" aria-label="Where you use it">
+            <button role="tab" data-m="claude" aria-selected="true">Claude.ai &amp; Desktop</button>
             <button role="tab" data-m="pip" aria-selected="false">pip / Python</button>
+            <button role="tab" data-m="other" aria-selected="false">Other AI tools</button>
           </div>
           <div class="method-panel" role="tabpanel" aria-live="polite">
             <p class="m-intro" data-f="intro"></p>
@@ -148,13 +155,24 @@
         </div>
 
         <table class="env">
-          <caption>Environment variables</caption>
+          <caption>Keys and settings</caption>
           <tbody>
-            <tr><th><code>COMPANIES_HOUSE_API_KEY</code></th><td><span class="req">Required</span> registry checks. Without it they report <code>not_configured</code>.</td></tr>
+            <tr><th><code>X-Companies-House-Key</code> header</th><td><span class="req">Connector</span> your key, sent by Claude on each request. Used for that request only, never stored or logged.</td></tr>
+            <tr><th><code>COMPANIES_HOUSE_API_KEY</code></th><td><span class="req">Local</span> registry checks. Without it they report <code>not_configured</code>.</td></tr>
             <tr><th><code>KYB_DATA_DIR</code></th><td><span class="opt">Optional</span> where the sanctions index and cache live. Default <code>~/.kyb-tool-mcp</code>.</td></tr>
             <tr><th><code>KYB_POLICY_FILE</code></th><td><span class="opt">Optional</span> your own decision policy, created with <code>kyb-tool-mcp init</code>.</td></tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section id="privacy" class="wrap" aria-labelledby="privacy-h">
+      <h2 id="privacy-h" class="h2">Your data</h2>
+      <p class="sub">Choose how much leaves your machine.</p>
+      <div class="uses two">
+        <div class="use"><h3>Hosted connector</h3><p>Names and company details you check are processed on the TrustLedger server to run the checks, then discarded. No accounts, no case history, no logs of your inputs or your key.</p></div>
+        <div class="use"><h3>Local install</h3><p>Everything runs on your computer. Sanctions screening uses a local copy of the lists, so names never leave your machine. Only Companies House, GLEIF and the website being checked are contacted.</p></div>
       </div>
     </section>
 
@@ -178,11 +196,11 @@
     <section id="next" class="band" aria-labelledby="next-h">
       <div class="wrap">
         <h2 id="next-h" class="h2">Coming next</h2>
-        <p class="sub">Today it runs on your machine. Phase 2 makes it easier to reach.</p>
+        <p class="sub">The hosted connector is live. Next, making it even easier to reach.</p>
         <ul class="next">
-          <li><b>One-click install for Claude Desktop.</b> A desktop extension file: no config editing.</li>
-          <li><b>Add it as a connector.</b> A hosted version you add to Claude by URL.</li>
+          <li><b>One-click install for Claude Desktop.</b> A desktop extension file for the local version: no config editing.</li>
           <li><b>A web form.</b> Fill in a company's details in the browser and get the same decision, no install needed.</li>
+          <li><b>UK sanctions list.</b> Screening against the UK government's own list alongside OFAC and the UN.</li>
         </ul>
       </div>
     </section>

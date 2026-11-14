@@ -180,3 +180,20 @@ section { padding: 88px 0; }
 #benchmark .small { text-align: center; }
 .next { margin: 0 auto; }
 .gh .actions { justify-content: center; }
+
+/* Hosted connector URL in the hero */
+.connector { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center;
+  max-width: 100%; margin: 28px auto 0; padding: 8px 8px 8px 14px; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--paper); }
+.connector-label { font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.connector-url { font: 500 14px var(--mono); color: var(--ink); overflow-wrap: anywhere; min-width: 0; }
+.copy.copy-light { position: static; color: var(--brand-dark); background: var(--brand-soft); border-color: var(--brand-soft); }
+.copy.copy-light:hover { background: var(--surface); border-color: var(--brand); }
+.hero-note { font-size: 14px; color: var(--muted); margin: 12px 0 0; }
+.m-note { font-size: 14px; color: var(--muted); margin: 0 0 8px; padding: 10px 14px; border-left: 3px solid var(--brand);
+  background: var(--surface); }
+.uses.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 600px) {
+  .uses, .uses.two { grid-template-columns: minmax(0, 1fr); }
+  .connector { padding: 10px 12px; }
+}
