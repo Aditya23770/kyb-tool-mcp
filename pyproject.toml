@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "kyb-tool-mcp"
-version = "0.1.1"
-description = "Open-source KYB (Know Your Business) screening and case-review engine, run locally as an MCP server."
+version = "0.2.0"
+description = "Open-source KYB (Know Your Business) screening and case-review engine: a local or hosted MCP server."
 readme = "README.md"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
@@ -24,7 +24,8 @@ classifiers = [
   "Topic :: Office/Business :: Financial",
   "Typing :: Typed",
 ]
-# Only what the local MCP server needs. LLM SDKs, web/API servers etc. are future work.
+# Only what the MCP server needs (stdio and Streamable HTTP). No LLM SDKs or extra web frameworks:
+# starlette and uvicorn already come with `mcp`; they are listed because the HTTP mode imports them.
 dependencies = [
   "mcp>=2.3,<3",
   "pydantic>=2.7",
@@ -34,10 +35,12 @@ dependencies = [
   "jellyfish>=1.0",
   "anyascii>=0.3.2",
   "pyyaml>=6.0",
+  "starlette>=0.40",
+  "uvicorn>=0.30",
 ]
 
 [project.urls]
-Homepage = "https://aditya23770.github.io/kyb-tool-mcp/"
+Homepage = "https://trustledger.vercel.app/"
 Repository = "https://github.com/Aditya23770/kyb-tool-mcp"
 Issues = "https://github.com/Aditya23770/kyb-tool-mcp/issues"
 

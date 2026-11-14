@@ -88,8 +88,10 @@ class ReviewPipeline:
         index_path: Path | None = None,
         today: date | None = None,
         audit: bool | None = None,
+        missing_key_hint: str = "set COMPANIES_HOUSE_API_KEY",
     ) -> None:
         self.config = config or load_config()
+        self.missing_key_hint = missing_key_hint
         self.transport = transport
         self.index_path = index_path or self.config.settings.index_path
         self.today = today
@@ -98,15 +100,21 @@ class ReviewPipeline:
 
     # ---- providers -----------------------------------------------------------
     def _registry_providers(
-        self, ctx: ProviderContext, country: str
+        self, ctx: ProviderContext, country: str, ch_key: str | None = None
     ) -> tuple[list[RegistryProvider], list[str]]:
+        """Build the configured registry providers.
+
+        `ch_key` is a per-call Companies House key (the hosted server reads it from the caller's request
+        header). It is used for this call only and never stored; the configured key is the fallback.
+        """
         providers: list[RegistryProvider] = []
         missing: list[str] = []
         for name in self.config.providers.registry:
             if name == "companies_house":
-                key = self.config.settings.companies_house_api_key
+                configured = self.config.settings.companies_house_api_key
+                key = ch_key or (configured.get_secret_value() if configured else None)
                 if not key:
-                    missing.append("companies_house (set COMPANIES_HOUSE_API_KEY)")
+                    missing.append(f"companies_house ({self.missing_key_hint})")
                     continue
                 p: RegistryProvider = CompaniesHouseProvider(ctx, key)
             elif name == "gleif":
@@ -141,10 +149,10 @@ class ReviewPipeline:
 
     # ---- building blocks (also exposed as raw MCP tools) ----------------------
     async def lookup_registry(
-        self, ctx: ProviderContext, run: _Run, app: Application
+        self, ctx: ProviderContext, run: _Run, app: Application, ch_key: str | None = None
     ) -> Evidence[CompanyRecord] | None:
         t0 = time.perf_counter()
-        providers, missing = self._registry_providers(ctx, app.country)
+        providers, missing = self._registry_providers(ctx, app.country, ch_key)
         if not providers:
             run.not_configured("registry", "; ".join(missing) or f"no registry provider for {app.country}")
             return None
@@ -317,13 +325,15 @@ class ReviewPipeline:
         return snap, dom
 
     # ---- full review -----------------------------------------------------------
-    async def review(self, application: Application | dict[str, Any]) -> ReviewResult:
+    async def review(
+        self, application: Application | dict[str, Any], *, companies_house_api_key: str | None = None
+    ) -> ReviewResult:
         app = application if isinstance(application, Application) else Application.model_validate(application)
         t_start = time.perf_counter()
         run = _Run()
         ctx = ProviderContext.create(self.config, self.transport)
         try:
-            reg_task = asyncio.create_task(self.lookup_registry(ctx, run, app))
+            reg_task = asyncio.create_task(self.lookup_registry(ctx, run, app, companies_house_api_key))
             web_task = asyncio.create_task(self.fetch_website(ctx, run, app.website)) if app.website else None
             primary = await reg_task
             self.ownership(run, app, primary)
@@ -392,7 +402,12 @@ class ReviewPipeline:
 
     # ---- raw tools (tool mode) -------------------------------------------------
     async def registry_lookup(
-        self, country: str, registration_number: str | None, name: str | None
+        self,
+        country: str,
+        registration_number: str | None,
+        name: str | None,
+        *,
+        companies_house_api_key: str | None = None,
     ) -> dict[str, Any]:
         app = Application(
             case_id="lookup",
@@ -403,7 +418,7 @@ class ReviewPipeline:
         run = _Run()
         ctx = ProviderContext.create(self.config, self.transport)
         try:
-            providers, missing = self._registry_providers(ctx, app.country)
+            providers, missing = self._registry_providers(ctx, app.country, companies_house_api_key)
             out: dict[str, Any] = {
                 "country": app.country,
                 "records": [],

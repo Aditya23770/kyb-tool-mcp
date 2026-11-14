@@ -144,7 +144,8 @@ class CompaniesHouseProvider:
         if r.status == 404:
             return None
         if r.status == 401:
-            raise ProviderError(self.name, "unauthorised: check COMPANIES_HOUSE_API_KEY")
+            # Never include the key itself: this message reaches the caller as a PROVIDER_ERROR flag.
+            raise ProviderError(self.name, "unauthorised: the Companies House API key was rejected")
         if r.status != 200:
             raise ProviderError(self.name, f"HTTP {r.status} for {path}")
         data = r.json()

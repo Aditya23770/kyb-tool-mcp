@@ -50,7 +50,6 @@ benchmarks/d_ood/*.json
 
 # Local-only development material (kept on disk, not shipped)
 benchmarks/
-Dockerfile
 PLAN.md
 CLAUDE.md
 docs/testing.md

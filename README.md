@@ -4,13 +4,14 @@
 
 [![PyPI](https://img.shields.io/pypi/v/kyb-tool-mcp)](https://pypi.org/project/kyb-tool-mcp/)
 [![Licence](https://img.shields.io/badge/licence-Apache--2.0-blue)](LICENSE)
-[![Website](https://img.shields.io/badge/website-TrustLedger-0f8a55)](https://aditya23770.github.io/kyb-tool-mcp/)
+[![Website](https://img.shields.io/badge/website-TrustLedger-0f8a55)](https://trustledger.vercel.app/)
 
 Give it a company. It checks Companies House, screens the company, its directors and its owners
 against the OFAC and UN sanctions lists, and checks the website. You get **APPROVE**, **ESCALATE**
 or **REJECT**, and every flag points to the evidence behind it.
 
-- **Runs on your machine.** Sanctions screening uses a local copy of the lists; names never leave your computer.
+- **Add it to Claude by URL.** No install: paste the connector URL into claude.ai or Claude Desktop.
+- **Or run it on your machine.** The pip package keeps everything local; names never leave your computer.
 - **No LLM key needed.** Your assistant is the LLM. The decision comes from fixed rules, so it is repeatable and auditable.
 - **Free data.** Companies House, OFAC and the UN list are free. You only need a free Companies House key.
 
@@ -18,25 +19,67 @@ or **REJECT**, and every flag points to the evidence behind it.
 
 ## Quick start
 
-**1. Get a free Companies House key** (5 minutes): register at
+**Get a free Companies House key** (5 minutes): register at
 [developer.company-information.service.gov.uk](https://developer.company-information.service.gov.uk/),
-create an application, then create a **REST** key.
+create an application, then create a **REST** key. Registry checks need it; sanctions and website checks
+work without it.
 
-**2. Build the local sanctions index** (once; re-run daily to stay current):
+### 1. Claude.ai and Claude Desktop (no install)
+
+1. In Claude, open **Customize → Connectors → Add custom connector**.
+2. Name it `TrustLedger` and paste the connector URL:
+
+   ```text
+   https://CONNECTOR-URL-PENDING.run.app/mcp
+   ```
+
+3. Under **Request headers**, add `X-Companies-House-Key` with your Companies House key as the value.
+4. Click **Add**, then **Connect**.
+
+Your key is sent with each request, used for that request only, and never stored or logged. Never paste
+it into the chat. On the Free plan you can add one custom connector; on Team and Enterprise an Owner adds
+it in Organization settings and members click **Connect**.
+
+### 2. pip / Python
+
+```bash
+pip install kyb-tool-mcp
+kyb-tool-mcp update-lists         # builds the local sanctions index; re-run daily
+```
+
+Then use the [command line](#command-line), the [Python library](#python), or
+[run your own connector](#run-your-own-connector). Details in [Use it with pip](#use-it-with-pip-no-assistant-needed).
+
+### 3. Other AI tools
+
+Hosted, in Claude Code:
+
+```bash
+claude mcp add --transport http trustledger https://CONNECTOR-URL-PENDING.run.app/mcp \
+  --header "X-Companies-House-Key: your-key"
+```
+
+Hosted, in Cursor (`.cursor/mcp.json`) or any client that takes a URL and headers:
+
+```json
+{
+  "mcpServers": {
+    "trustledger": {
+      "url": "https://CONNECTOR-URL-PENDING.run.app/mcp",
+      "headers": { "X-Companies-House-Key": "your-key" }
+    }
+  }
+}
+```
+
+Local (everything stays on your machine). Build the sanctions index once, then add the server:
 
 ```bash
 uvx kyb-tool-mcp update-lists
-```
-
-**3. Add it to your assistant**
-
-Claude Code:
-
-```bash
 claude mcp add kyb-tool-mcp -e COMPANIES_HOUSE_API_KEY=your-key -- uvx kyb-tool-mcp
 ```
 
-Claude Desktop or Cursor: add this to `claude_desktop_config.json` or `.cursor/mcp.json`, then restart the app.
+For Claude Desktop or Cursor, add this to `claude_desktop_config.json` or `.cursor/mcp.json`, then restart the app:
 
 ```json
 {
@@ -50,10 +93,9 @@ Claude Desktop or Cursor: add this to `claude_desktop_config.json` or `.cursor/m
 }
 ```
 
-`uvx` comes with [uv](https://docs.astral.sh/uv/). Prefer pip? `pip install kyb-tool-mcp` gives you the same
-`kyb-tool-mcp` command.
+`uvx` comes with [uv](https://docs.astral.sh/uv/).
 
-**4. Ask**
+### Ask
 
 | You ask | You get |
 | --- | --- |
@@ -88,6 +130,14 @@ as a fallback).
 
 Without a Companies House key, registry checks report `not_configured` and fall back to GLEIF.
 Sanctions and website checks still run.
+
+## Your data
+
+- **Hosted connector:** what you check is processed on the TrustLedger server to run the checks, then
+  discarded. No accounts, no case history (the audit log and HTTP cache are off), and your key and inputs
+  are never logged.
+- **Local install:** everything runs on your computer. Sanctions screening uses a local copy of the lists,
+  so names never leave your machine.
 
 ## Use it with pip (no assistant needed)
 
@@ -131,6 +181,20 @@ you: the tool compares them with the registry, and anyone missing is flagged `UN
   "ubos": []
 }
 ```
+
+### Run your own connector
+
+The same tools over Streamable HTTP, for your team or your own cloud:
+
+```bash
+kyb-tool-mcp serve --http --port 8080      # MCP at /mcp, health at /healthz (localhost only;
+                                           # add --host 0.0.0.0 to accept outside connections)
+```
+
+Each caller sends their own key in the `X-Companies-House-Key` header (or set `COMPANIES_HOUSE_API_KEY`
+on the server to share one key). `GET /healthz` returns 503 when the sanctions index is missing or older
+than 48 hours. Set `KYB_ALLOWED_HOSTS` to your public hostname(s) to reject other `Host` headers. The repo
+includes a `Dockerfile` that builds the index into the image.
 
 ### Python
 
@@ -219,15 +283,16 @@ UK data the tool was never tuned on.
 
 - **`kyb-tool-mcp` is not recognised (Windows):** your Python `Scripts` folder is not on PATH. Use
   `uvx kyb-tool-mcp`, or `python -m kyb_tool_mcp.cli`.
-- **Registry checks say `not_configured`:** the key is missing. Pass it as `COMPANIES_HOUSE_API_KEY`
-  in the MCP config or a `.env` file.
+- **Registry checks say `not_configured`:** the key is missing. In the Claude connector, add the
+  `X-Companies-House-Key` request header. Locally, pass it as `COMPANIES_HOUSE_API_KEY` in the MCP config
+  or a `.env` file.
 - **Sanctions results look out of date:** run `uvx kyb-tool-mcp update-lists` again.
 
 ## Coming next
 
-- One-click install for Claude Desktop
-- Add it to Claude as a connector by URL
+- One-click install for Claude Desktop (local version)
 - A web form: check a company in the browser, no install
+- The UK government's sanctions list alongside OFAC and the UN
 
 ## More
 
