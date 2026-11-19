@@ -5,10 +5,10 @@ from __future__ import annotations
 from functools import cache
 from importlib import resources
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from kyb_tool_mcp import __version__
@@ -26,7 +26,8 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
-    companies_house_api_key: str | None = None
+    # SecretStr: the key never shows up in a repr, a log line or a settings dump.
+    companies_house_api_key: SecretStr | None = None
 
     kyb_providers_file: Path | None = None
     kyb_policy_file: Path | None = None
@@ -35,6 +36,11 @@ class Settings(BaseSettings):
     kyb_http_cache: bool = True
     kyb_http_cache_ttl: int = 24 * 3600
     kyb_http_timeout: float = 20.0
+    # Hosted HTTP mode (`kyb-tool-mcp serve --http`)
+    kyb_allowed_hosts: list[str] = Field(default_factory=list)  # Host headers accepted; empty = no check
+    kyb_index_max_age_hours: int = 48  # /healthz fails when the sanctions index is older than this
+    kyb_log_format: Literal["text", "json"] = "text"  # json = Google Cloud Logging structured lines
+    kyb_gcp_project: str | None = None  # links log lines to Cloud Run request traces
 
     @property
     def user_agent(self) -> str:

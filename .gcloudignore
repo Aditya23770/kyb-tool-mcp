@@ -1,0 +1,23 @@
+# Files `gcloud run deploy --source .` uploads to Cloud Build. Never upload secrets or local data.
+.gcloudignore
+.git
+.gitignore
+.github
+.venv
+.env
+.env.*
+**/*.sqlite
+**/__pycache__
+.mypy_cache
+.ruff_cache
+.pytest_cache
+.coverage
+.claude
+dist
+tests
+benchmarks
+website
+docs
+PLAN.md
+CLAUDE.md
+local_files/

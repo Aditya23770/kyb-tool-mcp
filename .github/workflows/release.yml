@@ -1,6 +1,6 @@
 name: Release
 
-# Future work: the project currently ships as a local MCP server run from source.
+# Publishes the pip package (stdio MCP server, `serve --http` hosted mode, CLI and library).
 # This workflow only runs when you push a version tag (v*) or start it by hand, and publishes
 # with PyPI Trusted Publishing (no API tokens). Configure the trusted publisher on
 # test.pypi.org and pypi.org for this repository before the first tag.
