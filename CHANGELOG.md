@@ -17,7 +17,7 @@ Hosted connector: add TrustLedger to Claude by URL.
 - Security: `COMPANIES_HOUSE_API_KEY` is held as a `SecretStr`; a rejected key reports
   "the Companies House API key was rejected" without the key.
 - `FakeWorld.companies_house_key` lets tests require a specific key.
-- Docker image for hosting; website moved to https://trustledger.vercel.app/.
+- Docker image for hosting; website moved to https://kyb-tool-mcp-website.vercel.app/.
 - No decision-rule changes (policy version unchanged).
 
 ## 0.1.1

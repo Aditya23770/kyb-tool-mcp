@@ -40,7 +40,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://trustledger.vercel.app/"
+Homepage = "https://kyb-tool-mcp-website.vercel.app/"
 Repository = "https://github.com/Aditya23770/kyb-tool-mcp"
 Issues = "https://github.com/Aditya23770/kyb-tool-mcp/issues"
 

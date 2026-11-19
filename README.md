@@ -4,7 +4,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/kyb-tool-mcp)](https://pypi.org/project/kyb-tool-mcp/)
 [![Licence](https://img.shields.io/badge/licence-Apache--2.0-blue)](LICENSE)
-[![Website](https://img.shields.io/badge/website-TrustLedger-0f8a55)](https://trustledger.vercel.app/)
+[![Website](https://img.shields.io/badge/website-TrustLedger-0f8a55)](https://kyb-tool-mcp-website.vercel.app/)
 
 Give it a company. It checks Companies House, screens the company, its directors and its owners
 against the OFAC and UN sanctions lists, and checks the website. You get **APPROVE**, **ESCALATE**

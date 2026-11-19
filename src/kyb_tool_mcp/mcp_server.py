@@ -60,7 +60,7 @@ HOSTED_INSTRUCTIONS = (
     "X-Companies-House-Key request header of the connector settings. If the registry check is "
     '"not_configured", tell the user how to add that header; never ask them to paste the key into the chat.'
 )
-WEBSITE_URL = "https://trustledger.vercel.app/"
+WEBSITE_URL = "https://kyb-tool-mcp-website.vercel.app/"
 
 READ_ONLY = ToolAnnotations(readOnlyHint=True, openWorldHint=True)
 log: logging.Logger = logging.getLogger("kyb_tool_mcp")
