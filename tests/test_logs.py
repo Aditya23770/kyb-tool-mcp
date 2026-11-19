@@ -57,7 +57,7 @@ async def test_tool_calls_log_outcome_only_with_trace(config: Config, mini_index
     logger.setLevel(logging.INFO)
     try:
         app = app_for(config, mini_index_path, world_requiring_key())
-        headers = {"X-Companies-House-Key": KEY, "X-Cloud-Trace-Context": f"{TRACE}/1;o=1"}
+        headers = {"x-api-key": KEY, "X-Cloud-Trace-Context": f"{TRACE}/1;o=1"}
         async with (
             http(app, headers) as hc,
             Client(streamable_http_client(f"{BASE}/mcp", http_client=hc)) as c,

@@ -34,10 +34,11 @@ const METHODS = {
     steps: [
       [`1. Get a free Companies House API key: register at ${CH_KEY_URL}, create an application, then create a REST key.`, null],
       ["2. In Claude, open Customize → Connectors → Add custom connector. Name it TrustLedger and paste this URL:", CONNECTOR_URL],
-      ["3. Under Request headers, add this header name, with your Companies House key as the value:", "X-Companies-House-Key"],
-      ["4. Click Add, then Connect. Try: “Run a KYB check on company 00445790, website tesco.com.”", null],
+      ["3. Under Authentication, choose No sign-in (Claude usually marks it “Detected”). TrustLedger has no accounts: your key goes in a header instead.", null],
+      ["4. Under Request headers, add this header name, with your Companies House key as the value:", "x-api-key"],
+      ["5. Click Add, then Connect. Try: “Run a KYB check on company 00445790, website tesco.com.”", null],
     ],
-    note: "Free plan: one custom connector. Team and Enterprise: an Owner adds it in Organization settings, then members click Connect. Never paste your key into the chat.",
+    note: "Chose a sign-in option by mistake? Edit the connector and switch to No sign-in. Registry checks say not_configured? The x-api-key header is missing. Claude says the header name needs approval? Use the header Authorization with the value Bearer followed by your key. Never paste your key into the chat. Free plan: one custom connector. Team and Enterprise: an Owner adds it in Organization settings, then members click Connect.",
   },
   pip: {
     intro: "Install the package into your own environment (Python 3.11+). You get the CLI, the Python library and the MCP server.",
@@ -57,9 +58,9 @@ result = await review_case({"case_id": "c1", "legal_name": "Acme Ltd", "registra
     intro: "Claude Code, Cursor, VS Code and other MCP clients. Use the hosted URL, or run it locally so nothing leaves your machine.",
     steps: [
       ["Claude Code (hosted)", `claude mcp add --transport http trustledger ${CONNECTOR_URL} \\
-  --header "X-Companies-House-Key: your-key"`],
+  --header "x-api-key: your-key"`],
       ["Cursor .cursor/mcp.json (hosted)", JSON.stringify({
-        mcpServers: { trustledger: { url: CONNECTOR_URL, headers: { "X-Companies-House-Key": "your-key" } } },
+        mcpServers: { trustledger: { url: CONNECTOR_URL, headers: { "x-api-key": "your-key" } } },
       }, null, 2)],
       ["Local instead: build the sanctions index once, then add the server", `uvx kyb-tool-mcp update-lists
 claude mcp add kyb-tool-mcp -e COMPANIES_HOUSE_API_KEY=your-key -- uvx kyb-tool-mcp`],

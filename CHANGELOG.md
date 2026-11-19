@@ -7,7 +7,8 @@ Hosted connector: add TrustLedger to Claude by URL.
 - New `kyb-tool-mcp serve --http [--host] [--port]`: the same tools over Streamable HTTP at `/mcp`
   (stateless, JSON responses), plus `GET /health` and `/healthz` (503 when the sanctions index is missing or older
   than `KYB_INDEX_MAX_AGE_HOURS`, default 48).
-- Each caller sends their own Companies House key in the `X-Companies-House-Key` request header. It is
+- Each caller sends their own Companies House key in the `x-api-key` request header (also accepted:
+  `Authorization: Bearer <key>` and `X-Companies-House-Key`). It is
   used for that call only: never stored, logged or returned. Without it, registry checks report
   `not_configured` with setup instructions (fail closed, as before).
 - HTTP mode turns off the audit log and HTTP cache (shared server, nothing stored about users).

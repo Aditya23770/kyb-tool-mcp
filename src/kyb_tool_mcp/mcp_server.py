@@ -2,8 +2,8 @@
 
 - stdio (`kyb-tool-mcp`): the client starts the server on the user's machine.
 - Streamable HTTP (`kyb-tool-mcp serve --http`): a hosted connector. Each caller sends their own
-  Companies House key in the `X-Companies-House-Key` request header; it is used for that call only and
-  never stored, logged or returned.
+  Companies House key in the `x-api-key` request header (also accepted: `Authorization: Bearer <key>`
+  and the older `X-Companies-House-Key`); it is used for that call only and never stored, logged or returned.
 
 Two modes:
 - Pipeline mode: `review_kyb_case` runs every configured check and returns a policy decision.
@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import logging
 import time
+from collections.abc import Mapping
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Literal
@@ -49,16 +50,20 @@ Use the raw tools (`registry_lookup`, `screen_entity`, `check_website`) to inves
 `explain_policy` to learn the rules. A check reported as "not_configured" was NOT performed.
 {DISCLAIMER}"""
 
-KEY_HEADER = "x-companies-house-key"
+# Where callers may put their Companies House key, in order of preference. `x-api-key` is the
+# documented one (a standard name Claude's connector dialog accepts); the others are fallbacks.
+KEY_HEADER = "x-api-key"
+LEGACY_KEY_HEADER = "x-companies-house-key"
 CH_KEY_URL = "https://developer.company-information.service.gov.uk/"
 HOSTED_KEY_HINT = (
-    f"add your free Companies House key ({CH_KEY_URL}) as the X-Companies-House-Key request header "
+    f"add your free Companies House key ({CH_KEY_URL}) as the x-api-key request header "
     "in your connector settings"
 )
 HOSTED_INSTRUCTIONS = (
     "\nHosted connector: registry checks use the caller's own free Companies House key, sent in the "
-    "X-Companies-House-Key request header of the connector settings. If the registry check is "
-    '"not_configured", tell the user how to add that header; never ask them to paste the key into the chat.'
+    "x-api-key request header of the connector settings (Authentication: No sign-in). If the registry "
+    'check is "not_configured", tell the user how to add that header; never ask them to paste the key '
+    "into the chat."
 )
 WEBSITE_URL = "https://kyb-tool-mcp-website.vercel.app/"
 
@@ -106,10 +111,23 @@ def _header_key(ctx: Context | None) -> str | None:
         headers = ctx.headers
     except ValueError:  # called outside a request
         return None
-    if not headers:
-        return None
-    value = (headers.get(KEY_HEADER) or "").strip()
-    return value or None
+    return key_from_headers(headers) if headers else None
+
+
+def key_from_headers(headers: Mapping[str, str]) -> str | None:
+    """Companies House key from `x-api-key`, then `X-Companies-House-Key`, then `Authorization: Bearer`.
+
+    Header names are matched case-insensitively. Any other Authorization scheme is ignored.
+    """
+    lower = {k.lower(): v for k, v in headers.items()}
+    for name in (KEY_HEADER, LEGACY_KEY_HEADER):
+        value = (lower.get(name) or "").strip()
+        if value:
+            return value
+    scheme, _, token = (lower.get("authorization") or "").strip().partition(" ")
+    if scheme.lower() == "bearer" and token.strip():
+        return token.strip()
+    return None
 
 
 def index_health(settings: Settings, index_path: Path | None = None) -> tuple[bool, dict[str, Any]]:

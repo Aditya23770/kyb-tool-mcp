@@ -33,8 +33,10 @@ work without it.
    https://trustledger-mcp-929149814707.europe-west1.run.app/mcp
    ```
 
-3. Under **Request headers**, add `X-Companies-House-Key` with your Companies House key as the value.
-4. Click **Add**, then **Connect**.
+3. Under **Authentication**, choose **No sign-in** (Claude usually marks it "Detected"). TrustLedger has no
+   accounts; your key goes in a header instead.
+4. Under **Request headers**, add `x-api-key` with your Companies House key as the value.
+5. Click **Add**, then **Connect**.
 
 Your key is sent with each request, used for that request only, and never stored or logged. Never paste
 it into the chat. On the Free plan you can add one custom connector; on Team and Enterprise an Owner adds
@@ -56,7 +58,7 @@ Hosted, in Claude Code:
 
 ```bash
 claude mcp add --transport http trustledger https://trustledger-mcp-929149814707.europe-west1.run.app/mcp \
-  --header "X-Companies-House-Key: your-key"
+  --header "x-api-key: your-key"
 ```
 
 Hosted, in Cursor (`.cursor/mcp.json`) or any client that takes a URL and headers:
@@ -66,7 +68,7 @@ Hosted, in Cursor (`.cursor/mcp.json`) or any client that takes a URL and header
   "mcpServers": {
     "trustledger": {
       "url": "https://trustledger-mcp-929149814707.europe-west1.run.app/mcp",
-      "headers": { "X-Companies-House-Key": "your-key" }
+      "headers": { "x-api-key": "your-key" }
     }
   }
 }
@@ -191,8 +193,9 @@ kyb-tool-mcp serve --http --port 8080      # MCP at /mcp, health at /health (loc
                                            # add --host 0.0.0.0 to accept outside connections)
 ```
 
-Each caller sends their own key in the `X-Companies-House-Key` header (or set `COMPANIES_HOUSE_API_KEY`
-on the server to share one key). `GET /health` (or `/healthz`) returns 503 when the sanctions index is missing or older
+Each caller sends their own key in the `x-api-key` header (`Authorization: Bearer <key>` and the older
+`X-Companies-House-Key` also work), or set `COMPANIES_HOUSE_API_KEY`
+on the server to share one key. `GET /health` (or `/healthz`) returns 503 when the sanctions index is missing or older
 than 48 hours. Set `KYB_ALLOWED_HOSTS` to your public hostname(s) to reject other `Host` headers. The repo
 includes a `Dockerfile` that builds the index into the image.
 
@@ -284,8 +287,11 @@ UK data the tool was never tuned on.
 - **`kyb-tool-mcp` is not recognised (Windows):** your Python `Scripts` folder is not on PATH. Use
   `uvx kyb-tool-mcp`, or `python -m kyb_tool_mcp.cli`.
 - **Registry checks say `not_configured`:** the key is missing. In the Claude connector, add the
-  `X-Companies-House-Key` request header. Locally, pass it as `COMPANIES_HOUSE_API_KEY` in the MCP config
+  `x-api-key` request header. Locally, pass it as `COMPANIES_HOUSE_API_KEY` in the MCP config
   or a `.env` file.
+- **Claude can't connect to the connector:** edit it and check **Authentication** is **No sign-in**.
+- **Claude says a custom header name needs approval:** use `x-api-key` as the header name. If that is
+  also refused, use the header `Authorization` with the value `Bearer <your key>`.
 - **Sanctions results look out of date:** run `uvx kyb-tool-mcp update-lists` again.
 
 ## Coming next
