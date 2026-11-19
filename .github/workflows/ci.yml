@@ -61,9 +61,9 @@ jobs:
       - name: Smoke test hosted HTTP mode
         run: |
           /tmp/smoke/bin/kyb-tool-mcp serve --http --host 127.0.0.1 --port 8765 &
-          for i in $(seq 1 30); do curl -s -o /dev/null http://127.0.0.1:8765/healthz && break; sleep 1; done
+          for i in $(seq 1 30); do curl -s -o /dev/null http://127.0.0.1:8765/health && break; sleep 1; done
           # No sanctions index in CI, so /healthz must report it (503), not pretend to be healthy.
-          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8765/healthz)" = "503"
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8765/health)" = "503"
           /tmp/smoke/bin/python - <<'EOF'
           import asyncio
           from mcp import Client

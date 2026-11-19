@@ -1,8 +1,8 @@
 // Content lives here, separate from the markup. The page reads fine without this script
 // (except the example card and install panel, which need it).
 const DOCS = "https://github.com/Aditya23770/kyb-tool-mcp#readme";
-// The hosted connector. Replace with the Cloud Run URL after the first deploy (one place only).
-const CONNECTOR_URL = "https://CONNECTOR-URL-PENDING.run.app/mcp";
+// The hosted connector (Cloud Run). Change it here only.
+const CONNECTOR_URL = "https://trustledger-mcp-929149814707.europe-west1.run.app/mcp";
 const CH_KEY_URL = "https://developer.company-information.service.gov.uk/";
 
 // Illustrative review outputs. Flag codes, severities and the decision rule are the real ones.

@@ -308,6 +308,9 @@ def build_server(config: Config | None = None, *, hosted: bool = False, **pipeli
         path = cfg.settings.kyb_policy_file
         return path.read_text(encoding="utf-8") if path else default_policy_text()
 
+    # /health for Cloud Run (its front end reserves some paths ending in "z", so /healthz never arrives);
+    # /healthz kept for local runs and other hosts.
+    @server.custom_route("/health", methods=["GET"], include_in_schema=False)  # type: ignore[untyped-decorator]
     @server.custom_route("/healthz", methods=["GET"], include_in_schema=False)  # type: ignore[untyped-decorator]
     async def healthz(_: Request) -> Response:
         """Liveness and freshness: 503 when the sanctions index is missing or stale. Public data only."""

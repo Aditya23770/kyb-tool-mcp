@@ -49,4 +49,4 @@ jobs:
       - name: Health check
         run: |
           URL=$(gcloud run services describe "$SERVICE" --region "$REGION" --format='value(status.url)')
-          curl --fail --silent --show-error --retry 5 --retry-delay 5 "$URL/healthz"
+          curl --fail --silent --show-error --retry 5 --retry-delay 5 "$URL/health"

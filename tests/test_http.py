@@ -107,9 +107,11 @@ async def test_wrong_header_key_is_a_provider_error(config: Config, mini_index_p
 async def test_healthz_ok_with_fresh_index(config: Config, mini_index_path: Path) -> None:
     async with http(app_for(config, mini_index_path, clean_world())) as hc:
         r = await hc.get("/healthz")
-    assert r.status_code == 200
+        cloud_run = await hc.get("/health")  # Cloud Run reserves /healthz, so this is the one it uses
+    assert r.status_code == 200 and cloud_run.status_code == 200
     body = r.json()
     assert body["status"] == "ok" and body["index"] == "ok" and body["version"]
+    assert cloud_run.json() == body
 
 
 async def test_healthz_fails_when_index_missing_or_stale(

@@ -30,7 +30,7 @@ work without it.
 2. Name it `TrustLedger` and paste the connector URL:
 
    ```text
-   https://CONNECTOR-URL-PENDING.run.app/mcp
+   https://trustledger-mcp-929149814707.europe-west1.run.app/mcp
    ```
 
 3. Under **Request headers**, add `X-Companies-House-Key` with your Companies House key as the value.
@@ -55,7 +55,7 @@ Then use the [command line](#command-line), the [Python library](#python), or
 Hosted, in Claude Code:
 
 ```bash
-claude mcp add --transport http trustledger https://CONNECTOR-URL-PENDING.run.app/mcp \
+claude mcp add --transport http trustledger https://trustledger-mcp-929149814707.europe-west1.run.app/mcp \
   --header "X-Companies-House-Key: your-key"
 ```
 
@@ -65,7 +65,7 @@ Hosted, in Cursor (`.cursor/mcp.json`) or any client that takes a URL and header
 {
   "mcpServers": {
     "trustledger": {
-      "url": "https://CONNECTOR-URL-PENDING.run.app/mcp",
+      "url": "https://trustledger-mcp-929149814707.europe-west1.run.app/mcp",
       "headers": { "X-Companies-House-Key": "your-key" }
     }
   }
@@ -187,12 +187,12 @@ you: the tool compares them with the registry, and anyone missing is flagged `UN
 The same tools over Streamable HTTP, for your team or your own cloud:
 
 ```bash
-kyb-tool-mcp serve --http --port 8080      # MCP at /mcp, health at /healthz (localhost only;
+kyb-tool-mcp serve --http --port 8080      # MCP at /mcp, health at /health (localhost only;
                                            # add --host 0.0.0.0 to accept outside connections)
 ```
 
 Each caller sends their own key in the `X-Companies-House-Key` header (or set `COMPANIES_HOUSE_API_KEY`
-on the server to share one key). `GET /healthz` returns 503 when the sanctions index is missing or older
+on the server to share one key). `GET /health` (or `/healthz`) returns 503 when the sanctions index is missing or older
 than 48 hours. Set `KYB_ALLOWED_HOSTS` to your public hostname(s) to reject other `Host` headers. The repo
 includes a `Dockerfile` that builds the index into the image.
 
