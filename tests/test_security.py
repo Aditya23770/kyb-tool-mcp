@@ -25,7 +25,7 @@ async def test_key_absent_from_every_response_and_log(
     app = app_for(config, mini_index_path, world_requiring_key())
     dumps: list[str] = []
     async with (
-        http(app, {"X-Companies-House-Key": KEY}) as hc,
+        http(app, {"x-api-key": KEY}) as hc,
         Client(streamable_http_client(f"{BASE}/mcp", http_client=hc)) as c,
     ):
         dumps.append(json.dumps(payload(await c.call_tool("review_kyb_case", clean_application()))))
@@ -48,11 +48,21 @@ async def test_key_absent_from_error_path(
     world = world_requiring_key()
     world.companies_house_key = "the-real-key"  # caller's key will be rejected (401)
     app = app_for(config, mini_index_path, world)
-    async with mcp_client(app, {"X-Companies-House-Key": KEY}) as c:
+    async with mcp_client(app, {"x-api-key": KEY}) as c:
         out = json.dumps(payload(await c.call_tool("review_kyb_case", clean_application())))
     assert "PROVIDER_ERROR" in out and "rejected" in out
     assert KEY not in out and "the-real-key" not in out
     assert KEY not in caplog.text
+
+
+async def test_bearer_key_absent_from_responses_and_logs(
+    config: Config, mini_index_path: Path, caplog: pytest.LogCaptureFixture
+) -> None:
+    caplog.set_level(logging.DEBUG)
+    app = app_for(config, mini_index_path, world_requiring_key())
+    async with mcp_client(app, {"Authorization": f"Bearer {KEY}"}) as c:
+        out = json.dumps(payload(await c.call_tool("review_kyb_case", clean_application())))
+    assert KEY not in out and KEY not in caplog.text
 
 
 def test_settings_never_show_the_key() -> None:

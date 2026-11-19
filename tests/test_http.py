@@ -17,7 +17,7 @@ from mcp.client.streamable_http import streamable_http_client
 from starlette.applications import Starlette
 
 from kyb_tool_mcp.config import Config
-from kyb_tool_mcp.mcp_server import build_http_app, hosted_settings, transport_security_for
+from kyb_tool_mcp.mcp_server import build_http_app, hosted_settings, key_from_headers, transport_security_for
 from kyb_tool_mcp.testing import FakeWorld
 from tests.conftest import TODAY, clean_application, clean_world
 from tests.test_mcp import EXPECTED_TOOLS, payload
@@ -67,12 +67,12 @@ async def test_lists_tools_over_http_and_ctx_is_not_a_tool_argument(
         assert set(tools) == EXPECTED_TOOLS
         for t in tools.values():
             assert "ctx" not in json.dumps(t.input_schema)
-        assert c.instructions and "X-Companies-House-Key" in c.instructions
+        assert c.instructions and "x-api-key" in c.instructions
 
 
 async def test_header_key_is_used_for_registry(config: Config, mini_index_path: Path) -> None:
     app = app_for(config, mini_index_path, world_requiring_key())
-    async with mcp_client(app, {"X-Companies-House-Key": KEY}) as c:
+    async with mcp_client(app, {"x-api-key": KEY}) as c:
         out = payload(await c.call_tool("registry_lookup", {"registration_number": "09876543"}))
         review = payload(await c.call_tool("review_kyb_case", clean_application()))
     assert out["records"] and not out["errors"] and not out["not_configured"]
@@ -88,17 +88,17 @@ async def test_missing_header_is_not_configured_with_setup_hint(
     async with mcp_client(app) as c:
         out = payload(await c.call_tool("registry_lookup", {"registration_number": "09876543"}))
         review = payload(await c.call_tool("review_kyb_case", clean_application()))
-    assert any("X-Companies-House-Key" in m for m in out["not_configured"])
+    assert any("x-api-key" in m for m in out["not_configured"])
     reg = next(ch for ch in review["checks"] if ch["check"] == "registry")
     # Without a key, Companies House is skipped (reported, never silent) and only GLEIF runs. This fake
     # company has no GLEIF record either, so the registry finds nothing and the case escalates.
-    assert "X-Companies-House-Key" in (reg["note"] or "")
+    assert "x-api-key" in (reg["note"] or "")
     assert review["decision"] != "APPROVE"
 
 
 async def test_wrong_header_key_is_a_provider_error(config: Config, mini_index_path: Path) -> None:
     app = app_for(config, mini_index_path, world_requiring_key())
-    async with mcp_client(app, {"X-Companies-House-Key": "wrong-key"}) as c:
+    async with mcp_client(app, {"x-api-key": "wrong-key"}) as c:
         review = payload(await c.call_tool("review_kyb_case", clean_application()))
     codes = {f["code"] for f in review["flags"]}
     assert "PROVIDER_ERROR" in codes and review["decision"] != "APPROVE"
@@ -147,6 +147,27 @@ async def test_loopback_server_blocks_dns_rebinding(config: Config, mini_index_p
         bad_origin = await hc.post("/mcp", json=body, headers={**accept, "origin": "http://attacker.example"})
     assert bad_host.status_code in (400, 403, 421)
     assert bad_origin.status_code in (400, 403, 421)
+
+
+def test_key_from_headers_order_and_formats() -> None:
+    assert key_from_headers({"x-api-key": " k1 "}) == "k1"
+    assert key_from_headers({"X-API-KEY": "k1"}) == "k1"  # header names are case-insensitive
+    assert key_from_headers({"X-Companies-House-Key": "k2"}) == "k2"  # legacy name still works
+    assert key_from_headers({"Authorization": "Bearer k3"}) == "k3"
+    assert key_from_headers({"authorization": "bearer   k3 "}) == "k3"
+    assert key_from_headers({"x-api-key": "k1", "Authorization": "Bearer k3"}) == "k1"  # x-api-key wins
+    assert key_from_headers({"Authorization": "Basic abc"}) is None  # other schemes ignored
+    assert key_from_headers({"Authorization": "Bearer "}) is None
+    assert key_from_headers({"x-api-key": "  "}) is None
+    assert key_from_headers({}) is None
+
+
+async def test_bearer_and_legacy_headers_work_end_to_end(config: Config, mini_index_path: Path) -> None:
+    for headers in ({"Authorization": f"Bearer {KEY}"}, {"X-Companies-House-Key": KEY}):
+        app = app_for(config, mini_index_path, world_requiring_key())
+        async with mcp_client(app, headers) as c:
+            out = payload(await c.call_tool("registry_lookup", {"registration_number": "09876543"}))
+        assert out["records"] and not out["errors"] and not out["not_configured"], headers
 
 
 def test_transport_security_choices() -> None:

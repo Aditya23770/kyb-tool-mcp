@@ -157,7 +157,7 @@
         <table class="env">
           <caption>Keys and settings</caption>
           <tbody>
-            <tr><th><code>X-Companies-House-Key</code> header</th><td><span class="req">Connector</span> your key, sent by Claude on each request. Used for that request only, never stored or logged.</td></tr>
+            <tr><th><code>x-api-key</code> header</th><td><span class="req">Connector</span> your Companies House key, sent by Claude on each request (Authentication: No sign-in). Used for that request only, never stored or logged.</td></tr>
             <tr><th><code>COMPANIES_HOUSE_API_KEY</code></th><td><span class="req">Local</span> registry checks. Without it they report <code>not_configured</code>.</td></tr>
             <tr><th><code>KYB_DATA_DIR</code></th><td><span class="opt">Optional</span> where the sanctions index and cache live. Default <code>~/.kyb-tool-mcp</code>.</td></tr>
             <tr><th><code>KYB_POLICY_FILE</code></th><td><span class="opt">Optional</span> your own decision policy, created with <code>kyb-tool-mcp init</code>.</td></tr>
